@@ -7,3 +7,12 @@
     @apply mb-auto w-full py-5 px-10
   }
 }
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}

@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -7,10 +7,16 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { Footer } from "./components/layout/footer";
+import { Header } from "./components/layout/header";
+
+import styles from "./tailwind.css";
+
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Sommarprat-UI",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -21,11 +27,13 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="h-full min-h-screen w-full flex flex-col justify-between dark:bg-amber-100">
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Footer />
       </body>
     </html>
   );

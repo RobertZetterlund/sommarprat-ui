@@ -1,47 +1,47 @@
+import type { Episode } from "@prisma/client";
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useCatch, useLoaderData, useParams } from "@remix-run/react";
+import { db } from "../../utils/db.server";
 
 type LoaderData = {
+  episodes: Pick<Episode, "title" | "playlistId">[];
   year: number;
-  content: string[];
 };
-
-const temp_data: LoaderData[] = [
-  { year: 2015, content: ["2015 var året då David Davidsson sommarpratade"] },
-  { year: 2016, content: ["2016 var året då Anders Andersson sommarpratade"] },
-  { year: 2017, content: ["2017 var året då Bernt Berntsson sommarpratade"] },
-];
 
 export const loader: LoaderFunction = async ({ params }) => {
   const year = params.year ? parseInt(params.year) : NaN;
 
-  if (isNaN(year) || year < 2015 || year > 2017) {
+  if (isNaN(year) || year < 2005 || year > 2021) {
     throw new Response("Year not found.", {
       status: 404,
     });
   }
 
-  const data = temp_data.find((p) => p.year === year);
+  const episodes = await db.episode.findMany({
+    where: { yearAired: year },
+    select: { title: true, playlistId: true },
+  });
 
-  if (!data) {
-    throw new Response("Year not found.", {
-      status: 404,
-    });
-  }
-
-  return json(data);
+  return json({ episodes, year });
 };
 
 export default function Playlists() {
-  const data = useLoaderData<LoaderData>();
+  const { episodes, year } = useLoaderData<LoaderData>();
 
   return (
     <div className="mb-auto w-full py-5 px-10">
-      <h1>{data.year}</h1>
+      <h1>{year}</h1>
       <ul>
-        {data.content.map((content) => (
-          <li key={content}>{content}</li>
+        {episodes.map(({ title, playlistId }) => (
+          <a
+            href={`https://open.spotify.com/playlist/${playlistId}`}
+            target="_blank"
+            rel="noreferrer"
+            key={playlistId}
+          >
+            <li>{title}</li>
+          </a>
         ))}
       </ul>
     </div>
@@ -62,7 +62,8 @@ export function CatchBoundary() {
     case 404: {
       return (
         <div className="error-container">
-          Huh? Looks like there is no data for {params.year}.
+          SR started tracking the music in their API 2005, so I can't help you
+          with whatever this is ---{">"} {params.year}.
         </div>
       );
     }

@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/*@layer components {
-  .custom-class {
-
+@layer components {
+  .error-container {
+    @apply mb-auto w-full py-5 px-10
   }
-}*/
+}

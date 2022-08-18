@@ -34,14 +34,15 @@ export default function Playlists() {
       <h1>{year}</h1>
       <ul>
         {episodes.map(({ title, playlistId }) => (
-          <a
-            href={`https://open.spotify.com/playlist/${playlistId}`}
-            target="_blank"
-            rel="noreferrer"
-            key={playlistId}
-          >
-            <li>{title}</li>
-          </a>
+          <li key={playlistId}>
+            <a
+              href={`https://open.spotify.com/playlist/${playlistId}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {title}
+            </a>
+          </li>
         ))}
       </ul>
     </div>

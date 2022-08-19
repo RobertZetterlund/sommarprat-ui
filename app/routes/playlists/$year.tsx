@@ -3,9 +3,11 @@ import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useCatch, useLoaderData, useParams } from "@remix-run/react";
 import { db } from "../../utils/db.server";
+import SpotifyLogo from "../../res/spotify.svg";
+import SRLogo from "../../res/SR.svg";
 
 type LoaderData = {
-  episodes: Pick<Episode, "title" | "playlistId">[];
+  episodes: Pick<Episode, "title" | "playlistId" | "imageurl" | "date">[];
   year: number;
 };
 
@@ -20,10 +22,12 @@ export const loader: LoaderFunction = async ({ params }) => {
 
   const episodes = await db.episode.findMany({
     where: { yearAired: year },
-    select: { title: true, playlistId: true },
+    select: { title: true, playlistId: true, imageurl: true, date: true },
   });
 
-  return json({ episodes, year });
+  const sortedEpisodes = episodes.sort((a, b) => a.date.localeCompare(b.date));
+
+  return json({ episodes: sortedEpisodes, year });
 };
 
 export default function Playlists() {
@@ -32,16 +36,50 @@ export default function Playlists() {
   return (
     <div className="mb-auto w-full py-5 px-10">
       <h1>{year}</h1>
-      <ul>
-        {episodes.map(({ title, playlistId }) => (
-          <li key={playlistId}>
-            <a
-              href={`https://open.spotify.com/playlist/${playlistId}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {title}
-            </a>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-5">
+        {episodes.map(({ title, playlistId, imageurl, date }) => (
+          <li
+            className="w-full rounded overflow-hidden shadow-lg"
+            key={playlistId}
+          >
+            <div className="group relative">
+              <img
+                src={imageurl}
+                className="w-full aspect-square"
+                alt={`${title} wearing a midsommarkrans`}
+                loading="lazy"
+              />
+              <div className="absolute top-0 left-0 w-full h-0 flex flex-row justify-between items-end p-2 bg-gray-700 bg-opacity-0	group-hover:h-full group-hover:bg-opacity-50 duration-500">
+                <a
+                  href={`https://open.spotify.com/playlist/${playlistId}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={SpotifyLogo}
+                    alt="Spotify Logo"
+                    className="w-8 h-8 opacity-0 group-hover:opacity-100 duration-500"
+                  />
+                </a>
+                <a
+                  // TODO(robertz): Include episode id in data scrape and update this.
+                  href="https://sverigesradio.se/avsnitt/359934"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={SRLogo}
+                    alt="Sveriges Radio Logo"
+                    className="w-8 h-8 opacity-0 group-hover:opacity-100 duration-500"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col px-2 py-1">
+              <span className="font-bold text-xl text-stone-800">{title}</span>
+              <span className="text-xs text-stone-600">{date}</span>
+            </div>
           </li>
         ))}
       </ul>

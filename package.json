@@ -1,45 +1,61 @@
 {
+  "name": "blog-tutorial-e5bf",
   "private": true,
   "sideEffects": false,
-  "prisma": {
-    "seed": "node --require esbuild-register prisma/seed.ts"
-  },
   "scripts": {
-    "dev": "run-p \"dev:*\"",
-    "build": "run-s \"build:*\"",
+    "build": "run-s build:*",
     "build:css": "npm run generate:css -- --minify",
     "build:remix": "remix build",
+    "dev": "run-p dev:*",
     "dev:css": "npm run generate:css -- --watch",
     "dev:remix": "remix dev",
-    "generate:css": "npx tailwindcss -i ./styles/tailwind.css -o ./app/tailwind.css",
-    "start": "remix-serve build",
-    "lint": "eslint --cache --cache-location .",
     "format": "prettier --write .",
+    "generate:css": "tailwindcss -o ./app/styles/tailwind.css",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "setup": "prisma generate && prisma migrate deploy && prisma db seed",
+    "start": "remix-serve build",
     "typecheck": "tsc -b"
   },
+  "prettier": {},
+  "eslintIgnore": [
+    "/node_modules",
+    "/build",
+    "/public/build"
+  ],
   "dependencies": {
     "@prisma/client": "^4.2.1",
     "@remix-run/node": "^1.6.8",
     "@remix-run/react": "^1.6.8",
     "@remix-run/serve": "^1.6.8",
-    "esbuild": "^0.15.5",
+    "@remix-run/server-runtime": "^1.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.6.8",
     "@remix-run/eslint-config": "^1.6.8",
-    "@types/react": "^18.0.15",
+    "@types/eslint": "^8.4.5",
+    "@types/node": "^18.7.4",
+    "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "esbuild-register": "^3.3.3",
-    "eslint": "^8.20.0",
+    "@vitejs/plugin-react": "^2.0.1",
+    "autoprefixer": "^10.4.8",
+    "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "npm-run-all": "^4.1.5",
+    "prettier": "2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
     "prisma": "^4.2.1",
     "tailwindcss": "^3.1.8",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0",
     "typescript": "^4.7.4"
   },
   "engines": {
     "node": ">=14"
+  },
+  "prisma": {
+    "seed": "ts-node --require tsconfig-paths/register prisma/seed.ts"
   }
 }

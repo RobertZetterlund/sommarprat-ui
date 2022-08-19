@@ -33,7 +33,7 @@ export default function Playlists() {
                 alt={`Collection of hosts year ${year}`}
                 loading="lazy"
               />
-              <h1>{year}</h1>
+              <span className="font-bold text-xl text-stone-800 px-2 py-1">{`Sommarprat ${year}`}</span>
             </Link>
           </li>
         ))}

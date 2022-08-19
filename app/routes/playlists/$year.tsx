@@ -54,6 +54,7 @@ export default function Playlists() {
                   href={`https://open.spotify.com/playlist/${playlistId}`}
                   target="_blank"
                   rel="noreferrer"
+                  className="hover:-translate-y-1 duration-200"
                 >
                   <img
                     src={SpotifyLogo}
@@ -66,6 +67,7 @@ export default function Playlists() {
                   href="https://sverigesradio.se/avsnitt/359934"
                   target="_blank"
                   rel="noreferrer"
+                  className="hover:-translate-y-1 duration-200"
                 >
                   <img
                     src={SRLogo}
@@ -77,7 +79,16 @@ export default function Playlists() {
             </div>
 
             <div className="flex flex-col px-2 py-1">
-              <span className="font-bold text-xl text-stone-800">{title}</span>
+              <a
+                href={`https://open.spotify.com/playlist/${playlistId}`}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:underline"
+              >
+                <span className="font-bold text-xl text-stone-800">
+                  {title}
+                </span>
+              </a>
               <span className="text-xs text-stone-600">{date}</span>
             </div>
           </li>

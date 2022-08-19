@@ -23,11 +23,18 @@ export default function Playlists() {
 
   return (
     <div className="mb-auto w-full py-5 px-10">
-      <h1>Playlists</h1>
-      <ul>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-5">
         {yearsAired.map((year) => (
-          <li key={year}>
-            <Link to={String(year)}>{year}</Link>
+          <li key={year} className="w-full rounded overflow-hidden shadow-lg">
+            <Link to={String(year)}>
+              <img
+                src={`/thumbnails/${year}.jpg`}
+                className="w-full aspect-square"
+                alt={`Collection of hosts year ${year}`}
+                loading="lazy"
+              />
+              <h1>{year}</h1>
+            </Link>
           </li>
         ))}
       </ul>

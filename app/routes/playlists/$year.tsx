@@ -3,8 +3,8 @@ import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useCatch, useLoaderData, useParams } from "@remix-run/react";
 import { db } from "../../utils/db.server";
-import SpotifyLogo from "../../res/spotify.svg";
-import SRLogo from "../../res/SR.svg";
+import SpotifyLogo from "../../res/images/spotify.svg";
+import SRLogo from "../../res/images/SR.svg";
 
 type LoaderData = {
   episodes: Pick<Episode, "title" | "playlistId" | "imageurl" | "date">[];

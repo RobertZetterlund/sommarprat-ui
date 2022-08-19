@@ -27,7 +27,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full min-h-screen w-full flex flex-col justify-between dark:bg-amber-100">
+      <body className="h-full min-h-screen w-full flex flex-col justify-between bg-amber-100">
         <Header />
         <Outlet />
         <ScrollRestoration />

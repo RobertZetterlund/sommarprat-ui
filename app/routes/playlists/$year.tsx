@@ -6,8 +6,21 @@ import { db } from "../../utils/db.server";
 import SpotifyLogo from "../../res/images/spotify.svg";
 import SRLogo from "../../res/images/SR.svg";
 
+const EpisodeLoaderDataSelections: (keyof Episode)[] = [
+  "title",
+  "playlistId",
+  "imageurl",
+  "date",
+  "episodeUrl",
+];
+
+const select = EpisodeLoaderDataSelections.reduce(
+  (acc, curr) => ({ [curr]: true, ...acc }),
+  {} as { [key in keyof Episode]: boolean }
+);
+
 type LoaderData = {
-  episodes: Pick<Episode, "title" | "playlistId" | "imageurl" | "date">[];
+  episodes: Pick<Episode, typeof EpisodeLoaderDataSelections[number]>[];
   year: number;
 };
 
@@ -22,7 +35,7 @@ export const loader: LoaderFunction = async ({ params }) => {
 
   const episodes = await db.episode.findMany({
     where: { yearAired: year },
-    select: { title: true, playlistId: true, imageurl: true, date: true },
+    select,
   });
 
   const sortedEpisodes = episodes.sort((a, b) => a.date.localeCompare(b.date));
@@ -37,7 +50,7 @@ export default function Playlists() {
     <div className="mb-auto w-full py-5 px-10">
       <h1>{year}</h1>
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-5">
-        {episodes.map(({ title, playlistId, imageurl, date }) => (
+        {episodes.map(({ title, playlistId, imageurl, date, episodeUrl }) => (
           <li
             className="w-full rounded overflow-hidden shadow-lg"
             key={playlistId}
@@ -63,8 +76,7 @@ export default function Playlists() {
                   />
                 </a>
                 <a
-                  // TODO(robertz): Include episode id in data scrape and update this.
-                  href="https://sverigesradio.se/avsnitt/359934"
+                  href={episodeUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="hover:-translate-y-1 duration-200"

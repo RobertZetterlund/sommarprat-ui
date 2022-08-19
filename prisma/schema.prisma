@@ -16,5 +16,6 @@ model Episode {
   date       String
   playlistId String  @id
   imageurl   String
+  episodeUrl String
   yearAired  Int
 }

@@ -17,6 +17,7 @@ export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Sommarprat-UI",
+  description: "A collection of spotify playlists from Sommar I P1",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -27,7 +28,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full min-h-screen w-full flex flex-col justify-between bg-amber-100 text-stone-800">
+      <body className="flex h-full min-h-screen w-full flex-col justify-between bg-amber-100 text-stone-800">
         <Header />
         <Outlet />
         <ScrollRestoration />

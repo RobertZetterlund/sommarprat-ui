@@ -10,15 +10,16 @@ import {
 import { Footer } from "./components/layout/footer";
 import { Header } from "./components/layout/header";
 
-import styles from "./tailwind.css";
+import tailwind from "./tailwind.css";
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: tailwind },
+];
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Sommarprat-UI",
   description: "A collection of spotify playlists from Sommar I P1",
-  // amber-100
   theme: "#fef3c7",
   viewport: "width=device-width,initial-scale=1",
 });
@@ -30,13 +31,11 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="flex h-full min-h-screen w-full flex-col justify-between bg-amber-100 text-stone-800">
-        <Header />
+      <body className="flex h-full min-h-screen w-full flex-col justify-between bg-[#287504] text-stone-800">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
-        <Footer />
       </body>
     </html>
   );

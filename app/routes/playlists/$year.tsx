@@ -48,43 +48,43 @@ export default function Playlists() {
 
   return (
     <div className="mb-auto w-full py-5 px-10">
-      <h1>{year}</h1>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-5">
+      <h1 className="pl-5 font-serif text-4xl text-slate-100">{year}</h1>
+      <ul className="grid grid-cols-1 gap-4 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {episodes.map(({ title, playlistId, imageurl, date, episodeUrl }) => (
           <li
-            className="w-full rounded overflow-hidden shadow-lg"
+            className="w-full overflow-hidden rounded shadow-lg"
             key={playlistId}
           >
             <div className="group relative">
               <img
                 src={imageurl}
-                className="w-full aspect-square"
+                className="aspect-square w-full"
                 alt={`${title} wearing a midsommarkrans`}
                 loading="lazy"
               />
-              <div className="absolute top-0 left-0 w-full h-0 flex flex-row justify-between items-end p-2 bg-gray-700 bg-opacity-0	group-hover:h-full group-hover:bg-opacity-50 duration-500">
+              <div className="absolute top-0 left-0 flex h-0 w-full flex-row items-end justify-between bg-gray-700 bg-opacity-0 p-2	duration-500 group-hover:h-full group-hover:bg-opacity-50">
                 <a
                   href={`https://open.spotify.com/playlist/${playlistId}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:-translate-y-1 duration-200"
+                  className="duration-200 hover:-translate-y-1"
                 >
                   <img
                     src={SpotifyLogo}
                     alt="Spotify Logo"
-                    className="w-8 h-8 opacity-0 group-hover:opacity-100 duration-500"
+                    className="h-8 w-8 opacity-0 duration-500 group-hover:opacity-100"
                   />
                 </a>
                 <a
                   href={episodeUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:-translate-y-1 duration-200"
+                  className="duration-200 hover:-translate-y-1"
                 >
                   <img
                     src={SRLogo}
                     alt="Sveriges Radio Logo"
-                    className="w-8 h-8 opacity-0 group-hover:opacity-100 duration-500"
+                    className="h-8 w-8 opacity-0 duration-500 group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -97,11 +97,11 @@ export default function Playlists() {
                 rel="noreferrer"
                 className="hover:underline"
               >
-                <span className="font-bold text-xl text-stone-800">
+                <span className="text-xl font-bold text-slate-100">
                   {title}
                 </span>
               </a>
-              <span className="text-xs text-stone-600">{date}</span>
+              <span className="text-xs text-slate-200">{date}</span>
             </div>
           </li>
         ))}

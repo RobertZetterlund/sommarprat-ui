@@ -32,10 +32,12 @@ export default function App() {
         <Links />
       </head>
       <body className="flex h-full min-h-screen w-full flex-col justify-between bg-[#287504] text-stone-800">
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Footer />
       </body>
     </html>
   );

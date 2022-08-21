@@ -2,6 +2,37 @@
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 */
 
+/* pt-serif-regular - latin */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/pt-serif-v17-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/pt-serif-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/pt-serif-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/pt-serif-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/pt-serif-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/pt-serif-v17-latin-regular.svg#PTSerif') format('svg'); /* Legacy iOS */
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+body {
+  font-family: var(--font-body)
+
+}
+
+
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -567,6 +598,10 @@ video {
   left: 0px;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -596,10 +631,6 @@ video {
   display: grid;
 }
 
-.hidden {
-  display: none;
-}
-
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
@@ -618,6 +649,10 @@ video {
 
 .h-8 {
   height: 2rem;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .min-h-screen {
@@ -688,9 +723,9 @@ video {
   border-radius: 0.25rem;
 }
 
-.bg-amber-100 {
+.bg-\[\#287504\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(254 243 199 / var(--tw-bg-opacity));
+  background-color: rgb(40 117 4 / var(--tw-bg-opacity));
 }
 
 .bg-emerald-600 {
@@ -712,6 +747,11 @@ video {
   --tw-bg-opacity: 0;
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -722,16 +762,6 @@ video {
 
 .p-2 {
   padding: 0.5rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 
 .px-4 {
@@ -747,6 +777,16 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .px-2 {
@@ -808,11 +848,6 @@ video {
 .text-stone-600 {
   --tw-text-opacity: 1;
   color: rgb(87 83 78 / var(--tw-text-opacity));
-}
-
-.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
 }
 
 .opacity-0 {

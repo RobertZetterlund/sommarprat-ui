@@ -23,17 +23,17 @@ export default function Playlists() {
 
   return (
     <div className="mb-auto w-full py-5 px-10">
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-5">
+      <ul className="grid grid-cols-1 gap-4 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {yearsAired.map((year) => (
-          <li key={year} className="w-full rounded overflow-hidden shadow-lg">
+          <li key={year} className="w-full overflow-hidden rounded shadow-lg">
             <Link to={String(year)}>
               <img
                 src={`/thumbnails/${year}.jpg`}
-                className="w-full aspect-square"
+                className="aspect-square w-full"
                 alt={`Collection of hosts year ${year}`}
                 loading="lazy"
               />
-              <span className="font-bold text-xl text-stone-800 px-2 py-1">{`Sommarprat ${year}`}</span>
+              <span className="px-2 py-1 text-xl font-bold text-slate-100">{`Sommarprat ${year}`}</span>
             </Link>
           </li>
         ))}

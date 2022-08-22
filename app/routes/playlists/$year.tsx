@@ -48,7 +48,7 @@ export default function Playlists() {
 
   return (
     <div className="mb-auto w-full py-5 px-10">
-      <h1 className="pl-5 font-serif text-4xl text-slate-100">{year}</h1>
+      <h1 className="pl-5 text-4xl text-slate-100">{year}</h1>
       <ul className="grid grid-cols-1 gap-4 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {episodes.map(({ title, playlistId, imageurl, date, episodeUrl }) => (
           <li
@@ -95,11 +95,9 @@ export default function Playlists() {
                 href={`https://open.spotify.com/playlist/${playlistId}`}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:underline"
+                className="text-slate-100 hover:underline"
               >
-                <span className="text-xl font-bold text-slate-100">
-                  {title}
-                </span>
+                <span className="text-xl font-bold">{title}</span>
               </a>
               <span className="text-xs text-slate-200">{date}</span>
             </div>

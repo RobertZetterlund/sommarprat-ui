@@ -7,20 +7,20 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { Footer } from "./components/layout/footer";
-import { Header } from "./components/layout/header";
 
 import tailwind from "./tailwind.css";
+import globalstyles from "./styles/global.css";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
+  { rel: "stylesheet", href: globalstyles },
 ];
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Sommarprat-UI",
   description: "A collection of spotify playlists from Sommar I P1",
-  theme: "#fef3c7",
+  theme: "#287504",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -32,12 +32,10 @@ export default function App() {
         <Links />
       </head>
       <body className="flex h-full min-h-screen w-full flex-col justify-between bg-[#287504] text-stone-800">
-        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
-        <Footer />
       </body>
     </html>
   );

@@ -10,10 +10,12 @@ import {
 
 import tailwind from "./tailwind.css";
 import globalstyles from "./styles/global.css";
+import font from "../public/fonts/pt-serif-v17-latin-regular.woff";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
   { rel: "stylesheet", href: globalstyles },
+  { rel: "preload", href: font, as: "font", type: "font/woff" },
 ];
 
 export const meta: MetaFunction = () => ({

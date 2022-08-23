@@ -3,7 +3,8 @@
   font-family: "PT Serif";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/pt-serif-v17-latin-regular.woff") format("woff");
+  src: local("/fonts/pt-serif-v17-latin-regular.woff") format("woff");
+  font-display: swap;
 }
 
 :root {

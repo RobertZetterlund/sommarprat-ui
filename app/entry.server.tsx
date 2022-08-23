@@ -22,6 +22,20 @@ export default function handleRequest(
           let body = new PassThrough();
 
           responseHeaders.set("Content-Type", "text/html");
+          responseHeaders.set("X-Content-Type-Options", "nosniff");
+
+          responseHeaders.set("Referrer-Policy", "strict-origin");
+          responseHeaders.set(
+            "Strict-Transport-Security",
+            "max-age=31536000; includeSubDomains"
+          );
+          // TODO(robertz): get default-src none;
+          responseHeaders.set(
+            "Content-Security-Policy",
+            "img-src 'self' https://static-cdn.sr.se/; font-src 'self'; object-src 'none';"
+          );
+
+          responseHeaders.set("X-Frame-Options", "SAMEORIGIN");
 
           resolve(
             new Response(body, {

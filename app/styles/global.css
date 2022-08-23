@@ -1,29 +1,14 @@
 /* pt-serif-regular - latin */
 @font-face {
-  font-family: "PT Serif";
+  font-family: PT Serif;
   font-style: normal;
   font-weight: 400;
   src: local("/fonts/pt-serif-v17-latin-regular.woff") format("woff");
-  font-display: swap;
 }
 
 :root {
   --font-body: -apple-system, "Segoe UI", Helvetica Neue, Helvetica, Roboto,
     Arial, sans-serif, system-ui, "Apple Color Emoji", "Segoe UI Emoji";
   --font-display: PT Serif, var(--font-body);
-}
-
-p,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   font-family: var(--font-display);
-}
-
-body {
-  font-family: var(--font-body);
 }

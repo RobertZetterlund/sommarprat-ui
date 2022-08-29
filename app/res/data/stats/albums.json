@@ -1,0 +1,392 @@
+{
+  "albums": [
+    {
+      "2005": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 1,
+        "2k3nz0I7mJzegtkooii4za": 3,
+        "7pY0hwPU10gaH4qDsDFA6d": 1,
+        "6fQElzBNTiEMGdIeY0hy5l": 1
+      }
+    },
+    {
+      "2006": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 3,
+        "2k3nz0I7mJzegtkooii4za": 3,
+        "7pY0hwPU10gaH4qDsDFA6d": 3,
+        "6fQElzBNTiEMGdIeY0hy5l": 4,
+        "0ETFjACtuP2ADo6LFhL6HN": 2,
+        "4MZqt2uT29Lhjs3C2i54Af": 3
+      }
+    },
+    {
+      "2007": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 3,
+        "2k3nz0I7mJzegtkooii4za": 4,
+        "7pY0hwPU10gaH4qDsDFA6d": 5,
+        "6fQElzBNTiEMGdIeY0hy5l": 4,
+        "0ETFjACtuP2ADo6LFhL6HN": 3,
+        "4MZqt2uT29Lhjs3C2i54Af": 4,
+        "0E4xv5gPjykrwBgBZzI8XG": 1
+      }
+    },
+    {
+      "2008": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 5,
+        "2k3nz0I7mJzegtkooii4za": 5,
+        "7pY0hwPU10gaH4qDsDFA6d": 6,
+        "6fQElzBNTiEMGdIeY0hy5l": 7,
+        "0ETFjACtuP2ADo6LFhL6HN": 5,
+        "4MZqt2uT29Lhjs3C2i54Af": 4,
+        "0E4xv5gPjykrwBgBZzI8XG": 3
+      }
+    },
+    {
+      "2009": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 6,
+        "2k3nz0I7mJzegtkooii4za": 6,
+        "7pY0hwPU10gaH4qDsDFA6d": 6,
+        "6fQElzBNTiEMGdIeY0hy5l": 8,
+        "0ETFjACtuP2ADo6LFhL6HN": 7,
+        "4MZqt2uT29Lhjs3C2i54Af": 5,
+        "0E4xv5gPjykrwBgBZzI8XG": 4
+      }
+    },
+    {
+      "2010": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 6,
+        "2k3nz0I7mJzegtkooii4za": 6,
+        "7pY0hwPU10gaH4qDsDFA6d": 9,
+        "6fQElzBNTiEMGdIeY0hy5l": 10,
+        "0ETFjACtuP2ADo6LFhL6HN": 8,
+        "4MZqt2uT29Lhjs3C2i54Af": 7,
+        "0E4xv5gPjykrwBgBZzI8XG": 5
+      }
+    },
+    {
+      "2011": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 8,
+        "2k3nz0I7mJzegtkooii4za": 6,
+        "7pY0hwPU10gaH4qDsDFA6d": 9,
+        "6fQElzBNTiEMGdIeY0hy5l": 10,
+        "0ETFjACtuP2ADo6LFhL6HN": 8,
+        "4MZqt2uT29Lhjs3C2i54Af": 7,
+        "0E4xv5gPjykrwBgBZzI8XG": 7
+      }
+    },
+    {
+      "2012": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 10,
+        "2k3nz0I7mJzegtkooii4za": 8,
+        "7pY0hwPU10gaH4qDsDFA6d": 11,
+        "6fQElzBNTiEMGdIeY0hy5l": 10,
+        "0ETFjACtuP2ADo6LFhL6HN": 10,
+        "4MZqt2uT29Lhjs3C2i54Af": 10,
+        "0E4xv5gPjykrwBgBZzI8XG": 8,
+        "0pfOSr3PHdLqe9kHcoEPIL": 1,
+        "7f4Mh7Lv8liYFDYQLw2g5T": 10
+      }
+    },
+    {
+      "2013": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 10,
+        "2k3nz0I7mJzegtkooii4za": 8,
+        "7pY0hwPU10gaH4qDsDFA6d": 11,
+        "6fQElzBNTiEMGdIeY0hy5l": 12,
+        "0ETFjACtuP2ADo6LFhL6HN": 11,
+        "4MZqt2uT29Lhjs3C2i54Af": 13,
+        "0E4xv5gPjykrwBgBZzI8XG": 8,
+        "0pfOSr3PHdLqe9kHcoEPIL": 1,
+        "7f4Mh7Lv8liYFDYQLw2g5T": 10,
+        "74s1xuJFJGvRCPjlh2d2oE": 3
+      }
+    },
+    {
+      "2014": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 12,
+        "2k3nz0I7mJzegtkooii4za": 8,
+        "7pY0hwPU10gaH4qDsDFA6d": 12,
+        "6fQElzBNTiEMGdIeY0hy5l": 12,
+        "0ETFjACtuP2ADo6LFhL6HN": 12,
+        "4MZqt2uT29Lhjs3C2i54Af": 13,
+        "0E4xv5gPjykrwBgBZzI8XG": 9,
+        "0pfOSr3PHdLqe9kHcoEPIL": 1,
+        "7f4Mh7Lv8liYFDYQLw2g5T": 10,
+        "74s1xuJFJGvRCPjlh2d2oE": 10
+      }
+    },
+    {
+      "2015": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 13,
+        "2k3nz0I7mJzegtkooii4za": 8,
+        "7pY0hwPU10gaH4qDsDFA6d": 12,
+        "6fQElzBNTiEMGdIeY0hy5l": 12,
+        "0ETFjACtuP2ADo6LFhL6HN": 12,
+        "4MZqt2uT29Lhjs3C2i54Af": 13,
+        "0E4xv5gPjykrwBgBZzI8XG": 9,
+        "0pfOSr3PHdLqe9kHcoEPIL": 3,
+        "7f4Mh7Lv8liYFDYQLw2g5T": 10,
+        "74s1xuJFJGvRCPjlh2d2oE": 16
+      }
+    },
+    {
+      "2016": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 13,
+        "2k3nz0I7mJzegtkooii4za": 11,
+        "7pY0hwPU10gaH4qDsDFA6d": 12,
+        "6fQElzBNTiEMGdIeY0hy5l": 13,
+        "0ETFjACtuP2ADo6LFhL6HN": 13,
+        "4MZqt2uT29Lhjs3C2i54Af": 14,
+        "0E4xv5gPjykrwBgBZzI8XG": 11,
+        "0pfOSr3PHdLqe9kHcoEPIL": 6,
+        "7f4Mh7Lv8liYFDYQLw2g5T": 10,
+        "74s1xuJFJGvRCPjlh2d2oE": 25
+      }
+    },
+    {
+      "2017": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 13,
+        "2k3nz0I7mJzegtkooii4za": 13,
+        "7pY0hwPU10gaH4qDsDFA6d": 12,
+        "6fQElzBNTiEMGdIeY0hy5l": 16,
+        "0ETFjACtuP2ADo6LFhL6HN": 14,
+        "4MZqt2uT29Lhjs3C2i54Af": 16,
+        "0E4xv5gPjykrwBgBZzI8XG": 13,
+        "0pfOSr3PHdLqe9kHcoEPIL": 8,
+        "7f4Mh7Lv8liYFDYQLw2g5T": 20,
+        "74s1xuJFJGvRCPjlh2d2oE": 34
+      }
+    },
+    {
+      "2018": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 13,
+        "2k3nz0I7mJzegtkooii4za": 13,
+        "7pY0hwPU10gaH4qDsDFA6d": 13,
+        "6fQElzBNTiEMGdIeY0hy5l": 18,
+        "0ETFjACtuP2ADo6LFhL6HN": 16,
+        "4MZqt2uT29Lhjs3C2i54Af": 17,
+        "0E4xv5gPjykrwBgBZzI8XG": 13,
+        "0pfOSr3PHdLqe9kHcoEPIL": 13,
+        "7f4Mh7Lv8liYFDYQLw2g5T": 20,
+        "74s1xuJFJGvRCPjlh2d2oE": 43
+      }
+    },
+    {
+      "2019": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 14,
+        "2k3nz0I7mJzegtkooii4za": 13,
+        "7pY0hwPU10gaH4qDsDFA6d": 13,
+        "6fQElzBNTiEMGdIeY0hy5l": 18,
+        "0ETFjACtuP2ADo6LFhL6HN": 18,
+        "4MZqt2uT29Lhjs3C2i54Af": 19,
+        "0E4xv5gPjykrwBgBZzI8XG": 14,
+        "0pfOSr3PHdLqe9kHcoEPIL": 15,
+        "7f4Mh7Lv8liYFDYQLw2g5T": 20,
+        "74s1xuJFJGvRCPjlh2d2oE": 52
+      }
+    },
+    {
+      "2020": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 15,
+        "2k3nz0I7mJzegtkooii4za": 15,
+        "7pY0hwPU10gaH4qDsDFA6d": 14,
+        "6fQElzBNTiEMGdIeY0hy5l": 18,
+        "0ETFjACtuP2ADo6LFhL6HN": 19,
+        "4MZqt2uT29Lhjs3C2i54Af": 19,
+        "0E4xv5gPjykrwBgBZzI8XG": 18,
+        "0pfOSr3PHdLqe9kHcoEPIL": 17,
+        "7f4Mh7Lv8liYFDYQLw2g5T": 20,
+        "74s1xuJFJGvRCPjlh2d2oE": 55
+      }
+    },
+    {
+      "2021": {
+        "2BlL4Gv2DLPu8p58Wcmlm9": 15,
+        "2k3nz0I7mJzegtkooii4za": 16,
+        "7pY0hwPU10gaH4qDsDFA6d": 15,
+        "6fQElzBNTiEMGdIeY0hy5l": 19,
+        "0ETFjACtuP2ADo6LFhL6HN": 20,
+        "4MZqt2uT29Lhjs3C2i54Af": 19,
+        "0E4xv5gPjykrwBgBZzI8XG": 18,
+        "0pfOSr3PHdLqe9kHcoEPIL": 20,
+        "7f4Mh7Lv8liYFDYQLw2g5T": 20,
+        "74s1xuJFJGvRCPjlh2d2oE": 63
+      }
+    }
+  ],
+  "meta": {
+    "2BlL4Gv2DLPu8p58Wcmlm9": {
+      "album": {
+        "id": "2BlL4Gv2DLPu8p58Wcmlm9",
+        "name": "American IV: The Man Comes Around",
+        "img": "https://i.scdn.co/image/ab67616d00001e026f4f62da3d811b6501a69ffa"
+      },
+      "artists": [
+        {
+          "name": "Johnny Cash",
+          "id": "6kACVPfCOnqzgfEF5ryl0x"
+        }
+      ],
+      "track": {
+        "id": "3e0qSxu1fNPzDlwqWN3cBD",
+        "name": "Bridge Over Troubled Water"
+      }
+    },
+    "2k3nz0I7mJzegtkooii4za": {
+      "album": {
+        "id": "2k3nz0I7mJzegtkooii4za",
+        "name": "Eternelle",
+        "img": "https://i.scdn.co/image/ab67616d00001e023d69a1082b9d676263912178"
+      },
+      "artists": [
+        {
+          "name": "Édith Piaf",
+          "id": "1WPcVNert9hn7mHsPKDn7j"
+        }
+      ],
+      "track": {
+        "id": "3dkIE8P7hvl3tHl9KSb6dA",
+        "name": "Non, je ne regrette rien"
+      }
+    },
+    "7pY0hwPU10gaH4qDsDFA6d": {
+      "album": {
+        "id": "7pY0hwPU10gaH4qDsDFA6d",
+        "name": "Ted",
+        "img": "https://i.scdn.co/image/ab67616d00001e02279f48896822185c7ae7ab34"
+      },
+      "artists": [
+        {
+          "name": "Ted Gärdestad",
+          "id": "6zpub6jbY6CdrcqQsDq8P4"
+        }
+      ],
+      "track": {
+        "id": "3No0idjeViPyWDP4gh1YGo",
+        "name": "Jag ska fånga en ängel"
+      }
+    },
+    "6fQElzBNTiEMGdIeY0hy5l": {
+      "album": {
+        "id": "6fQElzBNTiEMGdIeY0hy5l",
+        "name": "Hunky Dory (2015 Remaster)",
+        "img": "https://i.scdn.co/image/ab67616d00001e02e464904cc3fed2b40fc55120"
+      },
+      "artists": [
+        {
+          "name": "David Bowie",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "track": {
+        "id": "3ZE3wv8V3w2T2f7nOCjV0N",
+        "name": "Life on Mars? - 2015 Remaster"
+      }
+    },
+    "0ETFjACtuP2ADo6LFhL6HN": {
+      "album": {
+        "id": "0ETFjACtuP2ADo6LFhL6HN",
+        "name": "Abbey Road (Remastered)",
+        "img": "https://i.scdn.co/image/ab67616d00001e02dc30583ba717007b00cceb25"
+      },
+      "artists": [
+        {
+          "name": "The Beatles",
+          "id": "3WrFJ7ztbogyGnTHbHJFl2"
+        }
+      ],
+      "track": {
+        "id": "6dGnYIeXmHdcikdzNNDMm2",
+        "name": "Here Comes The Sun - Remastered 2009"
+      }
+    },
+    "4MZqt2uT29Lhjs3C2i54Af": {
+      "album": {
+        "id": "4MZqt2uT29Lhjs3C2i54Af",
+        "name": "Blommig falukorv",
+        "img": "https://i.scdn.co/image/ab67616d00001e02876bd7f70774397025a39cb8"
+      },
+      "artists": [
+        {
+          "name": "Hans Alfredson",
+          "id": "2wSu2EcQojgAifviEgZmy3"
+        }
+      ],
+      "track": {
+        "id": "3LSdaNWsEMAuiXy3xYm3gZ",
+        "name": "Ska vi byta?"
+      }
+    },
+    "0E4xv5gPjykrwBgBZzI8XG": {
+      "album": {
+        "id": "0E4xv5gPjykrwBgBZzI8XG",
+        "name": "Back To Black (Deluxe Edition)",
+        "img": "https://i.scdn.co/image/ab67616d00001e0276ffb5b5ab045d22c81235c1"
+      },
+      "artists": [
+        {
+          "name": "Amy Winehouse",
+          "id": "6Q192DXotxtaysaqNPy5yR"
+        }
+      ],
+      "track": {
+        "id": "3FAclTFfvUuQYnEsptbK8w",
+        "name": "Back To Black"
+      }
+    },
+    "0pfOSr3PHdLqe9kHcoEPIL": {
+      "album": {
+        "id": "0pfOSr3PHdLqe9kHcoEPIL",
+        "name": "Colors",
+        "img": "https://i.scdn.co/image/ab67616d00001e02eeb668b40f24b2417943e211"
+      },
+      "artists": [
+        {
+          "name": "Laleh",
+          "id": "62QZPjYQMoo5g56FP9Webq"
+        }
+      ],
+      "track": {
+        "id": "7qA8S7mbV9uPy9rFprdN3C",
+        "name": "Goliat"
+      }
+    },
+    "7f4Mh7Lv8liYFDYQLw2g5T": {
+      "album": {
+        "id": "7f4Mh7Lv8liYFDYQLw2g5T",
+        "name": "Släpp in lite höst",
+        "img": "https://i.scdn.co/image/ab67616d00001e02c798f4d5a667e5456cf06dc0"
+      },
+      "artists": [
+        {
+          "name": "Henrik Dorsin",
+          "id": "26ELugcMgfqnLLFQHlhrSd"
+        },
+        {
+          "name": "Blåsarsymfonikerna",
+          "id": "1QhI7sZAIpUKdTxS3j0vRF"
+        }
+      ],
+      "track": {
+        "id": "4Q43RBPGJymRQHJCTSWXKz",
+        "name": "Släpp in lite höst"
+      }
+    },
+    "74s1xuJFJGvRCPjlh2d2oE": {
+      "album": {
+        "id": "74s1xuJFJGvRCPjlh2d2oE",
+        "name": "History, Mystery",
+        "img": "https://i.scdn.co/image/ab67616d00001e022ead318e165905a49a4eca81"
+      },
+      "artists": [
+        {
+          "name": "Bill Frisell",
+          "id": "3SONlwqLIP2GtaMh9pLYe5"
+        }
+      ],
+      "track": {
+        "id": "6Omr4zDMg6XokKVMtxStmw",
+        "name": "Probability Cloud"
+      }
+    }
+  }
+}

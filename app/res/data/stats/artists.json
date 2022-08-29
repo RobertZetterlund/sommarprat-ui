@@ -1,0 +1,414 @@
+{
+  "artists": [
+    {
+      "2005": {
+        "5aIqB5nVVvmFsvSdExz408": 6,
+        "62QZPjYQMoo5g56FP9Webq": 3,
+        "3WrFJ7ztbogyGnTHbHJFl2": 4,
+        "0LcJLqbBmaGUft1e9Mm8HV": 2,
+        "5B38ZGYpd0msq1LKOyz2r9": 4,
+        "7G1GBhoKtEPnP86X2PvEYO": 2,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 2,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 3,
+        "7mvvG63CNSY93JWAJ37rnD": 2
+      }
+    },
+    {
+      "2006": {
+        "5aIqB5nVVvmFsvSdExz408": 11,
+        "62QZPjYQMoo5g56FP9Webq": 5,
+        "3WrFJ7ztbogyGnTHbHJFl2": 7,
+        "0LcJLqbBmaGUft1e9Mm8HV": 4,
+        "5B38ZGYpd0msq1LKOyz2r9": 7,
+        "7G1GBhoKtEPnP86X2PvEYO": 4,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 7,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 6,
+        "7mvvG63CNSY93JWAJ37rnD": 8
+      }
+    },
+    {
+      "2007": {
+        "5aIqB5nVVvmFsvSdExz408": 13,
+        "62QZPjYQMoo5g56FP9Webq": 6,
+        "3WrFJ7ztbogyGnTHbHJFl2": 11,
+        "0LcJLqbBmaGUft1e9Mm8HV": 8,
+        "5B38ZGYpd0msq1LKOyz2r9": 13,
+        "7G1GBhoKtEPnP86X2PvEYO": 4,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 9,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 11,
+        "7mvvG63CNSY93JWAJ37rnD": 13
+      }
+    },
+    {
+      "2008": {
+        "5aIqB5nVVvmFsvSdExz408": 15,
+        "62QZPjYQMoo5g56FP9Webq": 9,
+        "3WrFJ7ztbogyGnTHbHJFl2": 25,
+        "0LcJLqbBmaGUft1e9Mm8HV": 11,
+        "5B38ZGYpd0msq1LKOyz2r9": 18,
+        "7G1GBhoKtEPnP86X2PvEYO": 6,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 15,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 14,
+        "7mvvG63CNSY93JWAJ37rnD": 15
+      }
+    },
+    {
+      "2009": {
+        "5aIqB5nVVvmFsvSdExz408": 23,
+        "62QZPjYQMoo5g56FP9Webq": 9,
+        "3WrFJ7ztbogyGnTHbHJFl2": 35,
+        "0LcJLqbBmaGUft1e9Mm8HV": 19,
+        "5B38ZGYpd0msq1LKOyz2r9": 18,
+        "7G1GBhoKtEPnP86X2PvEYO": 9,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 17,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 21,
+        "7mvvG63CNSY93JWAJ37rnD": 16
+      }
+    },
+    {
+      "2010": {
+        "5aIqB5nVVvmFsvSdExz408": 24,
+        "62QZPjYQMoo5g56FP9Webq": 10,
+        "3WrFJ7ztbogyGnTHbHJFl2": 47,
+        "0LcJLqbBmaGUft1e9Mm8HV": 22,
+        "5B38ZGYpd0msq1LKOyz2r9": 20,
+        "7G1GBhoKtEPnP86X2PvEYO": 13,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 21,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 28,
+        "7mvvG63CNSY93JWAJ37rnD": 25
+      }
+    },
+    {
+      "2011": {
+        "5aIqB5nVVvmFsvSdExz408": 31,
+        "62QZPjYQMoo5g56FP9Webq": 11,
+        "3WrFJ7ztbogyGnTHbHJFl2": 50,
+        "0LcJLqbBmaGUft1e9Mm8HV": 26,
+        "5B38ZGYpd0msq1LKOyz2r9": 27,
+        "7G1GBhoKtEPnP86X2PvEYO": 18,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 23,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 31,
+        "7mvvG63CNSY93JWAJ37rnD": 33
+      }
+    },
+    {
+      "2012": {
+        "5aIqB5nVVvmFsvSdExz408": 36,
+        "62QZPjYQMoo5g56FP9Webq": 16,
+        "3WrFJ7ztbogyGnTHbHJFl2": 61,
+        "0LcJLqbBmaGUft1e9Mm8HV": 28,
+        "5B38ZGYpd0msq1LKOyz2r9": 29,
+        "7G1GBhoKtEPnP86X2PvEYO": 20,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 25,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 32,
+        "7mvvG63CNSY93JWAJ37rnD": 36
+      }
+    },
+    {
+      "2013": {
+        "5aIqB5nVVvmFsvSdExz408": 40,
+        "62QZPjYQMoo5g56FP9Webq": 20,
+        "3WrFJ7ztbogyGnTHbHJFl2": 64,
+        "0LcJLqbBmaGUft1e9Mm8HV": 30,
+        "5B38ZGYpd0msq1LKOyz2r9": 37,
+        "7G1GBhoKtEPnP86X2PvEYO": 24,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 28,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 38,
+        "7mvvG63CNSY93JWAJ37rnD": 40,
+        "3SONlwqLIP2GtaMh9pLYe5": 3
+      }
+    },
+    {
+      "2014": {
+        "5aIqB5nVVvmFsvSdExz408": 40,
+        "62QZPjYQMoo5g56FP9Webq": 23,
+        "3WrFJ7ztbogyGnTHbHJFl2": 68,
+        "0LcJLqbBmaGUft1e9Mm8HV": 34,
+        "5B38ZGYpd0msq1LKOyz2r9": 40,
+        "7G1GBhoKtEPnP86X2PvEYO": 24,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 31,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 40,
+        "7mvvG63CNSY93JWAJ37rnD": 42,
+        "3SONlwqLIP2GtaMh9pLYe5": 10
+      }
+    },
+    {
+      "2015": {
+        "5aIqB5nVVvmFsvSdExz408": 42,
+        "62QZPjYQMoo5g56FP9Webq": 29,
+        "3WrFJ7ztbogyGnTHbHJFl2": 71,
+        "0LcJLqbBmaGUft1e9Mm8HV": 38,
+        "5B38ZGYpd0msq1LKOyz2r9": 42,
+        "7G1GBhoKtEPnP86X2PvEYO": 30,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 33,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 44,
+        "7mvvG63CNSY93JWAJ37rnD": 46,
+        "3SONlwqLIP2GtaMh9pLYe5": 16
+      }
+    },
+    {
+      "2016": {
+        "5aIqB5nVVvmFsvSdExz408": 42,
+        "62QZPjYQMoo5g56FP9Webq": 38,
+        "3WrFJ7ztbogyGnTHbHJFl2": 77,
+        "0LcJLqbBmaGUft1e9Mm8HV": 41,
+        "5B38ZGYpd0msq1LKOyz2r9": 42,
+        "7G1GBhoKtEPnP86X2PvEYO": 36,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 38,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 50,
+        "7mvvG63CNSY93JWAJ37rnD": 49,
+        "3SONlwqLIP2GtaMh9pLYe5": 25
+      }
+    },
+    {
+      "2017": {
+        "5aIqB5nVVvmFsvSdExz408": 44,
+        "62QZPjYQMoo5g56FP9Webq": 43,
+        "3WrFJ7ztbogyGnTHbHJFl2": 85,
+        "0LcJLqbBmaGUft1e9Mm8HV": 47,
+        "5B38ZGYpd0msq1LKOyz2r9": 46,
+        "7G1GBhoKtEPnP86X2PvEYO": 45,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 44,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 54,
+        "7mvvG63CNSY93JWAJ37rnD": 52,
+        "3SONlwqLIP2GtaMh9pLYe5": 34
+      }
+    },
+    {
+      "2018": {
+        "5aIqB5nVVvmFsvSdExz408": 49,
+        "62QZPjYQMoo5g56FP9Webq": 50,
+        "3WrFJ7ztbogyGnTHbHJFl2": 88,
+        "0LcJLqbBmaGUft1e9Mm8HV": 49,
+        "5B38ZGYpd0msq1LKOyz2r9": 48,
+        "7G1GBhoKtEPnP86X2PvEYO": 49,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 50,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 60,
+        "7mvvG63CNSY93JWAJ37rnD": 55,
+        "3SONlwqLIP2GtaMh9pLYe5": 44
+      }
+    },
+    {
+      "2019": {
+        "5aIqB5nVVvmFsvSdExz408": 52,
+        "62QZPjYQMoo5g56FP9Webq": 54,
+        "3WrFJ7ztbogyGnTHbHJFl2": 96,
+        "0LcJLqbBmaGUft1e9Mm8HV": 53,
+        "5B38ZGYpd0msq1LKOyz2r9": 51,
+        "7G1GBhoKtEPnP86X2PvEYO": 59,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 56,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 60,
+        "7mvvG63CNSY93JWAJ37rnD": 59,
+        "3SONlwqLIP2GtaMh9pLYe5": 53
+      }
+    },
+    {
+      "2020": {
+        "5aIqB5nVVvmFsvSdExz408": 58,
+        "62QZPjYQMoo5g56FP9Webq": 63,
+        "3WrFJ7ztbogyGnTHbHJFl2": 103,
+        "0LcJLqbBmaGUft1e9Mm8HV": 56,
+        "5B38ZGYpd0msq1LKOyz2r9": 56,
+        "7G1GBhoKtEPnP86X2PvEYO": 68,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 57,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 63,
+        "7mvvG63CNSY93JWAJ37rnD": 63,
+        "3SONlwqLIP2GtaMh9pLYe5": 56
+      }
+    },
+    {
+      "2021": {
+        "5aIqB5nVVvmFsvSdExz408": 61,
+        "62QZPjYQMoo5g56FP9Webq": 69,
+        "3WrFJ7ztbogyGnTHbHJFl2": 105,
+        "0LcJLqbBmaGUft1e9Mm8HV": 58,
+        "5B38ZGYpd0msq1LKOyz2r9": 62,
+        "7G1GBhoKtEPnP86X2PvEYO": 70,
+        "0oSGxfWSnnOXhD2fKuz2Gy": 60,
+        "1Mxqyy3pSjf8kZZL4QVxS0": 63,
+        "7mvvG63CNSY93JWAJ37rnD": 64,
+        "3SONlwqLIP2GtaMh9pLYe5": 64
+      }
+    }
+  ],
+  "meta": {
+    "5aIqB5nVVvmFsvSdExz408": {
+      "album": {
+        "id": "4SHPSTGeiSA8d1o6lm3Dlw",
+        "name": "Bach: Greatest Hits",
+        "img": "https://i.scdn.co/image/ab67616d00001e02ba2ba80bd74989b088282b52"
+      },
+      "artists": [
+        {
+          "name": "Johann Sebastian Bach",
+          "id": "5aIqB5nVVvmFsvSdExz408"
+        },
+        {
+          "name": "Raymond Leppard",
+          "id": "6RX3X6dI939ANy78YXqWXT"
+        },
+        {
+          "name": "English Chamber Orchestra",
+          "id": "2DO4p3CPDnInsJfg0jFfaF"
+        }
+      ],
+      "track": {
+        "id": "0nBsOGDIIByflMenfQVBBX",
+        "name": "Orchestral Suite No. 3 in D Major, BWV 1068: II. Air"
+      }
+    },
+    "62QZPjYQMoo5g56FP9Webq": {
+      "album": {
+        "id": "1YqHIqrWx3eopxKFPqjqhT",
+        "name": "Sjung",
+        "img": "https://i.scdn.co/image/ab67616d00001e026494a5592cca561ea52f6541"
+      },
+      "artists": [
+        {
+          "name": "Laleh",
+          "id": "62QZPjYQMoo5g56FP9Webq"
+        }
+      ],
+      "track": {
+        "id": "2bfRfAO1RNWcpNtWJv042o",
+        "name": "Some Die Young"
+      }
+    },
+    "3WrFJ7ztbogyGnTHbHJFl2": {
+      "album": {
+        "id": "0ETFjACtuP2ADo6LFhL6HN",
+        "name": "Abbey Road (Remastered)",
+        "img": "https://i.scdn.co/image/ab67616d00001e02dc30583ba717007b00cceb25"
+      },
+      "artists": [
+        {
+          "name": "The Beatles",
+          "id": "3WrFJ7ztbogyGnTHbHJFl2"
+        }
+      ],
+      "track": {
+        "id": "6dGnYIeXmHdcikdzNNDMm2",
+        "name": "Here Comes The Sun - Remastered 2009"
+      }
+    },
+    "0LcJLqbBmaGUft1e9Mm8HV": {
+      "album": {
+        "id": "7iLuHJkrb9KHPkMgddYigh",
+        "name": "Voulez-Vous",
+        "img": "https://i.scdn.co/image/ab67616d00001e02aa22899360d8ba6704732dec"
+      },
+      "artists": [
+        {
+          "name": "ABBA",
+          "id": "0LcJLqbBmaGUft1e9Mm8HV"
+        }
+      ],
+      "track": {
+        "id": "3R47KOuGuGvmoeQqbODPa3",
+        "name": "If It Wasn't For The Nights"
+      }
+    },
+    "5B38ZGYpd0msq1LKOyz2r9": {
+      "album": {
+        "id": "5KoclB3QR9GWTPBQcKj5R9",
+        "name": "En fattig trubadur",
+        "img": "https://i.scdn.co/image/ab67616d00001e02dfe52dab7427e3de74b33f3e"
+      },
+      "artists": [
+        {
+          "name": "Cornelis Vreeswijk",
+          "id": "5B38ZGYpd0msq1LKOyz2r9"
+        }
+      ],
+      "track": {
+        "id": "0P5wCXpGqItUpYbj2bUK0d",
+        "name": "Sommarkort"
+      }
+    },
+    "7G1GBhoKtEPnP86X2PvEYO": {
+      "album": {
+        "id": "2miVfa78vOd0o8Vbsgd7g3",
+        "name": "Silk & Soul (Expanded Edition)",
+        "img": "https://i.scdn.co/image/ab67616d00001e020cf2e3d1e85c5bd6d7bedee0"
+      },
+      "artists": [
+        {
+          "name": "Nina Simone",
+          "id": "7G1GBhoKtEPnP86X2PvEYO"
+        }
+      ],
+      "track": {
+        "id": "5CKHhg31HcYYhwUeeGqvhq",
+        "name": "I Wish I Knew How It Would Feel to Be Free"
+      }
+    },
+    "0oSGxfWSnnOXhD2fKuz2Gy": {
+      "album": {
+        "id": "5fxvWHvIDPIALfTfRiwyB0",
+        "name": "Scary Monsters (And Super Creeps) [2017 Remaster]",
+        "img": "https://i.scdn.co/image/ab67616d00001e02b62b49cec67e610f6f3d1221"
+      },
+      "artists": [
+        {
+          "name": "David Bowie",
+          "id": "0oSGxfWSnnOXhD2fKuz2Gy"
+        }
+      ],
+      "track": {
+        "id": "37CRPk0L5ZpfPeePEPwE0t",
+        "name": "Ashes to Ashes - 2017 Remaster"
+      }
+    },
+    "1Mxqyy3pSjf8kZZL4QVxS0": {
+      "album": {
+        "id": "66v9QmjAj0Wwhh2OpbU4BE",
+        "name": "Come Fly With Me (Remastered)",
+        "img": "https://i.scdn.co/image/ab67616d00001e02068a5559744d17bd5e871740"
+      },
+      "artists": [
+        {
+          "name": "Frank Sinatra",
+          "id": "1Mxqyy3pSjf8kZZL4QVxS0"
+        }
+      ],
+      "track": {
+        "id": "4hHbeIIKO5Y5uLyIEbY9Gn",
+        "name": "Come Fly With Me - Remastered 1998"
+      }
+    },
+    "7mvvG63CNSY93JWAJ37rnD": {
+      "album": {
+        "id": "2LaTtgxHN1GgPAY6DiSvCI",
+        "name": "Gröna små äpplen",
+        "img": "https://i.scdn.co/image/ab67616d00001e02a9db86fbb61e5eed80bf2d37"
+      },
+      "artists": [
+        {
+          "name": "Monica Zetterlund",
+          "id": "7mvvG63CNSY93JWAJ37rnD"
+        }
+      ],
+      "track": {
+        "id": "0dtE42FDoz08Aa9i7EWUI2",
+        "name": "Gröna små äpplen"
+      }
+    },
+    "3SONlwqLIP2GtaMh9pLYe5": {
+      "album": {
+        "id": "74s1xuJFJGvRCPjlh2d2oE",
+        "name": "History, Mystery",
+        "img": "https://i.scdn.co/image/ab67616d00001e022ead318e165905a49a4eca81"
+      },
+      "artists": [
+        {
+          "name": "Bill Frisell",
+          "id": "3SONlwqLIP2GtaMh9pLYe5"
+        }
+      ],
+      "track": {
+        "id": "6Omr4zDMg6XokKVMtxStmw",
+        "name": "Probability Cloud"
+      }
+    }
+  }
+}

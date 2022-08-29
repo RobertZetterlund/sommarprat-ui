@@ -32,7 +32,7 @@ export default function handleRequest(
           // TODO(robertz): get default-src none;
           responseHeaders.set(
             "Content-Security-Policy",
-            "img-src 'self' https://static-cdn.sr.se/; font-src 'self'; object-src 'none';"
+            "img-src 'self' https://static-cdn.sr.se/ https://i.scdn.co/image/; font-src 'self'; object-src 'none';"
           );
 
           responseHeaders.set("X-Frame-Options", "SAMEORIGIN");

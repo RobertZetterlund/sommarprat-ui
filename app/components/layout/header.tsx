@@ -4,7 +4,7 @@ import logo from "../../res/images/midsommarkrans.png";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-10 w-full bg-blue-400">
+    <header className="fixed top-0 z-10 w-full backdrop-blur">
       <nav className="align-center flex justify-between px-4 py-2">
         <Link
           to={"."}

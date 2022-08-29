@@ -33,13 +33,12 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="flex h-full min-h-screen w-full flex-col justify-between overscroll-x-none text-stone-800">
+      <body className="flex h-full w-full flex-col justify-between overscroll-x-none text-stone-800">
         <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
-        <Footer />
       </body>
     </html>
   );

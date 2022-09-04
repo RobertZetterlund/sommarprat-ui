@@ -17,6 +17,7 @@ import twokeighteen from "~/res/data/2018.json";
 import twoknineteen from "~/res/data/2019.json";
 import twoktwenty from "~/res/data/2020.json";
 import twoktwentyone from "~/res/data/2021.json";
+import twoktwentytwo from "~/res/data/2022.json";
 
 const AllYears = {
   "2005": twokfive,
@@ -36,6 +37,7 @@ const AllYears = {
   "2019": twoknineteen,
   "2020": twoktwenty,
   "2021": twoktwentyone,
+  "2022": twoktwentytwo,
 };
 
 const db = new PrismaClient();

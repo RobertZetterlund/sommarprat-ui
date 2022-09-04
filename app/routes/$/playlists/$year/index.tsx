@@ -29,7 +29,7 @@ type LoaderData = {
 export const loader: LoaderFunction = async ({ params }) => {
   const year = params.year ? parseInt(params.year) : NaN;
 
-  if (isNaN(year) || year < 2005 || year > 2021) {
+  if (isNaN(year) || year < 2005) {
     throw new Response("Year not found.", {
       status: 404,
     });
@@ -39,6 +39,12 @@ export const loader: LoaderFunction = async ({ params }) => {
     where: { yearAired: year },
     select,
   });
+
+  if (episodes.length === 0) {
+    throw new Response("Year not found.", {
+      status: 404,
+    });
+  }
 
   const sortedEpisodes = episodes.sort((a, b) => a.date.localeCompare(b.date));
 
@@ -72,16 +78,17 @@ export default function Playlists() {
               />
               <div className="absolute top-0 left-0 flex h-0 w-full flex-col items-end justify-between bg-gray-700 bg-opacity-0 p-2	duration-500 group-hover:h-full group-hover:bg-opacity-50">
                 <Link
-                  className="flex items-end rounded bg-slate-800 p-1 duration-100 hover:-translate-y-1"
+                  className="flex items-end duration-100 hover:-translate-y-1 hover:pb-1"
                   to={shortenPlayListId(playlistId)}
                 >
                   <svg
+                    className="rounded bg-slate-800 p-1"
                     stroke="white"
                     fill="white"
                     stroke-width="0"
                     viewBox="0 0 1024 1024"
-                    height="1.25em"
-                    width="1.25em"
+                    height="1.5em"
+                    width="1.5em"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>
@@ -134,6 +141,7 @@ export default function Playlists() {
 }
 
 export function CatchBoundary() {
+  const params = useParams();
   const caught = useCatch();
   switch (caught.status) {
     case 400: {
@@ -142,7 +150,7 @@ export function CatchBoundary() {
     case 404: {
       return (
         <ErrorBox
-          text={"SR started tracking the music in their API in the year 2005"}
+          text={`Unable to find year "${params.year}". SR started tracking the music in their API in the year 2005`}
           code={404}
         />
       );

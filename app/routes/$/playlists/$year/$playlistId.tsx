@@ -26,7 +26,7 @@ export const loader: LoaderFunction = async ({ params }) => {
   const year = params.year ? parseInt(params.year) : NaN;
   const playlistId = params.playlistId;
 
-  if (isNaN(year) || year < 2005 || year > 2021) {
+  if (isNaN(year)) {
     throw new Response("Year not found.", {
       status: 404,
     });
@@ -88,6 +88,7 @@ export default function Playlists() {
 
 export function CatchBoundary() {
   const caught = useCatch();
+  const params = useParams();
   switch (caught.status) {
     case 400: {
       return <ErrorBox text={"What you're trying to do is not allowed."} />;
@@ -95,7 +96,7 @@ export function CatchBoundary() {
     case 404: {
       return (
         <ErrorBox
-          text={"You're looking for something that does not exist"}
+          text={`You're looking for something that does not exist, could not find episode with id: "${params.playlistId}" `}
           code={404}
         />
       );

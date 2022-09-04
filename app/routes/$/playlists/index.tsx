@@ -22,8 +22,9 @@ export default function Playlists() {
   const { yearsAired } = useLoaderData<LoaderData>();
 
   return (
-    <div className="mb-auto w-full py-5 px-10">
-      <ul className="grid grid-cols-1 gap-4 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    <>
+      <h1 className="pb-4 text-4xl text-slate-100">Alla Spellistor</h1>
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {yearsAired.map((year) => (
           <li key={year} className="w-full overflow-hidden rounded shadow-lg">
             <Link to={String(year)}>
@@ -38,6 +39,6 @@ export default function Playlists() {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }

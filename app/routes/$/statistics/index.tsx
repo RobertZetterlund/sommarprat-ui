@@ -9,9 +9,9 @@ import {
 
 export default () => {
   return (
-    <div className="px-4 pt-10">
-      <div className="flex flex-col  p-4 text-slate-100">
-        <h2 className="mb-3 text-2xl text-slate-100">Mest spelade albumen.</h2>
+    <>
+      <div className="flex flex-col text-slate-100">
+        <h2 className="mb-3 text-2xl">Mest spelade albumen.</h2>
         <Bar
           items={Object.values(albums)
             .sort((itemA, itemB) => itemB.count - itemA.count)
@@ -31,8 +31,8 @@ export default () => {
             }))}
         />
       </div>
-      <div className="flex flex-col  p-4 text-slate-100">
-        <h2 className="mb-3 text-2xl text-slate-100">Mest spelade låtarna.</h2>
+      <div className="flex flex-col text-slate-100">
+        <h2 className="mb-3 text-2xl">Mest spelade låtarna.</h2>
         <Bar
           items={Object.values(tracks)
             .sort((itemA, itemB) => itemB.count - itemA.count)
@@ -52,10 +52,8 @@ export default () => {
             }))}
         />
       </div>
-      <div className="flex flex-col  p-4 text-slate-100">
-        <h2 className="mb-3 text-2xl text-slate-100">
-          Mest spelade artisterna.
-        </h2>
+      <div className="flex flex-col text-slate-100">
+        <h2 className="mb-3 text-2xl">Mest spelade artisterna.</h2>
         <Bar
           items={Object.values(artists)
             .sort((itemA, itemB) => itemB.count - itemA.count)
@@ -71,7 +69,7 @@ export default () => {
             }))}
         />
       </div>
-    </div>
+    </>
   );
 };
 

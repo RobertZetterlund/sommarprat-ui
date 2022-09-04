@@ -2,6 +2,7 @@ import { useState, useCallback, useMemo, useRef } from "react";
 import type { ReactNode } from "react";
 import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
 import { useSpring, animated } from "@react-spring/web";
+import useElementSize from "../../../../hooks/useElementSize";
 
 interface BarItem {
   id: string;
@@ -15,8 +16,10 @@ export const Bar = ({ items }: { items: BarItem[] }) => {
     () => Math.max(...items.map((i) => i.value)),
     [items]
   );
-  const ref = useRef<HTMLTableElement>(null);
-  const observer = useIntersectionObserver(ref, {
+
+  const inViewRef = useRef<HTMLDivElement>(null);
+  const [sizeRef, { height }] = useElementSize();
+  const observer = useIntersectionObserver(inViewRef, {
     freezeOnceVisible: true,
     threshold: 0.05,
   });
@@ -34,7 +37,7 @@ export const Bar = ({ items }: { items: BarItem[] }) => {
   const [showMore, setShowMore] = useState<boolean>(false);
 
   const tableStyles = useSpring({
-    height: showMore ? ref.current?.scrollHeight : 500,
+    height: showMore ? height : 500,
     config: {
       duration: 1000,
     },
@@ -48,8 +51,12 @@ export const Bar = ({ items }: { items: BarItem[] }) => {
   });
 
   return (
-    <animated.div style={tableStyles} className="relative overflow-hidden">
-      <table ref={ref} className="w-full">
+    <animated.div
+      ref={inViewRef}
+      style={tableStyles}
+      className="relative overflow-hidden"
+    >
+      <table ref={sizeRef} className="w-full">
         <tbody>
           {items.map((item) => (
             <tr
@@ -59,7 +66,7 @@ export const Bar = ({ items }: { items: BarItem[] }) => {
               <td className="pb-2 md:w-[40%] md:text-right">{item.label}</td>
               <td className="flex w-full items-center gap-1 self-end pb-2">
                 <span
-                  className="inline-block h-4 w-4 rounded bg-gradient-to-tr from-yellow-500 to-yellow-300 transition-[width] delay-300 duration-500"
+                  className="inline-block h-4 w-4 rounded bg-gradient-to-tr from-yellow-500 to-yellow-300 transition-[width] delay-100 duration-500"
                   style={style(item)}
                 />
                 <span
@@ -74,13 +81,15 @@ export const Bar = ({ items }: { items: BarItem[] }) => {
         </tbody>
       </table>
       <animated.div
-        className={`absolute bottom-0 flex h-16 w-full items-center justify-center bg-gradient-to-t from-slate-400 ${
+        className={`absolute bottom-0 flex h-16 w-full items-center justify-center rounded bg-gradient-to-t from-slate-400 ${
           showMore && "pointer-events-none"
         }`}
         style={buttonStyles}
       >
         <button className="h-full w-full" onClick={() => setShowMore(true)}>
-          show more
+          <span className="rounded border bg-[#1b3e6a] px-4 hover:opacity-95">
+            Expandera
+          </span>
         </button>
       </animated.div>
     </animated.div>

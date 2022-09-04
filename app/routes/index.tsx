@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <div className="bg-[#236C02]">
       <Parallax pages={2} ref={ref}>
-        <ParallaxLayer sticky={{ start: 0, end: 2 }}>
+        <ParallaxLayer sticky={{ start: 0, end: 2 }} style={{ height: 40 }}>
           <Header />
         </ParallaxLayer>
         <ParallaxLayer offset={0.02} speed={-0.5} factor={1}>

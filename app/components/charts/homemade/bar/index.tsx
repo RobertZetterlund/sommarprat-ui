@@ -38,7 +38,7 @@ export const Bar = ({ items }: { items: BarItem[] }) => {
             key={item.id}
             className="flex flex-col justify-center gap-1 md:flex-row md:items-center"
           >
-            <td className="pb-2 text-right md:w-[40%]">{item.label}</td>
+            <td className="pb-2 md:w-[40%] md:text-right">{item.label}</td>
             <td className="flex w-full items-center gap-1 self-end pb-2">
               <span
                 className="inline-block h-4 w-4 rounded bg-gradient-to-tr from-yellow-500 to-yellow-300 transition-[width] delay-300 duration-500"

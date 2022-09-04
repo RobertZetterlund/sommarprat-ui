@@ -55,7 +55,7 @@ export const EmbedSpotify = ({
   type: "artist" | "playlist" | "track" | "album";
 }) => (
   <iframe
-    className="self-start rounded-md md:self-end"
+    className="-order-1 self-start rounded-md md:order-10 md:self-end"
     title={title}
     src={`https://open.spotify.com/embed/${type}/${id}?utm_source=generator`}
     width="80"

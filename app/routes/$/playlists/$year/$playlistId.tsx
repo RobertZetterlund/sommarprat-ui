@@ -2,6 +2,7 @@ import type { Episode } from "@prisma/client";
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useCatch, useLoaderData, useParams } from "@remix-run/react";
+import { ErrorBox } from "../../../../components/error";
 import { db } from "../../../../utils/db.server";
 
 const EpisodeLoaderDataSelections: (keyof Episode)[] = [
@@ -31,20 +32,26 @@ export const loader: LoaderFunction = async ({ params }) => {
     });
   }
 
+  if (!playlistId || playlistId.length < 5) {
+    throw new Response("Episode not found.", {
+      status: 404,
+    });
+  }
+
   const episode = await db.episode.findFirst({
     where: { yearAired: year, playlistId: { contains: playlistId } },
     select,
   });
 
+  if (!episode) {
+    throw new Response("Episode not found.", {
+      status: 404,
+    });
+  }
+
   return json({ episode });
 };
 
-// Maybe embed
-/**
- * <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3VGmQvnsGwB9DpVGG73eor?utm_source=generator"
- * width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen;
- * picture-in-picture" loading="lazy"></iframe>
- */
 export default function Playlists() {
   const { episode } = useLoaderData<LoaderData>();
 
@@ -58,7 +65,12 @@ export default function Playlists() {
       />
 
       <div>
-        <h1 className="text-3xl text-slate-100">{episode.title}</h1>
+        <a
+          href={episode.episodeUrl}
+          className="text-3xl text-slate-100 hover:underline"
+        >
+          {episode.title}
+        </a>
       </div>
       <iframe
         title={episode.title}
@@ -69,28 +81,23 @@ export default function Playlists() {
         frameBorder="0"
         allowFullScreen={false}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      ></iframe>
+      />
     </div>
   );
 }
 
 export function CatchBoundary() {
   const caught = useCatch();
-  const params = useParams();
   switch (caught.status) {
     case 400: {
-      return (
-        <div className="error-container">
-          What you're trying to do is not allowed.
-        </div>
-      );
+      return <ErrorBox text={"What you're trying to do is not allowed."} />;
     }
     case 404: {
       return (
-        <div className="error-container">
-          SR started tracking the music in their API 2005, so I can't help you
-          with whatever this is ---{">"} {params.year}.
-        </div>
+        <ErrorBox
+          text={"You're looking for something that does not exist"}
+          code={404}
+        />
       );
     }
     default: {
@@ -100,10 +107,6 @@ export function CatchBoundary() {
 }
 
 export function ErrorBoundary({ error }: { error: Error }) {
-  console.error(error);
-
   const { year } = useParams();
-  return (
-    <div className="error-container">{`There was an error loading year ${year}. Sorry.`}</div>
-  );
+  return <ErrorBox text={`There was an error loading year ${year}. Sorry.`} />;
 }

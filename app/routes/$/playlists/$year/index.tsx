@@ -5,6 +5,8 @@ import { Link, useCatch, useLoaderData, useParams } from "@remix-run/react";
 import { db } from "../../../../utils/db.server";
 import SpotifyLogo from "../../../../res/images/spotify.svg";
 import SRLogo from "../../../../res/images/SR.svg";
+import { ErrorBox } from "../../../../components/error";
+import { shortenPlayListId } from "../../../../utils/links";
 
 const EpisodeLoaderDataSelections: (keyof Episode)[] = [
   "title",
@@ -54,7 +56,7 @@ export default function Playlists() {
 
   return (
     <>
-      <h1 className="text-4xl text-slate-100">{year}</h1>
+      <h1 className="text-4xl text-slate-100">Sommarpratare {year}</h1>
       <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {episodes.map(({ title, playlistId, imageurl, date, episodeUrl }) => (
           <li
@@ -71,7 +73,7 @@ export default function Playlists() {
               <div className="absolute top-0 left-0 flex h-0 w-full flex-col items-end justify-between bg-gray-700 bg-opacity-0 p-2	duration-500 group-hover:h-full group-hover:bg-opacity-50">
                 <Link
                   className="flex items-end rounded bg-slate-800 p-1 duration-100 hover:-translate-y-1"
-                  to={playlistId.slice(0, 6)}
+                  to={shortenPlayListId(playlistId)}
                 >
                   <svg
                     stroke="white"
@@ -117,7 +119,7 @@ export default function Playlists() {
 
             <div className="flex flex-col px-2 py-1">
               <Link
-                to={playlistId.slice(0, 6)}
+                to={shortenPlayListId(playlistId)}
                 className="text-slate-100 hover:underline"
               >
                 <span className="text-xl font-bold">{title}</span>
@@ -133,21 +135,16 @@ export default function Playlists() {
 
 export function CatchBoundary() {
   const caught = useCatch();
-  const params = useParams();
   switch (caught.status) {
     case 400: {
-      return (
-        <div className="error-container">
-          What you're trying to do is not allowed.
-        </div>
-      );
+      return <ErrorBox text={"What you're trying to do is not allowed."} />;
     }
     case 404: {
       return (
-        <div className="error-container">
-          SR started tracking the music in their API 2005, so I can't help you
-          with whatever this is ---{">"} {params.year}.
-        </div>
+        <ErrorBox
+          text={"SR started tracking the music in their API in the year 2005"}
+          code={404}
+        />
       );
     }
     default: {
@@ -160,7 +157,5 @@ export function ErrorBoundary({ error }: { error: Error }) {
   console.error(error);
 
   const { year } = useParams();
-  return (
-    <div className="error-container">{`There was an error loading year ${year}. Sorry.`}</div>
-  );
+  return <ErrorBox text={`There was an error loading year ${year}. Sorry.`} />;
 }

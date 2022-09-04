@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 
-import logo from "../../res/images/midsommarkrans.png";
+import logo from "../../res/images/logo.png";
 
 export const Header = () => {
   return (

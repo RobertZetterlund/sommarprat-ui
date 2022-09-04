@@ -10,7 +10,7 @@ import {
 export default () => {
   return (
     <>
-      <div className="flex flex-col text-slate-100">
+      <div className="flex w-full flex-col text-slate-100">
         <h1 className="mb-3 text-4xl">Mest spelade albumen.</h1>
         <Bar
           color="yellow"
@@ -32,7 +32,7 @@ export default () => {
             }))}
         />
       </div>
-      <div className="flex flex-col text-slate-100">
+      <div className="flex w-full flex-col text-slate-100">
         <h1 className="mb-3 text-4xl">Mest spelade låtarna.</h1>
         <Bar
           color="orange"
@@ -54,7 +54,7 @@ export default () => {
             }))}
         />
       </div>
-      <div className="flex flex-col text-slate-100">
+      <div className="flex w-full flex-col text-slate-100">
         <h1 className="mb-3 text-4xl">Mest spelade artisterna.</h1>
         <Bar
           color="red"

@@ -54,7 +54,7 @@ export default function Playlists() {
 
   return (
     <>
-      <h1 className="pb-4 text-4xl text-slate-100">{year}</h1>
+      <h1 className="text-4xl text-slate-100">{year}</h1>
       <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {episodes.map(({ title, playlistId, imageurl, date, episodeUrl }) => (
           <li

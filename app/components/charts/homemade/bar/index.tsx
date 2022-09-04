@@ -11,7 +11,20 @@ interface BarItem {
   tooltip?: ReactNode;
 }
 
-export const Bar = ({ items }: { items: BarItem[] }) => {
+// Urgh, this is kinda how it is done in tailwind???
+const barColors = {
+  orange: "from-orange-500 to-orange-300",
+  red: "from-red-500 to-red-300",
+  yellow: "from-yellow-500 to-yellow-300",
+} as const;
+
+export const Bar = ({
+  items,
+  color,
+}: {
+  items: BarItem[];
+  color: "orange" | "red" | "yellow";
+}) => {
   const maxValue = useMemo(
     () => Math.max(...items.map((i) => i.value)),
     [items]
@@ -66,7 +79,7 @@ export const Bar = ({ items }: { items: BarItem[] }) => {
               <td className="pb-2 md:w-[40%] md:text-right">{item.label}</td>
               <td className="flex w-full items-center gap-1 self-end pb-2">
                 <span
-                  className="inline-block h-4 w-4 rounded bg-gradient-to-tr from-yellow-500 to-yellow-300 transition-[width] delay-100 duration-500"
+                  className={`inline-block h-4 w-4 rounded bg-gradient-to-tr ${barColors[color]} transition-[width] delay-100 duration-500`}
                   style={style(item)}
                 />
                 <span
@@ -81,13 +94,16 @@ export const Bar = ({ items }: { items: BarItem[] }) => {
         </tbody>
       </table>
       <animated.div
-        className={`absolute bottom-0 flex h-16 w-full items-center justify-center rounded bg-gradient-to-t from-slate-400 ${
+        className={`absolute bottom-0 flex h-24 w-full items-center justify-center rounded bg-gradient-to-t from-[#1b3e6a] ${
           showMore && "pointer-events-none"
         }`}
         style={buttonStyles}
       >
-        <button className="h-full w-full" onClick={() => setShowMore(true)}>
-          <span className="rounded border bg-[#1b3e6a] px-4 hover:opacity-95">
+        <button
+          className="flex h-full w-full items-end justify-center"
+          onClick={() => setShowMore(true)}
+        >
+          <span className="rounded border px-4 hover:opacity-95">
             Expandera
           </span>
         </button>

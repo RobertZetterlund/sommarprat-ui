@@ -11,8 +11,9 @@ export default () => {
   return (
     <>
       <div className="flex flex-col text-slate-100">
-        <h2 className="mb-3 text-2xl">Mest spelade albumen.</h2>
+        <h1 className="mb-3 text-4xl">Mest spelade albumen.</h1>
         <Bar
+          color="yellow"
           items={Object.values(albums)
             .sort((itemA, itemB) => itemB.count - itemA.count)
             .map((item) => ({
@@ -32,8 +33,9 @@ export default () => {
         />
       </div>
       <div className="flex flex-col text-slate-100">
-        <h2 className="mb-3 text-2xl">Mest spelade låtarna.</h2>
+        <h1 className="mb-3 text-4xl">Mest spelade låtarna.</h1>
         <Bar
+          color="orange"
           items={Object.values(tracks)
             .sort((itemA, itemB) => itemB.count - itemA.count)
             .map((item) => ({
@@ -53,8 +55,9 @@ export default () => {
         />
       </div>
       <div className="flex flex-col text-slate-100">
-        <h2 className="mb-3 text-2xl">Mest spelade artisterna.</h2>
+        <h1 className="mb-3 text-4xl">Mest spelade artisterna.</h1>
         <Bar
+          color="red"
           items={Object.values(artists)
             .sort((itemA, itemB) => itemB.count - itemA.count)
             .map((item) => ({

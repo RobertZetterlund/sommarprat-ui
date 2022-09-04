@@ -13,7 +13,9 @@ export const loader: LoaderFunction = async () => {
     await db.episode.groupBy({
       by: ["yearAired"],
     })
-  ).map((ep) => ep.yearAired);
+  )
+    .map((ep) => ep.yearAired)
+    .sort((epA, epB) => epB - epA);
 
   return json({ yearsAired });
 };

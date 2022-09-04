@@ -13,12 +13,21 @@ export const Header = () => {
           <img width={24} height={24} src={logo} alt="Midsommarkrans" />
           Sommarprat-UI
         </Link>
-        <Link
-          to={"/playlists"}
-          className="w-fit whitespace-nowrap text-sm text-slate-100 underline"
-        >
-          Spellistor
-        </Link>
+        <div className="flex gap-2">
+          <Link
+            to={"/playlists"}
+            className="w-fit whitespace-nowrap text-sm text-slate-100 underline"
+          >
+            Spellistor
+          </Link>
+
+          <Link
+            to={"/statistics"}
+            className="w-fit whitespace-nowrap text-sm text-slate-100 underline"
+          >
+            Statistik
+          </Link>
+        </div>
       </nav>
     </header>
   );

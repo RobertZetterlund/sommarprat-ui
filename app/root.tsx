@@ -10,8 +10,6 @@ import {
 
 import tailwind from "./tailwind.css";
 import globalstyles from "./styles/global.css";
-import { Header } from "./components/layout/header";
-import { Footer } from "./components/layout/footer";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
@@ -28,13 +26,12 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html lang="en" className="bg-blue-400">
+    <html lang="en" className="bg-[#1b3e6a]">
       <head>
         <Meta />
         <Links />
       </head>
       <body className="flex h-full w-full flex-col justify-between overscroll-x-none text-stone-800">
-        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

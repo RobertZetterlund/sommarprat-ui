@@ -2,9 +2,9 @@ import type { Episode } from "@prisma/client";
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useCatch, useLoaderData, useParams } from "@remix-run/react";
-import { db } from "../../utils/db.server";
-import SpotifyLogo from "../../res/images/spotify.svg";
-import SRLogo from "../../res/images/SR.svg";
+import { db } from "../../../utils/db.server";
+import SpotifyLogo from "../../../res/images/spotify.svg";
+import SRLogo from "../../../res/images/SR.svg";
 
 const EpisodeLoaderDataSelections: (keyof Episode)[] = [
   "title",
@@ -43,6 +43,12 @@ export const loader: LoaderFunction = async ({ params }) => {
   return json({ episodes: sortedEpisodes, year });
 };
 
+// Maybe embed
+/**
+ * <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3VGmQvnsGwB9DpVGG73eor?utm_source=generator"
+ * width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen;
+ * picture-in-picture" loading="lazy"></iframe>
+ */
 export default function Playlists() {
   const { episodes, year } = useLoaderData<LoaderData>();
 

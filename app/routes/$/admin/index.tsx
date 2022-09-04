@@ -1,7 +1,7 @@
 import type { Episode } from "@prisma/client";
 import { Form } from "@remix-run/react";
 import type { ActionFunction } from "@remix-run/server-runtime";
-import { db } from "../../utils/db.server";
+import { db } from "../../../utils/db.server";
 
 export const action: ActionFunction = async ({ request }) => {
   const form = await request.formData();

@@ -20,7 +20,7 @@ export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Sommarprat-UI",
   description: "A collection of spotify playlists from Sommar I P1",
-  theme: "#60a5fa",
+  theme: "#1b3e6a",
   viewport: "width=device-width,initial-scale=1",
 });
 

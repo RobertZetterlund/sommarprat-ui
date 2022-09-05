@@ -32,7 +32,7 @@ export default function Playlists() {
             <Link to={String(year)}>
               <img
                 src={`/thumbnails/${year}.jpg`}
-                className="aspect-square w-full"
+                className="aspect-square w-full object-cover"
                 alt={`Collection of hosts year ${year}`}
                 loading="lazy"
               />

@@ -72,7 +72,7 @@ export default function Playlists() {
             <div className="group relative">
               <img
                 src={imageurl}
-                className="aspect-square w-full"
+                className="aspect-square w-full object-cover"
                 alt={`${title} wearing a midsommarkrans most likely`}
                 loading="lazy"
               />

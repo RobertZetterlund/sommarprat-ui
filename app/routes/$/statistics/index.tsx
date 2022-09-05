@@ -93,7 +93,7 @@ const tracks = {
       id: "2FnUyLhe7sjXgnZlK9sc0z",
       name: "Bara Få Va Mig Själv",
     },
-    count: 9,
+    count: 10,
   },
   "0Zii0Q4Z17kd1XMB27CQ2t": {
     album: {
@@ -128,6 +128,42 @@ const tracks = {
     track: {
       id: "60nZcImufyMA1MKQY3dcCH",
       name: 'Happy - From "Despicable Me 2"',
+    },
+    count: 10,
+  },
+  "1uXbwHHfgsXcUKfSZw5ZJ0": {
+    album: {
+      id: "1gIC63gC3B7o7FfpPACZQJ",
+      name: "4",
+      img: "https://i.scdn.co/image/ab67616d00004851ff5429125128b43572dbdccd",
+    },
+    artists: [
+      {
+        name: "Beyoncé",
+        id: "6vWDO969PvNqNYHIOW5v0m",
+      },
+    ],
+    track: {
+      id: "1uXbwHHfgsXcUKfSZw5ZJ0",
+      name: "Run the World (Girls)",
+    },
+    count: 11,
+  },
+  "0nrRP2bk19rLc0orkWPQk2": {
+    album: {
+      id: "2H6i2CrWgXE1HookLu8Au0",
+      name: "True",
+      img: "https://i.scdn.co/image/ab67616d00004851e14f11f796cef9f9a82691a7",
+    },
+    artists: [
+      {
+        name: "Avicii",
+        id: "1vCWHaC5f2uS3yhpwWbIA6",
+      },
+    ],
+    track: {
+      id: "0nrRP2bk19rLc0orkWPQk2",
+      name: "Wake Me Up",
     },
     count: 10,
   },
@@ -241,7 +277,7 @@ const tracks = {
       id: "7LVHVU3tWfcxj5aiPFEW4Q",
       name: "Fix You",
     },
-    count: 13,
+    count: 14,
   },
   "5Z01UMMf7V1o0MzF86s6WJ": {
     album: {
@@ -277,25 +313,7 @@ const tracks = {
       id: "49CcYj1bsJ0fjkICI8hIrR",
       name: "Jag vill tacka Livet",
     },
-    count: 8,
-  },
-  "1mea3bSkSGXuIRvnydlB5b": {
-    album: {
-      id: "1CEODgTmTwLyabvwd7HBty",
-      name: "Viva La Vida or Death and All His Friends",
-      img: "https://i.scdn.co/image/ab67616d00004851e21cc1db05580b6f2d2a3b6e",
-    },
-    artists: [
-      {
-        name: "Coldplay",
-        id: "4gzpq5DPGxSnKTe4SA8HAU",
-      },
-    ],
-    track: {
-      id: "1mea3bSkSGXuIRvnydlB5b",
-      name: "Viva La Vida",
-    },
-    count: 8,
+    count: 9,
   },
   "7s25THrKz86DM225dOYwnr": {
     album: {
@@ -313,25 +331,7 @@ const tracks = {
       id: "7s25THrKz86DM225dOYwnr",
       name: "Respect",
     },
-    count: 11,
-  },
-  "3oEkrIfXfSh9zGnE7eBzSV": {
-    album: {
-      id: "3ZdkT5buYFi1WQaB0XNNtf",
-      name: "Super Trouper",
-      img: "https://i.scdn.co/image/ab67616d000048514d08fc99eff4ed52dfce91fa",
-    },
-    artists: [
-      {
-        name: "ABBA",
-        id: "0LcJLqbBmaGUft1e9Mm8HV",
-      },
-    ],
-    track: {
-      id: "3oEkrIfXfSh9zGnE7eBzSV",
-      name: "The Winner Takes It All",
-    },
-    count: 8,
+    count: 14,
   },
   "6wpGqhRvJGNNXwWlPmkMyO": {
     album: {
@@ -367,7 +367,7 @@ const tracks = {
       id: "2aoo2jlRnM3A0NyLQqMN2f",
       name: "All Along the Watchtower",
     },
-    count: 9,
+    count: 10,
   },
   "3X4JH0aBqKKAamYkpj5xer": {
     album: {
@@ -385,7 +385,7 @@ const tracks = {
       id: "3X4JH0aBqKKAamYkpj5xer",
       name: "Did You Give the World Some Love Today, Baby",
     },
-    count: 10,
+    count: 11,
   },
   "3Dy4REq8O09IlgiwuHQ3sk": {
     album: {
@@ -403,7 +403,7 @@ const tracks = {
       id: "3Dy4REq8O09IlgiwuHQ3sk",
       name: "Waterloo",
     },
-    count: 10,
+    count: 11,
   },
   "7Jh1bpe76CNTCgdgAdBw4Z": {
     album: {
@@ -421,7 +421,7 @@ const tracks = {
       id: "7Jh1bpe76CNTCgdgAdBw4Z",
       name: "Heroes - 2017 Remaster",
     },
-    count: 8,
+    count: 9,
   },
   "7pKfPomDEeI4TPT6EOYjn9": {
     album: {
@@ -439,7 +439,7 @@ const tracks = {
       id: "7pKfPomDEeI4TPT6EOYjn9",
       name: "Imagine - Remastered 2010",
     },
-    count: 11,
+    count: 12,
   },
   "1WVjxyTSZ5UiI6TlcHyUPh": {
     album: {
@@ -457,7 +457,7 @@ const tracks = {
       id: "1WVjxyTSZ5UiI6TlcHyUPh",
       name: "Öppna landskap",
     },
-    count: 10,
+    count: 11,
   },
   "3spdoTYpuCpmq19tuD0bOe": {
     album: {
@@ -476,60 +476,6 @@ const tracks = {
       name: "My Way",
     },
     count: 12,
-  },
-  "4xUqqie4bBKufHtlMuZS3k": {
-    album: {
-      id: "0gv5aiVS1WBUZOKeb7YawE",
-      name: "Platinum - A Life In Music",
-      img: "https://i.scdn.co/image/ab67616d0000485152cbfb62c42adc19d5637843",
-    },
-    artists: [
-      {
-        name: "Elvis Presley",
-        id: "43ZHCT0cAZBISjO8DG9PnE",
-      },
-    ],
-    track: {
-      id: "4xUqqie4bBKufHtlMuZS3k",
-      name: "Are You Lonesome Tonight?",
-    },
-    count: 8,
-  },
-  "5ktvQ11IpqlZF60d0uJmsK": {
-    album: {
-      id: "4MZqt2uT29Lhjs3C2i54Af",
-      name: "Blommig falukorv",
-      img: "https://i.scdn.co/image/ab67616d00004851876bd7f70774397025a39cb8",
-    },
-    artists: [
-      {
-        name: "Hans Alfredson",
-        id: "2wSu2EcQojgAifviEgZmy3",
-      },
-    ],
-    track: {
-      id: "5ktvQ11IpqlZF60d0uJmsK",
-      name: "Blommig falukorv",
-    },
-    count: 8,
-  },
-  "1AHPsqF3EtHeWpOM06Y3Y4": {
-    album: {
-      id: "24Xm5zS2KvwojChzxLGdn9",
-      name: "I Am A Bird Now",
-      img: "https://i.scdn.co/image/ab67616d00004851a0591c5bfd1d391228e8423c",
-    },
-    artists: [
-      {
-        name: "Antony and the Johnsons",
-        id: "4fxp616ALtFWnXfwxnjLzW",
-      },
-    ],
-    track: {
-      id: "1AHPsqF3EtHeWpOM06Y3Y4",
-      name: "Hope There's Someone",
-    },
-    count: 8,
   },
   "5CKHhg31HcYYhwUeeGqvhq": {
     album: {
@@ -565,7 +511,7 @@ const tracks = {
       id: "6dGnYIeXmHdcikdzNNDMm2",
       name: "Here Comes The Sun - Remastered 2009",
     },
-    count: 11,
+    count: 12,
   },
   "3CepTOU9Y7FezTt0CF3lCw": {
     album: {
@@ -583,7 +529,7 @@ const tracks = {
       id: "3CepTOU9Y7FezTt0CF3lCw",
       name: "The Sounds of Silence",
     },
-    count: 9,
+    count: 10,
   },
   "4TOMI010Sd4ZAX4aZ5TS85": {
     album: {
@@ -619,7 +565,7 @@ const tracks = {
       id: "5Yx5PhdnwhNzLMBl34TZw4",
       name: "Both Sides Now",
     },
-    count: 10,
+    count: 11,
   },
   "5oE6INocVL9viDow5y8QNM": {
     album: {
@@ -637,7 +583,7 @@ const tracks = {
       id: "5oE6INocVL9viDow5y8QNM",
       name: "Fragile",
     },
-    count: 8,
+    count: 10,
   },
   "3pRaLNL3b8x5uBOcsgvdqM": {
     album: {
@@ -749,7 +695,7 @@ const tracks = {
       id: "5b7OgznPJJr1vHNYGyvxau",
       name: "Fly Me To The Moon (In Other Words)",
     },
-    count: 8,
+    count: 10,
   },
   "3gXV3hlrEZilq4DclC2hoW": {
     album: {
@@ -785,7 +731,25 @@ const tracks = {
       id: "3dkIE8P7hvl3tHl9KSb6dA",
       name: "Non, je ne regrette rien",
     },
-    count: 14,
+    count: 15,
+  },
+  "6Rqn2GFlmvmV4w9Ala0I1e": {
+    album: {
+      id: "3ofZeSWPHZOE5WC2tNZDez",
+      name: "I Put A Spell On You",
+      img: "https://i.scdn.co/image/ab67616d00004851425e9a15a4a1b9fe123a1aa7",
+    },
+    artists: [
+      {
+        name: "Nina Simone",
+        id: "7G1GBhoKtEPnP86X2PvEYO",
+      },
+    ],
+    track: {
+      id: "6Rqn2GFlmvmV4w9Ala0I1e",
+      name: "Feeling Good",
+    },
+    count: 9,
   },
   "1BLXxFPDL2BT37nHKD7KrA": {
     album: {
@@ -803,7 +767,7 @@ const tracks = {
       id: "1BLXxFPDL2BT37nHKD7KrA",
       name: "Pata Pata - Stereo Version",
     },
-    count: 9,
+    count: 11,
   },
   "3RziapqS8nr6DiejCtI3cd": {
     album: {
@@ -820,6 +784,24 @@ const tracks = {
     track: {
       id: "3RziapqS8nr6DiejCtI3cd",
       name: "Somliga går med trasiga skor",
+    },
+    count: 9,
+  },
+  "6G0MfBXF1QlLpgP8pKngzs": {
+    album: {
+      id: "0sKtHhPyVXCic96QFZywih",
+      name: "Shoreline",
+      img: "https://i.scdn.co/image/ab67616d00004851b3acf13890f0bc4e3d6b6fae",
+    },
+    artists: [
+      {
+        name: "Anna Ternheim",
+        id: "6xSTQT32ZxLQPe37QIC308",
+      },
+    ],
+    track: {
+      id: "6G0MfBXF1QlLpgP8pKngzs",
+      name: "Shoreline - Radio Version",
     },
     count: 8,
   },
@@ -839,7 +821,7 @@ const tracks = {
       id: "5dXdy6YR6lxxC3GxBZcRWv",
       name: "Turistens klagan",
     },
-    count: 12,
+    count: 13,
   },
   "3ZE3wv8V3w2T2f7nOCjV0N": {
     album: {
@@ -858,6 +840,24 @@ const tracks = {
       name: "Life on Mars? - 2015 Remaster",
     },
     count: 12,
+  },
+  "5S8EZuiSNFR2N5eG58oISQ": {
+    album: {
+      id: "4zvEPDfNKoC15SoNOAEkBR",
+      name: "We Are The Ark",
+      img: "https://i.scdn.co/image/ab67616d0000485183391d5d31e98eabefc400fd",
+    },
+    artists: [
+      {
+        name: "The Ark",
+        id: "73ib5ljBj2xAIR7R3hTwF4",
+      },
+    ],
+    track: {
+      id: "5S8EZuiSNFR2N5eG58oISQ",
+      name: "It Takes A Fool To Remain Sane",
+    },
+    count: 8,
   },
   "2uotez2GWPFpH8MNqyYtW5": {
     album: {
@@ -919,7 +919,7 @@ const tracks = {
       id: "4w3tQBXhn5345eUXDGBWZG",
       name: "9 to 5",
     },
-    count: 12,
+    count: 13,
   },
   "7nBARurNPIRVcf81uOFz3i": {
     album: {
@@ -981,7 +981,7 @@ const tracks = {
       id: "2UL2wKmovIqf0GpqZ2Irjn",
       name: "Gabriellas sång",
     },
-    count: 13,
+    count: 14,
   },
   "41AZHuVBj101ucLqLykb0a": {
     album: {
@@ -1007,97 +1007,97 @@ const artists = {
   "4X0v8sFoDZ6rIfkeOeVm2i": {
     name: "Seinabo Sey",
     id: "4X0v8sFoDZ6rIfkeOeVm2i",
-    count: 29,
+    count: 32,
   },
   "5K4W6rqBFWDnAN6FQUkS6x": {
     name: "Kanye West",
     id: "5K4W6rqBFWDnAN6FQUkS6x",
-    count: 28,
+    count: 30,
   },
   "3nFkdlSjzX9mRTtwJOzDYB": {
     name: "JAY-Z",
     id: "3nFkdlSjzX9mRTtwJOzDYB",
-    count: 29,
+    count: 31,
   },
   "4gzpq5DPGxSnKTe4SA8HAU": {
     name: "Coldplay",
     id: "4gzpq5DPGxSnKTe4SA8HAU",
-    count: 44,
+    count: 47,
   },
   "6UE7nl9mha6s8z0wFQFIZ2": {
     name: "Robyn",
     id: "6UE7nl9mha6s8z0wFQFIZ2",
-    count: 31,
+    count: 33,
   },
   "6vWDO969PvNqNYHIOW5v0m": {
     name: "Beyoncé",
     id: "6vWDO969PvNqNYHIOW5v0m",
-    count: 31,
+    count: 37,
   },
   "1dfeR4HaWDbWqFHLkxsg1d": {
     name: "Queen",
     id: "1dfeR4HaWDbWqFHLkxsg1d",
-    count: 30,
+    count: 36,
   },
   "4KXp3xtaz1wWXnu5u34eVX": {
     name: "kent",
     id: "4KXp3xtaz1wWXnu5u34eVX",
-    count: 34,
+    count: 35,
   },
   "3fMbdgg4jU18AjLCKBhRSm": {
     name: "Michael Jackson",
     id: "3fMbdgg4jU18AjLCKBhRSm",
-    count: 38,
+    count: 40,
   },
   "5l8VQNuIg0turYE1VtM9zV": {
     name: "Leonard Cohen",
     id: "5l8VQNuIg0turYE1VtM9zV",
-    count: 38,
+    count: 41,
   },
   "0LcJLqbBmaGUft1e9Mm8HV": {
     name: "ABBA",
     id: "0LcJLqbBmaGUft1e9Mm8HV",
-    count: 59,
+    count: 65,
   },
   "4FNjPnaiiXYeG2qOhVtd8A": {
     name: "Jussi Björling",
     id: "4FNjPnaiiXYeG2qOhVtd8A",
-    count: 33,
+    count: 35,
   },
   "5V0MlUE1Bft0mbLlND7FJz": {
     name: "Ella Fitzgerald",
     id: "5V0MlUE1Bft0mbLlND7FJz",
-    count: 44,
+    count: 46,
   },
   "5a2EaR3hamoenG9rDuVn8j": {
     name: "Prince",
     id: "5a2EaR3hamoenG9rDuVn8j",
-    count: 28,
+    count: 32,
   },
   "43ZHCT0cAZBISjO8DG9PnE": {
     name: "Elvis Presley",
     id: "43ZHCT0cAZBISjO8DG9PnE",
-    count: 56,
+    count: 59,
   },
   "7guDJrEfX3qb6FEbdPA5qi": {
     name: "Stevie Wonder",
     id: "7guDJrEfX3qb6FEbdPA5qi",
-    count: 43,
+    count: 47,
   },
   "74ASZWbe4lXaubB36ztrGX": {
     name: "Bob Dylan",
     id: "74ASZWbe4lXaubB36ztrGX",
-    count: 62,
+    count: 64,
   },
   "2VE6Ge0qFHrqDC6KG6ECJn": {
     name: "Bo Kaspers Orkester",
     id: "2VE6Ge0qFHrqDC6KG6ECJn",
-    count: 31,
+    count: 32,
   },
   "33zLgL7tT1vg7eRpWYX5uI": {
     name: "Lars Winnerbäck",
     id: "33zLgL7tT1vg7eRpWYX5uI",
-    count: 26,
+    count: 27,
   },
   "7Gl6zw4YYJQ1CAgs7oEBPY": {
     name: "Sven-Bertil Taube",
@@ -1107,42 +1107,42 @@ const artists = {
   "19eLuQmk9aCobbVDHc6eek": {
     name: "Louis Armstrong",
     id: "19eLuQmk9aCobbVDHc6eek",
-    count: 37,
+    count: 40,
   },
   "5B38ZGYpd0msq1LKOyz2r9": {
     name: "Cornelis Vreeswijk",
     id: "5B38ZGYpd0msq1LKOyz2r9",
-    count: 72,
+    count: 75,
   },
   "0oSGxfWSnnOXhD2fKuz2Gy": {
     name: "David Bowie",
     id: "0oSGxfWSnnOXhD2fKuz2Gy",
-    count: 68,
+    count: 75,
   },
   "0Y8KmFkKOgJybpVobn1onU": {
     name: "Luciano Pavarotti",
     id: "0Y8KmFkKOgJybpVobn1onU",
-    count: 28,
+    count: 29,
   },
   "1WPcVNert9hn7mHsPKDn7j": {
     name: "Édith Piaf",
     id: "1WPcVNert9hn7mHsPKDn7j",
-    count: 31,
+    count: 32,
   },
   "7G1GBhoKtEPnP86X2PvEYO": {
     name: "Nina Simone",
     id: "7G1GBhoKtEPnP86X2PvEYO",
-    count: 72,
+    count: 82,
   },
   "7mvvG63CNSY93JWAJ37rnD": {
     name: "Monica Zetterlund",
     id: "7mvvG63CNSY93JWAJ37rnD",
-    count: 80,
+    count: 85,
   },
   "1Mxqyy3pSjf8kZZL4QVxS0": {
     name: "Frank Sinatra",
     id: "1Mxqyy3pSjf8kZZL4QVxS0",
-    count: 70,
+    count: 72,
   },
   "2JXHbGSfNgJ25884YBIruo": {
     name: "Povel Ramel",
@@ -1152,7 +1152,7 @@ const artists = {
   "6DEfX2tZzx9iANmaErvLGf": {
     name: "Jan Johansson",
     id: "6DEfX2tZzx9iANmaErvLGf",
-    count: 27,
+    count: 28,
   },
   "3fUWKywZQbkzjqydZH15fT": {
     name: "Evert Taube",
@@ -1162,37 +1162,37 @@ const artists = {
   "62QZPjYQMoo5g56FP9Webq": {
     name: "Laleh",
     id: "62QZPjYQMoo5g56FP9Webq",
-    count: 77,
+    count: 80,
   },
   "51Blml2LZPmy7TTiAg47vQ": {
     name: "U2",
     id: "51Blml2LZPmy7TTiAg47vQ",
-    count: 43,
+    count: 45,
   },
   "7nwUJBm0HE4ZxD3f5cy5ok": {
     name: "Aretha Franklin",
     id: "7nwUJBm0HE4ZxD3f5cy5ok",
-    count: 43,
+    count: 47,
   },
   "32vWCbZh0xZ4o9gkz4PsEU": {
     name: "Dolly Parton",
     id: "32vWCbZh0xZ4o9gkz4PsEU",
-    count: 29,
+    count: 30,
   },
   "2QsynagSdAqZj3U9HgDzjD": {
     name: "Bob Marley & The Wailers",
     id: "2QsynagSdAqZj3U9HgDzjD",
-    count: 42,
+    count: 44,
   },
   "3WrFJ7ztbogyGnTHbHJFl2": {
     name: "The Beatles",
     id: "3WrFJ7ztbogyGnTHbHJFl2",
-    count: 107,
+    count: 115,
   },
   "4x1nvY2FN8jxqAFA0DA02H": {
     name: "John Lennon",
     id: "4x1nvY2FN8jxqAFA0DA02H",
-    count: 27,
+    count: 30,
   },
   "66se5dgU4TBgWvHtXrYrz0": {
     name: "Fred Åkerström",
@@ -1202,61 +1202,73 @@ const artists = {
   "3H7Ez7cwaYw4L3ELy4v3Lc": {
     name: "Håkan Hellström",
     id: "3H7Ez7cwaYw4L3ELy4v3Lc",
-    count: 63,
+    count: 65,
   },
   "7IK2JpZglDYTrso4ILEKE0": {
     name: "Eva Dahlgren",
     id: "7IK2JpZglDYTrso4ILEKE0",
-    count: 34,
+    count: 35,
   },
   "4NJhFmfw43RLBLjQvxDuRS": {
     name: "Wolfgang Amadeus Mozart",
     id: "4NJhFmfw43RLBLjQvxDuRS",
-    count: 63,
+    count: 64,
   },
   "6M5pgjMS5dVG0hGRh5xADx": {
     name: "Helen Sjöholm",
     id: "6M5pgjMS5dVG0hGRh5xADx",
-    count: 44,
+    count: 45,
   },
   "3eqjTLE0HfPfh78zjh6TqT": {
     name: "Bruce Springsteen",
     id: "3eqjTLE0HfPfh78zjh6TqT",
-    count: 66,
+    count: 69,
   },
   "6zpub6jbY6CdrcqQsDq8P4": {
     name: "Ted Gärdestad",
     id: "6zpub6jbY6CdrcqQsDq8P4",
-    count: 45,
+    count: 47,
   },
   "22bE4uQ6baNwSHPVcDxLCe": {
     name: "The Rolling Stones",
     id: "22bE4uQ6baNwSHPVcDxLCe",
-    count: 39,
+    count: 43,
   },
   "4bOG1sx3QHFbOUVLNmMpPe": {
     name: "Timbuktu",
     id: "4bOG1sx3QHFbOUVLNmMpPe",
-    count: 37,
+    count: 40,
   },
   "6kACVPfCOnqzgfEF5ryl0x": {
     name: "Johnny Cash",
     id: "6kACVPfCOnqzgfEF5ryl0x",
-    count: 45,
+    count: 48,
   },
   "70cRZdQywnSFp9pnc2WTCE": {
     name: "Simon & Garfunkel",
     id: "70cRZdQywnSFp9pnc2WTCE",
-    count: 38,
+    count: 39,
   },
   "5aIqB5nVVvmFsvSdExz408": {
     name: "Johann Sebastian Bach",
     id: "5aIqB5nVVvmFsvSdExz408",
-    count: 79,
+    count: 84,
   },
 };
 
 const albums = {
+  "4sVpJJTw1dKDGlTprOvafq": {
+    album: {
+      id: "4sVpJJTw1dKDGlTprOvafq",
+      name: "Kristaller",
+      img: "https://i.scdn.co/image/ab67616d000048518e5deed9a2a9ae9a5c8766cb",
+    },
+    artist: {
+      name: "Laleh",
+      id: "62QZPjYQMoo5g56FP9Webq",
+    },
+    count: 12,
+  },
   "0pfOSr3PHdLqe9kHcoEPIL": {
     album: {
       id: "0pfOSr3PHdLqe9kHcoEPIL",
@@ -1267,7 +1279,7 @@ const albums = {
       name: "Laleh",
       id: "62QZPjYQMoo5g56FP9Webq",
     },
-    count: 18,
+    count: 19,
   },
   "7g2ZA4JCgG8Jxr67i23xlz": {
     album: {
@@ -1280,6 +1292,30 @@ const albums = {
       id: "4X0v8sFoDZ6rIfkeOeVm2i",
     },
     count: 17,
+  },
+  "1gIC63gC3B7o7FfpPACZQJ": {
+    album: {
+      id: "1gIC63gC3B7o7FfpPACZQJ",
+      name: "4",
+      img: "https://i.scdn.co/image/ab67616d00004851ff5429125128b43572dbdccd",
+    },
+    artist: {
+      name: "Beyoncé",
+      id: "6vWDO969PvNqNYHIOW5v0m",
+    },
+    count: 14,
+  },
+  "2H6i2CrWgXE1HookLu8Au0": {
+    album: {
+      id: "2H6i2CrWgXE1HookLu8Au0",
+      name: "True",
+      img: "https://i.scdn.co/image/ab67616d00004851e14f11f796cef9f9a82691a7",
+    },
+    artist: {
+      name: "Avicii",
+      id: "1vCWHaC5f2uS3yhpwWbIA6",
+    },
+    count: 14,
   },
   "1YqHIqrWx3eopxKFPqjqhT": {
     album: {
@@ -1327,7 +1363,7 @@ const albums = {
       name: "Coldplay",
       id: "4gzpq5DPGxSnKTe4SA8HAU",
     },
-    count: 15,
+    count: 16,
   },
   "7HUKTP7QFZrpGX4fcOVuLQ": {
     album: {
@@ -1341,18 +1377,6 @@ const albums = {
     },
     count: 13,
   },
-  "5qENHeCSlwWpEzb25peRmQ": {
-    album: {
-      id: "5qENHeCSlwWpEzb25peRmQ",
-      name: "Curtain Call: The Hits (Deluxe Edition)",
-      img: "https://i.scdn.co/image/ab67616d00004851eab40fc794b88b9d1e012578",
-    },
-    artist: {
-      name: "Eminem",
-      id: "7dGJo4pcD2V6oG8kP0tJRR",
-    },
-    count: 11,
-  },
   "5WndWfzGwCkHzAbQXVkg2V": {
     album: {
       id: "5WndWfzGwCkHzAbQXVkg2V",
@@ -1363,7 +1387,7 @@ const albums = {
       name: "Aretha Franklin",
       id: "7nwUJBm0HE4ZxD3f5cy5ok",
     },
-    count: 12,
+    count: 15,
   },
   "3ZdkT5buYFi1WQaB0XNNtf": {
     album: {
@@ -1375,7 +1399,7 @@ const albums = {
       name: "ABBA",
       id: "0LcJLqbBmaGUft1e9Mm8HV",
     },
-    count: 11,
+    count: 13,
   },
   "0E4xv5gPjykrwBgBZzI8XG": {
     album: {
@@ -1387,7 +1411,7 @@ const albums = {
       name: "Amy Winehouse",
       id: "6Q192DXotxtaysaqNPy5yR",
     },
-    count: 18,
+    count: 20,
   },
   "5ihQ4Gepi7qXFrKqVF5shn": {
     album: {
@@ -1399,7 +1423,7 @@ const albums = {
       name: "Doris",
       id: "4oNCFX4cbl6Jy1VANKiE6A",
     },
-    count: 12,
+    count: 13,
   },
   "0xzaemKucrJpYhyl7TltAk": {
     album: {
@@ -1411,7 +1435,7 @@ const albums = {
       name: "John Lennon",
       id: "4x1nvY2FN8jxqAFA0DA02H",
     },
-    count: 12,
+    count: 13,
   },
   "7aB0bPRv2elnc0Ou1whaty": {
     album: {
@@ -1423,7 +1447,7 @@ const albums = {
       name: "Ulf Lundell",
       id: "5kFHS4mQd9W0r7qDp8ec9A",
     },
-    count: 11,
+    count: 12,
   },
   "3IdNQBn7De23AVyv2V67wn": {
     album: {
@@ -1471,7 +1495,7 @@ const albums = {
       name: "Monica Zetterlund",
       id: "7mvvG63CNSY93JWAJ37rnD",
     },
-    count: 16,
+    count: 19,
   },
   "28qbOp4dEh18N5u6FInyOO": {
     album: {
@@ -1495,19 +1519,7 @@ const albums = {
       name: "The Beatles",
       id: "3WrFJ7ztbogyGnTHbHJFl2",
     },
-    count: 19,
-  },
-  "1BZoqf8Zje5nGdwZhOjAtD": {
-    album: {
-      id: "1BZoqf8Zje5nGdwZhOjAtD",
-      name: "The Miseducation of Lauryn Hill",
-      img: "https://i.scdn.co/image/ab67616d00004851e08b1250db5f75643f1508c9",
-    },
-    artist: {
-      name: "Ms. Lauryn Hill",
-      id: "2Mu5NfyYm8n5iTomuKAEHl",
-    },
-    count: 11,
+    count: 21,
   },
   "321q9p7PELvzcFAWxml7VX": {
     album: {
@@ -1555,7 +1567,7 @@ const albums = {
       name: "Hans Alfredson",
       id: "2wSu2EcQojgAifviEgZmy3",
     },
-    count: 17,
+    count: 18,
   },
   "5kQxC90rZ5uCHF6nRDjHPW": {
     album: {
@@ -1567,7 +1579,7 @@ const albums = {
       name: "Jussi Björling",
       id: "4FNjPnaiiXYeG2qOhVtd8A",
     },
-    count: 11,
+    count: 12,
   },
   "1V6a99EbTTIegOhWoPxYI9": {
     album: {
@@ -1605,18 +1617,6 @@ const albums = {
     },
     count: 15,
   },
-  "6nRbwFgnL2EUMSQDLOuXzm": {
-    album: {
-      id: "6nRbwFgnL2EUMSQDLOuXzm",
-      name: "Klassiskt - 27 kända klassiska mästerverk",
-      img: "https://i.scdn.co/image/ab67616d000048511aec098f9152dd4cc6489314",
-    },
-    artist: {
-      name: "Hector Berlioz",
-      id: "11T8SOX82xraocZzUXzkvM",
-    },
-    count: 11,
-  },
   "2k3nz0I7mJzegtkooii4za": {
     album: {
       id: "2k3nz0I7mJzegtkooii4za",
@@ -1627,7 +1627,7 @@ const albums = {
       name: "Édith Piaf",
       id: "1WPcVNert9hn7mHsPKDn7j",
     },
-    count: 16,
+    count: 17,
   },
   "7yQtjAjhtNi76KRu05XWFS": {
     album: {
@@ -1641,6 +1641,30 @@ const albums = {
     },
     count: 12,
   },
+  "3ofZeSWPHZOE5WC2tNZDez": {
+    album: {
+      id: "3ofZeSWPHZOE5WC2tNZDez",
+      name: "I Put A Spell On You",
+      img: "https://i.scdn.co/image/ab67616d00004851425e9a15a4a1b9fe123a1aa7",
+    },
+    artist: {
+      name: "Nina Simone",
+      id: "7G1GBhoKtEPnP86X2PvEYO",
+    },
+    count: 13,
+  },
+  "4xPYddRQPYB5jbTB3e7tL5": {
+    album: {
+      id: "4xPYddRQPYB5jbTB3e7tL5",
+      name: "Pata Pata",
+      img: "https://i.scdn.co/image/ab67616d00004851d46caefb22d460eb8ca14db0",
+    },
+    artist: {
+      name: "Miriam Makeba",
+      id: "18RkLKfeoUgZflWv9os25W",
+    },
+    count: 12,
+  },
   "1klALx0u4AavZNEvC4LrTL": {
     album: {
       id: "1klALx0u4AavZNEvC4LrTL",
@@ -1651,7 +1675,7 @@ const albums = {
       name: "The Beatles",
       id: "3WrFJ7ztbogyGnTHbHJFl2",
     },
-    count: 13,
+    count: 15,
   },
   "5y6wlw1LnqFnQFruMeiwGU": {
     album: {
@@ -1663,7 +1687,7 @@ const albums = {
       name: "U2",
       id: "51Blml2LZPmy7TTiAg47vQ",
     },
-    count: 13,
+    count: 14,
   },
   "10znRN0s0flCvHfoSYPUzA": {
     album: {
@@ -1675,7 +1699,7 @@ const albums = {
       name: "Cornelis Vreeswijk",
       id: "5B38ZGYpd0msq1LKOyz2r9",
     },
-    count: 12,
+    count: 13,
   },
   "6fQElzBNTiEMGdIeY0hy5l": {
     album: {
@@ -1749,18 +1773,6 @@ const albums = {
     },
     count: 18,
   },
-  "1TSO7M4RaU156GYLIKjkL1": {
-    album: {
-      id: "1TSO7M4RaU156GYLIKjkL1",
-      name: "För sent för Edelweiss",
-      img: "https://i.scdn.co/image/ab67616d00004851ccc8337effe128a3baaad8cd",
-    },
-    artist: {
-      name: "Håkan Hellström",
-      id: "3H7Ez7cwaYw4L3ELy4v3Lc",
-    },
-    count: 11,
-  },
   "64Ky1tqKPfwxhJs6msphWd": {
     album: {
       id: "64Ky1tqKPfwxhJs6msphWd",
@@ -1771,7 +1783,7 @@ const albums = {
       name: "Dolly Parton",
       id: "32vWCbZh0xZ4o9gkz4PsEU",
     },
-    count: 12,
+    count: 13,
   },
   "4P1tHWqUAGpCNylsLXOXBf": {
     album: {
@@ -1795,7 +1807,7 @@ const albums = {
       name: "Helen Sjöholm",
       id: "6M5pgjMS5dVG0hGRh5xADx",
     },
-    count: 13,
+    count: 14,
   },
   "4V98pVvObWpDvwIoAMwyZX": {
     album: {
@@ -1807,19 +1819,7 @@ const albums = {
       name: "Ted Gärdestad",
       id: "6zpub6jbY6CdrcqQsDq8P4",
     },
-    count: 15,
-  },
-  "3tXuKxDCfmokZIoqzTYAjN": {
-    album: {
-      id: "3tXuKxDCfmokZIoqzTYAjN",
-      name: "Alla vill till himmelen men ingen vill dö",
-      img: "https://i.scdn.co/image/ab67616d000048514b22eb1e020e907c69e8543f",
-    },
-    artist: {
-      name: "Timbuktu",
-      id: "4bOG1sx3QHFbOUVLNmMpPe",
-    },
-    count: 11,
+    count: 17,
   },
   "24Xm5zS2KvwojChzxLGdn9": {
     album: {
@@ -1843,7 +1843,7 @@ const albums = {
       name: "Johnny Cash",
       id: "6kACVPfCOnqzgfEF5ryl0x",
     },
-    count: 15,
+    count: 16,
   },
   "0JwHz5SSvpYWuuCNbtYZoV": {
     album: {

@@ -1,6 +1,7 @@
 import type { IParallax } from "@react-spring/parallax";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { useRef } from "react";
+import Example from "../components/charts/bar";
 import { VerticalExample } from "../components/charts/homemade/bar/vertical";
 import { Header } from "../components/layout/header";
 
@@ -49,9 +50,9 @@ export default function Index() {
             height={982}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={0.8} speed={0} factor={2}>
+        <ParallaxLayer offset={0} speed={0} factor={2}>
           <div className="flex h-full flex-col bg-[#236C02] px-4">
-            <div className="flex flex-col gap-2 pb-10">
+            {/*<div className="flex flex-col gap-2 pb-10">
               <h1 className="text-5xl text-slate-100 ">Sommarprat-ui.</h1>
               <h2 className=" text-xl text-slate-200">
                 En sammanställning av värdarnas musikval i Sommar i P1.
@@ -90,6 +91,10 @@ export default function Index() {
             </div>
             <div>
               <VerticalExample />
+            </div>
+  */}
+            <div className="mt-12">
+              <Example width={1000} height={500} />
             </div>
           </div>
         </ParallaxLayer>

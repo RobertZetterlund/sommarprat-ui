@@ -79,7 +79,7 @@ export const TrackLabel = ({
     <div className="flex flex-col md:ml-auto">
       <a
         className="w-fit text-slate-100 hover:underline md:ml-auto"
-        href={`https://open.spotify.com/album/${track.track.id}`}
+        href={`https://open.spotify.com/track/${track.track.id}`}
       >
         {track.track.name}
       </a>

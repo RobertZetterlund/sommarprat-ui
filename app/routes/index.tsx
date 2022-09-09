@@ -13,7 +13,7 @@ export default function Index() {
 
   return (
     <div className="bg-[#236C02]">
-      <Parallax pages={2} ref={ref}>
+      <Parallax pages={4} ref={ref}>
         <ParallaxLayer sticky={{ start: 0, end: 2 }} style={{ height: 40 }}>
           <Header />
         </ParallaxLayer>
@@ -53,9 +53,9 @@ export default function Index() {
             height={982}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={0} factor={2}>
+        <ParallaxLayer offset={0.8} speed={0} factor={2}>
           <div className="flex h-full flex-col bg-[#236C02] px-4">
-            {/*<div className="flex flex-col gap-2 pb-10">
+            <div className="flex flex-col gap-2 pb-10">
               <h1 className="text-5xl text-slate-100 ">Sommarprat-ui.</h1>
               <h2 className=" text-xl text-slate-200">
                 En sammanställning av värdarnas musikval i Sommar i P1.
@@ -88,14 +88,7 @@ export default function Index() {
                 in Sweden.
               </p>
             </div>
-            <div>
-              Hur viktigt är året låten släpptes? Nedan är en graf över hur
-              nyligen låtar som spelats i Sommar släpptes.
-            </div>
-            <div>
-              <VerticalExample />
-            </div>
-  */}
+
             <GraphEntry>
               <div>
                 <h2>Hur viktigt är hur nyligen låten släpptes?</h2>
@@ -105,9 +98,174 @@ export default function Index() {
                 <BarGraph width={Math.min(width, 700)} height={500} />
               </div>
             </GraphEntry>
+            <GraphEntry>
+              <div>
+                <h2>Hur gammal var värden när låtarna de valt släpptes?</h2>
+                <p>
+                  Det finns teorier att man skapar sin musiksmak i ung ålder.
+                </p>
+              </div>
+              <div className="flex justify-center">
+                <BarGraph
+                  width={Math.min(width, 700)}
+                  height={500}
+                  data={_data}
+                />
+              </div>
+            </GraphEntry>
           </div>
         </ParallaxLayer>
       </Parallax>
     </div>
   );
 }
+
+const ages = {
+  "0": 68,
+  "1": 73,
+  "2": 69,
+  "3": 92,
+  "4": 107,
+  "5": 86,
+  "6": 93,
+  "7": 115,
+  "8": 104,
+  "9": 102,
+  "10": 118,
+  "11": 146,
+  "12": 132,
+  "13": 152,
+  "14": 166,
+  "15": 165,
+  "16": 173,
+  "17": 174,
+  "18": 157,
+  "19": 172,
+  "20": 168,
+  "21": 160,
+  "22": 180,
+  "23": 193,
+  "24": 201,
+  "25": 194,
+  "26": 194,
+  "27": 204,
+  "28": 193,
+  "29": 206,
+  "30": 202,
+  "31": 175,
+  "32": 183,
+  "33": 188,
+  "34": 205,
+  "35": 172,
+  "36": 176,
+  "37": 204,
+  "38": 174,
+  "39": 174,
+  "40": 183,
+  "41": 152,
+  "42": 144,
+  "43": 140,
+  "44": 140,
+  "45": 142,
+  "46": 138,
+  "47": 120,
+  "48": 120,
+  "49": 110,
+  "50": 94,
+  "51": 106,
+  "52": 100,
+  "53": 76,
+  "54": 72,
+  "55": 87,
+  "56": 101,
+  "57": 68,
+  "58": 51,
+  "59": 75,
+  "60": 61,
+  "61": 79,
+  "62": 68,
+  "63": 47,
+  "64": 51,
+  "65": 47,
+  "66": 37,
+  "67": 43,
+  "68": 42,
+  "69": 37,
+  "70": 31,
+  "71": 32,
+  "72": 31,
+  "73": 29,
+  "74": 22,
+  "75": 15,
+  "76": 18,
+  "77": 21,
+  "78": 17,
+  "79": 13,
+  "80": 10,
+  "81": 8,
+  "82": 8,
+  "83": 14,
+  "84": 3,
+  "85": 5,
+  "86": 5,
+  "87": 2,
+  "88": 6,
+  "89": 4,
+  "90": 1,
+  "91": 2,
+  "92": 4,
+  "93": 2,
+  "95": 1,
+  "98": 2,
+  "99": 1,
+  "100": 2,
+  "101": 2,
+  "104": 1,
+  "105": 1,
+  "115": 1,
+  "120": 1,
+  "-8": 36,
+  "-6": 38,
+  "-25": 8,
+  "-1": 45,
+  "-9": 35,
+  "-3": 52,
+  "-21": 11,
+  "-2": 66,
+  "-12": 32,
+  "-15": 30,
+  "-11": 37,
+  "-5": 42,
+  "-7": 35,
+  "-16": 22,
+  "-10": 34,
+  "-14": 22,
+  "-4": 50,
+  "-13": 23,
+  "-20": 12,
+  "-17": 18,
+  "-19": 13,
+  "-28": 3,
+  "-18": 12,
+  "-22": 13,
+  "-26": 3,
+  "-24": 6,
+  "-65": 1,
+  "-33": 2,
+  "-27": 6,
+  "-38": 3,
+  "-32": 2,
+  "-30": 3,
+  "-23": 11,
+  "-29": 3,
+  "-44": 1,
+  "-31": 2,
+  "-34": 1,
+};
+
+const _data = Object.entries(ages)
+  .map(([year, count]) => ({
+    x: parseInt(year),
+    y: count,
+  }))
+  .sort((a, b) => a.x - b.x);

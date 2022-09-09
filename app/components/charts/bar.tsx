@@ -142,11 +142,11 @@ export default function BarGraph({
     });
   }, [yMax, yMin]);
 
-  xScale.range([0, xMaxDimension]);
-  yScale.range([0, yMaxDimension]);
-
-  const tickWidth = xMaxDimension / (xs.length - 1);
+  const tickWidth = xMaxDimension / (xMax - xMin);
+  const xOffset = Math.abs(tickWidth * xMin);
   const barWidthMultiplier = 0.9;
+  yScale.range([0, yMaxDimension]);
+  xScale.range([0, xMaxDimension]);
 
   return (
     <div className="relative overflow-auto rounded bg-white">
@@ -175,7 +175,7 @@ export default function BarGraph({
             {data.map(({ x, y }, index) => (
               <Bar
                 key={`bar-stack-${y}`}
-                x={tickWidth * x}
+                x={tickWidth * x + xOffset}
                 y={-(y / yMax) * yMaxDimension}
                 height={(y / yMax) * yMaxDimension}
                 width={tickWidth * barWidthMultiplier}
@@ -199,7 +199,7 @@ export default function BarGraph({
                       key: y,
                     },
                     tooltipTop: eventSvgCoords?.y,
-                    tooltipLeft: tickWidth * index + margin.left,
+                    tooltipLeft: tickWidth * x + margin.left + xOffset,
                   });
                 }}
               />

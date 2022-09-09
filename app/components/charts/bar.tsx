@@ -8,21 +8,27 @@ import { AxisBottom, AxisLeft } from "@visx/axis";
 import { scaleLinear } from "@visx/scale";
 import { Grid } from "@visx/grid";
 
-type TooltipData = {
-  key: number;
-  index: number;
-  label: string;
+type DataItem<T> = {
+  x: number;
+  y: number;
+  meta?: T;
 };
 
-export type BarStackProps = {
+type TooltipData<T> = {
+  key: number;
+  index: number;
+  item: DataItem<T>;
+};
+
+export type BarStackProps<T> = {
   width: number;
   height: number;
+  data: DataItem<T>[];
+  renderLabel: (dataItem: DataItem<T>) => ReactNode;
   margin?: { top: number; right: number; bottom: number; left: number };
   events?: boolean;
-  data?: { x: number; y: number; meta?: any }[];
   xLabel?: string;
   yLabel?: string;
-  renderLabel?: (meta: any) => ReactNode;
 };
 
 export const background = "#eaedff";
@@ -36,73 +42,15 @@ const tooltipStyles = {
 
 let tooltipTimeout: number;
 
-const raw_data = {
-  0: 588,
-  1: 668,
-  2: 565,
-  3: 480,
-  4: 431,
-  5: 380,
-  6: 402,
-  7: 350,
-  8: 328,
-  9: 318,
-  10: 347,
-  11: 292,
-  12: 243,
-  13: 234,
-  14: 219,
-  15: 246,
-  16: 198,
-  17: 232,
-  18: 227,
-  19: 187,
-  20: 208,
-  21: 205,
-  22: 179,
-  23: 165,
-  24: 158,
-  25: 164,
-  26: 160,
-  27: 131,
-  28: 148,
-  29: 110,
-  30: 136,
-  31: 129,
-  32: 137,
-  33: 134,
-  34: 139,
-  35: 157,
-  36: 132,
-  37: 161,
-  38: 156,
-  39: 150,
-  40: 140,
-  41: 132,
-  42: 132,
-  43: 136,
-  44: 120,
-  45: 124,
-  46: 104,
-  47: 108,
-  48: 87,
-  49: 89,
-  50: 95,
-};
-
-const _data = Object.entries(raw_data).map(([year, count]) => ({
-  x: parseInt(year),
-  y: count,
-}));
-
-export default function BarGraph({
+export default function BarGraph<T>({
   width,
   height,
   margin = defaultMargin,
-  data = _data,
-  xLabel = "År innan låten släpptes",
-  yLabel = "Antalet spelningar",
-}: BarStackProps) {
+  data,
+  xLabel,
+  yLabel,
+  renderLabel,
+}: BarStackProps<T>) {
   const {
     tooltipOpen,
     tooltipLeft,
@@ -110,7 +58,7 @@ export default function BarGraph({
     tooltipData,
     hideTooltip,
     showTooltip,
-  } = useTooltip<TooltipData>();
+  } = useTooltip<TooltipData<T>>();
 
   const { containerRef, TooltipInPortal } = useTooltipInPortal({
     // TooltipInPortal is rendered in a separate child of <body /> and positioned
@@ -160,19 +108,21 @@ export default function BarGraph({
             stroke="black"
             strokeOpacity={0.1}
           />
-          <AxisBottom
-            scale={xScale}
-            top={yMaxDimension}
-            label={xLabel}
-            left={10}
-          />
-          <AxisLeft scale={yScale} left={0} label={yLabel} />
+          {xLabel && (
+            <AxisBottom
+              scale={xScale}
+              top={yMaxDimension}
+              label={xLabel}
+              left={10}
+            />
+          )}
+          {yLabel && <AxisLeft scale={yScale} left={0} label={yLabel} />}
 
           <Group
             top={yMaxDimension}
             left={(-xMaxDimension / (data.length - 1)) * 0.5 + 10}
           >
-            {data.map(({ x, y }, index) => (
+            {data.map(({ x, y, meta }, index) => (
               <Bar
                 key={`bar-stack-${y}`}
                 x={tickWidth * x + xOffset}
@@ -191,12 +141,15 @@ export default function BarGraph({
                   // localPoint returns coordinates relative to the nearest SVG, which
                   // is what containerRef is set to in this example.
                   const eventSvgCoords = localPoint(event);
-                  //const left = bar.x + bar.width / 2;
                   showTooltip({
                     tooltipData: {
                       index,
-                      label: `${x}-${y}`,
                       key: y,
+                      item: {
+                        x,
+                        y,
+                        meta,
+                      },
                     },
                     tooltipTop: eventSvgCoords?.y,
                     tooltipLeft: tickWidth * x + margin.left + xOffset,
@@ -214,9 +167,7 @@ export default function BarGraph({
           left={tooltipLeft}
           style={tooltipStyles}
         >
-          <div>
-            <small>{tooltipData.label}</small>
-          </div>
+          {tooltipData.item && renderLabel(tooltipData.item)}
         </TooltipInPortal>
       )}
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Group } from "@visx/group";
 import { useTooltip, useTooltipInPortal, defaultStyles } from "@visx/tooltip";
 import { localPoint } from "@visx/event";
@@ -21,7 +21,7 @@ export type BarStackProps = {
 };
 
 export const background = "#eaedff";
-const defaultMargin = { top: 50, right: 50, bottom: 50, left: 50 };
+const defaultMargin = { top: 30, right: 70, bottom: 70, left: 70 };
 const tooltipStyles = {
   ...defaultStyles,
   minWidth: 60,
@@ -32,6 +32,7 @@ const tooltipStyles = {
 let tooltipTimeout: number;
 
 const raw_data = {
+  0: 588,
   1: 668,
   2: 565,
   3: 480,
@@ -85,18 +86,9 @@ const raw_data = {
 };
 
 const data = Object.entries(raw_data).map(([year, count]) => ({
-  year: parseInt(year),
-  count: count,
-  normalizedHeight: count,
+  x: parseInt(year),
+  y: count,
 }));
-const xScale = scaleLinear<number>({
-  domain: [0, 50],
-});
-
-const yScale = scaleLinear<number>({
-  domain: [700, 0],
-  nice: true,
-});
 
 export default function Example({
   width,
@@ -119,13 +111,34 @@ export default function Example({
     scroll: true,
   });
 
-  if (width < 10) return null;
   // bounds
-  const xMax = width - margin.left - margin.right;
-  const yMax = height - margin.top - margin.bottom;
+  const xMaxDimension = width - margin.left - margin.right;
+  const yMaxDimension = height - margin.top - margin.bottom;
 
-  xScale.range([0, xMax]);
-  yScale.range([0, yMax]);
+  const xs = useMemo(() => data.map((p) => p.x), []);
+  const xMax = useMemo(() => Math.max(...xs), [xs]);
+  const xMin = useMemo(() => Math.min(...xs, 0), [xs]);
+  const ys = useMemo(() => data.map((p) => p.y), []);
+  const yMax = useMemo(() => Math.max(...ys), [ys]);
+  const yMin = useMemo(() => Math.min(...ys, 0), [ys]);
+
+  const xScale = useMemo(() => {
+    return scaleLinear<number>({
+      domain: [xMin, xMax],
+    });
+  }, [xMax, xMin]);
+
+  const yScale = useMemo(() => {
+    return scaleLinear<number>({
+      domain: [yMax, yMin],
+    });
+  }, [yMax, yMin]);
+
+  xScale.range([0, xMaxDimension]);
+  yScale.range([0, yMaxDimension]);
+
+  const tickWidth = xMaxDimension / (xs.length - 1);
+  const barWidthMultiplier = 0.9;
 
   return width < 10 ? null : (
     <div style={{ position: "relative" }}>
@@ -143,23 +156,30 @@ export default function Example({
           <Grid
             xScale={xScale}
             yScale={yScale}
-            width={xMax}
-            height={yMax}
+            width={xMaxDimension + tickWidth}
+            height={yMaxDimension}
             stroke="black"
             strokeOpacity={0.1}
           />
-          <AxisBottom scale={xScale} top={yMax} />
-          <AxisLeft scale={yScale} />
+          <AxisBottom
+            scale={xScale}
+            top={yMaxDimension}
+            label={"År innan låten släpptes"}
+            left={10}
+          />
+          <AxisLeft scale={yScale} left={0} label={"Antalet spelningar"} />
 
-          <Group top={yMax}>
-            {data.map(({ count, year, normalizedHeight }, index) => (
+          <Group
+            top={yMaxDimension}
+            left={(-xMaxDimension / (data.length - 1)) * 0.5 + 10}
+          >
+            {data.map(({ x, y }, index) => (
               <Bar
-                key={`bar-stack-${year}`}
-                x={(xMax / data.length) * index}
-                // THIS SHOULD BE MAX of YDOMAIN (700)
-                y={-(count / 700) * yMax}
-                height={(count / 700) * yMax}
-                width={(0.9 * xMax) / data.length}
+                key={`bar-stack-${y}`}
+                x={tickWidth * x}
+                y={-(y / yMax) * yMaxDimension}
+                height={(y / yMax) * yMaxDimension}
+                width={tickWidth * barWidthMultiplier}
                 fill={"red"}
                 onMouseLeave={() => {
                   tooltipTimeout = window.setTimeout(() => {
@@ -176,8 +196,8 @@ export default function Example({
                   showTooltip({
                     tooltipData: {
                       index,
-                      label: `${year}-${count}`,
-                      key: year,
+                      label: `${x}-${y}`,
+                      key: y,
                     },
                     tooltipTop: eventSvgCoords?.y,
                     tooltipLeft: (width / data.length) * index,

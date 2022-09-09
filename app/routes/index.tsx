@@ -1,12 +1,15 @@
 import type { IParallax } from "@react-spring/parallax";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { useRef } from "react";
-import Example from "../components/charts/bar";
-import { VerticalExample } from "../components/charts/homemade/bar/vertical";
+import BarGraph from "../components/charts/bar";
+import { GraphEntry } from "../components/landing/GraphEntry";
 import { Header } from "../components/layout/header";
+import useWindowSize from "../hooks/useWindowSize";
 
 export default function Index() {
   const ref = useRef<IParallax>(null);
+
+  const { width } = useWindowSize();
 
   return (
     <div className="bg-[#236C02]">
@@ -93,9 +96,15 @@ export default function Index() {
               <VerticalExample />
             </div>
   */}
-            <div className="mt-12">
-              <Example width={1000} height={500} />
-            </div>
+            <GraphEntry>
+              <div>
+                <h2>Hur viktigt är hur nyligen låten släpptes?</h2>
+                <p>Många väljer att spela låtar som nyligen släppts</p>
+              </div>
+              <div className="flex justify-center">
+                <BarGraph width={Math.min(width, 700)} height={500} />
+              </div>
+            </GraphEntry>
           </div>
         </ParallaxLayer>
       </Parallax>

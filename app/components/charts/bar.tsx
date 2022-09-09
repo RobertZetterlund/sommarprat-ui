@@ -1,11 +1,12 @@
+import type { ReactNode } from "react";
 import React, { useMemo } from "react";
 import { Group } from "@visx/group";
 import { useTooltip, useTooltipInPortal, defaultStyles } from "@visx/tooltip";
 import { localPoint } from "@visx/event";
 import { Bar } from "@visx/shape";
 import { AxisBottom, AxisLeft } from "@visx/axis";
-import { scaleBand, scaleLinear } from "@visx/scale";
-import { Grid, GridColumns, GridRows } from "@visx/grid";
+import { scaleLinear } from "@visx/scale";
+import { Grid } from "@visx/grid";
 
 type TooltipData = {
   key: number;
@@ -18,10 +19,14 @@ export type BarStackProps = {
   height: number;
   margin?: { top: number; right: number; bottom: number; left: number };
   events?: boolean;
+  data?: { x: number; y: number; meta?: any }[];
+  xLabel?: string;
+  yLabel?: string;
+  renderLabel?: (meta: any) => ReactNode;
 };
 
 export const background = "#eaedff";
-const defaultMargin = { top: 30, right: 70, bottom: 70, left: 70 };
+const defaultMargin = { top: 30, right: 30, bottom: 50, left: 60 };
 const tooltipStyles = {
   ...defaultStyles,
   minWidth: 60,
@@ -85,15 +90,18 @@ const raw_data = {
   50: 95,
 };
 
-const data = Object.entries(raw_data).map(([year, count]) => ({
+const _data = Object.entries(raw_data).map(([year, count]) => ({
   x: parseInt(year),
   y: count,
 }));
 
-export default function Example({
+export default function BarGraph({
   width,
   height,
   margin = defaultMargin,
+  data = _data,
+  xLabel = "År innan låten släpptes",
+  yLabel = "Antalet spelningar",
 }: BarStackProps) {
   const {
     tooltipOpen,
@@ -115,10 +123,10 @@ export default function Example({
   const xMaxDimension = width - margin.left - margin.right;
   const yMaxDimension = height - margin.top - margin.bottom;
 
-  const xs = useMemo(() => data.map((p) => p.x), []);
+  const xs = useMemo(() => data.map((p) => p.x), [data]);
   const xMax = useMemo(() => Math.max(...xs), [xs]);
   const xMin = useMemo(() => Math.min(...xs, 0), [xs]);
-  const ys = useMemo(() => data.map((p) => p.y), []);
+  const ys = useMemo(() => data.map((p) => p.y), [data]);
   const yMax = useMemo(() => Math.max(...ys), [ys]);
   const yMin = useMemo(() => Math.min(...ys, 0), [ys]);
 
@@ -140,18 +148,9 @@ export default function Example({
   const tickWidth = xMaxDimension / (xs.length - 1);
   const barWidthMultiplier = 0.9;
 
-  return width < 10 ? null : (
-    <div style={{ position: "relative" }}>
+  return (
+    <div className="relative overflow-auto rounded bg-white">
       <svg ref={containerRef} width={width} height={height}>
-        <rect
-          x={0}
-          y={0}
-          width={width}
-          height={height}
-          fill={background}
-          rx={14}
-        />
-
         <Group left={margin.left} top={margin.top}>
           <Grid
             xScale={xScale}
@@ -164,10 +163,10 @@ export default function Example({
           <AxisBottom
             scale={xScale}
             top={yMaxDimension}
-            label={"År innan låten släpptes"}
+            label={xLabel}
             left={10}
           />
-          <AxisLeft scale={yScale} left={0} label={"Antalet spelningar"} />
+          <AxisLeft scale={yScale} left={0} label={yLabel} />
 
           <Group
             top={yMaxDimension}
@@ -180,7 +179,7 @@ export default function Example({
                 y={-(y / yMax) * yMaxDimension}
                 height={(y / yMax) * yMaxDimension}
                 width={tickWidth * barWidthMultiplier}
-                fill={"red"}
+                fill={"#483d61"}
                 onMouseLeave={() => {
                   tooltipTimeout = window.setTimeout(() => {
                     hideTooltip();
@@ -200,7 +199,7 @@ export default function Example({
                       key: y,
                     },
                     tooltipTop: eventSvgCoords?.y,
-                    tooltipLeft: (width / data.length) * index,
+                    tooltipLeft: tickWidth * index + margin.left,
                   });
                 }}
               />
@@ -208,22 +207,6 @@ export default function Example({
           </Group>
         </Group>
       </svg>
-      <div
-        style={{
-          position: "absolute",
-          top: margin.top / 2 - 10,
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          fontSize: "14px",
-        }}
-      >
-        {/*<LegendOrdinal
-          scale={colorScale}
-          direction="row"
-          labelMargin="0 15px 0 0"
-      />*/}
-      </div>
 
       {tooltipOpen && tooltipData && (
         <TooltipInPortal

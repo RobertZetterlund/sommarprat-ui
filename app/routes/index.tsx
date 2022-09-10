@@ -1,6 +1,7 @@
 import type { IParallax } from "@react-spring/parallax";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { useRef } from "react";
+import { TopArtists } from "../components/TopArtists";
 
 const pages = 4;
 
@@ -81,7 +82,9 @@ export default function Index() {
                 in Sweden.
               </p>
             </div>
-            <div className="flex pt-10"></div>
+            <div className="flex w-full flex-col pt-10 text-slate-50">
+              <TopArtists />
+            </div>
           </div>
         </ParallaxLayer>
       </Parallax>

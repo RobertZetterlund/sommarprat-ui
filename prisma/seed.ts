@@ -19,6 +19,10 @@ import twoktwenty from "~/res/data/2020.json";
 import twoktwentyone from "~/res/data/2021.json";
 import twoktwentytwo from "~/res/data/2022.json";
 
+import tracks from "~/res/data/stats/tracks.json";
+import albums from "~/res/data/stats/albums.json";
+import artists from "~/res/data/stats/artists.json";
+
 const AllYears = {
   "2005": twokfive,
   "2006": twoksix,

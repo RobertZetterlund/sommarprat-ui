@@ -5,7 +5,8 @@
     "date": "2017-08-20",
     "playlistId": "7AV2tXa7uZLG8rYmlKYw0D",
     "imageurl": "https://static-cdn.sr.se/images/2071/d4791328-5192-400f-a5fa-8a9022cf7b64.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927255"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927255",
+    "popularity": 20.13
   },
   {
     "dob": "1974-04-13",
@@ -13,7 +14,8 @@
     "date": "2017-08-19",
     "playlistId": "3igWyHVHVMvKyduOPRpiIU",
     "imageurl": "https://static-cdn.sr.se/images/2071/540c2e7a-273d-427b-9034-392846afd958.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927254"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927254",
+    "popularity": 35
   },
   {
     "dob": null,
@@ -21,7 +23,8 @@
     "date": "2017-08-18",
     "playlistId": "5Zox35XNgB4GboXOpoHxwE",
     "imageurl": "https://static-cdn.sr.se/images/2071/16e477b8-96c8-41ad-ab16-d9a126f2d813.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927253"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927253",
+    "popularity": 61.18
   },
   {
     "dob": "1981-03-03",
@@ -29,7 +32,8 @@
     "date": "2017-08-17",
     "playlistId": "6iEdR0hw4n9x5YNyQZ46fL",
     "imageurl": "https://static-cdn.sr.se/images/2071/c8de2ad9-9c61-4ebe-b1cc-3f22c7486a60.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927252"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927252",
+    "popularity": 33.38
   },
   {
     "dob": "1959-02-26",
@@ -37,7 +41,8 @@
     "date": "2017-08-16",
     "playlistId": "4mHtSN18oHmiDR9mo53msi",
     "imageurl": "https://static-cdn.sr.se/images/2071/decc84ba-546d-418e-a725-c66294e0c3a2.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927251"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927251",
+    "popularity": 59.67
   },
   {
     "dob": null,
@@ -45,7 +50,8 @@
     "date": "2017-08-15",
     "playlistId": "1DYR1zD9fYssBX3Pzx4H4P",
     "imageurl": "https://static-cdn.sr.se/images/2071/2a1fdcc2-b24b-4f8e-85a9-4f2af039d971.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927250"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927250",
+    "popularity": 47.77
   },
   {
     "dob": "1943-05-22",
@@ -53,7 +59,8 @@
     "date": "2017-08-14",
     "playlistId": "35zQ7teh3Z6YJOztV908nn",
     "imageurl": "https://static-cdn.sr.se/images/2071/ac1e473e-5efe-4c44-b71e-0bf75e482793.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927249"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927249",
+    "popularity": 50.92
   },
   {
     "dob": "1975-04-20",
@@ -61,7 +68,8 @@
     "date": "2017-08-13",
     "playlistId": "3lqV5jDBpRofp4J3rAGlEd",
     "imageurl": "https://static-cdn.sr.se/images/2071/a0953806-11bc-4dcb-84f5-b58f7b8810dc.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927248"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927248",
+    "popularity": 25.55
   },
   {
     "dob": "1927-11-28",
@@ -69,7 +77,8 @@
     "date": "2017-08-12",
     "playlistId": "6WWNKg7GGRSsVnkISVqZgw",
     "imageurl": "https://static-cdn.sr.se/images/2071/0154a9ce-2d8e-4b79-8bef-5f467ec430d4.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927247"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927247",
+    "popularity": 16.05
   },
   {
     "dob": null,
@@ -77,7 +86,8 @@
     "date": "2017-08-11",
     "playlistId": "5lT6GcJKqlYPWhtBHyBMbH",
     "imageurl": "https://static-cdn.sr.se/images/2071/2344843_1200_675.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927246"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927246",
+    "popularity": 34.75
   },
   {
     "dob": "1975-10-17",
@@ -85,7 +95,8 @@
     "date": "2017-08-10",
     "playlistId": "0vfEw3M5ecLrAtvtyBPGyB",
     "imageurl": "https://static-cdn.sr.se/images/2071/a8163cb8-e0c0-4bec-8572-23f7638bacd6.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927245"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927245",
+    "popularity": 46.27
   },
   {
     "dob": "1947-08-09",
@@ -93,7 +104,8 @@
     "date": "2017-08-09",
     "playlistId": "5HPBwlvS6hGcz0vKVht2hT",
     "imageurl": "https://static-cdn.sr.se/images/2071/1a0919ed-ee4a-4716-9ad5-dc57ed4c9961.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927244"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927244",
+    "popularity": 52.55
   },
   {
     "dob": null,
@@ -101,7 +113,8 @@
     "date": "2017-08-08",
     "playlistId": "0sGtLQit48DswK1EnR2WFc",
     "imageurl": "https://static-cdn.sr.se/images/2071/6d63d8a7-51c9-47ca-a0b6-9b9e2419aad3.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927243"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927243",
+    "popularity": 42.3
   },
   {
     "dob": "undefined-undefined-1945",
@@ -109,7 +122,8 @@
     "date": "2017-08-07",
     "playlistId": "0NSdejoVQhIlZpvLNIqtJT",
     "imageurl": "https://static-cdn.sr.se/images/2071/54b8a9c4-33aa-46d5-a369-1676d32f6d8c.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927242"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927242",
+    "popularity": 35.93
   },
   {
     "dob": "1943-12-24",
@@ -117,7 +131,8 @@
     "date": "2017-08-06",
     "playlistId": "4TkFmYNf3PP26zhgrFCyuG",
     "imageurl": "https://static-cdn.sr.se/images/2071/2b85974c-1443-4e81-8eb2-0dc03ff37bb2.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927241"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927241",
+    "popularity": 40.6
   },
   {
     "dob": "1947-10-30",
@@ -125,7 +140,8 @@
     "date": "2017-08-05",
     "playlistId": "6PaWwwhC2sWUrxB7UDaJ1m",
     "imageurl": "https://static-cdn.sr.se/images/2071/caff9893-7b91-46c8-937f-fe729a7be252.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927240"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927240",
+    "popularity": 36.75
   },
   {
     "dob": "1991-04-09",
@@ -133,7 +149,8 @@
     "date": "2017-08-04",
     "playlistId": "3LUU6w5A4xqFbr4ts6bhCs",
     "imageurl": "https://static-cdn.sr.se/images/2071/685e8db8-d39e-49bd-90d5-9adb8dcdba29.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927239"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927239",
+    "popularity": 37.06
   },
   {
     "dob": null,
@@ -141,7 +158,8 @@
     "date": "2017-08-03",
     "playlistId": "0Tqp35Bwhv1LVtplDJlA4R",
     "imageurl": "https://static-cdn.sr.se/images/2071/6e88e40b-e6f8-44b4-932b-479681a4250f.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927238"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927238",
+    "popularity": 33
   },
   {
     "dob": "1991-03-08",
@@ -149,7 +167,8 @@
     "date": "2017-08-02",
     "playlistId": "3XwTIfvafBDTsW3jaqk3rC",
     "imageurl": "https://static-cdn.sr.se/images/2071/7ff36e86-6dcc-499b-a4e0-e5e5f05cb8d5.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927237"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927237",
+    "popularity": 35.27
   },
   {
     "dob": "1988-01-26",
@@ -157,7 +176,8 @@
     "date": "2017-08-01",
     "playlistId": "6qpxUUPVfypS9l5h7cfbk2",
     "imageurl": "https://static-cdn.sr.se/images/2071/08a204f8-55ec-4d0e-bdf6-42d06e1f2415.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/927236"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/927236",
+    "popularity": 52.88
   },
   {
     "dob": "1979-03-28",
@@ -165,7 +185,8 @@
     "date": "2017-07-31",
     "playlistId": "1sUgpK02Npywkuwmczt7Vz",
     "imageurl": "https://static-cdn.sr.se/images/2071/f4453736-e5f4-44cf-aaab-b3240bbe13b5.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921591"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921591",
+    "popularity": 42.4
   },
   {
     "dob": "1981-06-02",
@@ -173,7 +194,8 @@
     "date": "2017-07-30",
     "playlistId": "5adQ2ZjEcdyGpAFUv2PCm1",
     "imageurl": "https://static-cdn.sr.se/images/2071/6533ee90-093a-419a-9a99-217543ded1a2.jpeg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921590"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921590",
+    "popularity": 45.58
   },
   {
     "dob": "1971-07-29",
@@ -181,7 +203,8 @@
     "date": "2017-07-29",
     "playlistId": "2p414czbrRw2G4Y76xmUuA",
     "imageurl": "https://static-cdn.sr.se/images/2071/f617c6c9-38bf-4562-b361-09243c742128.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921587"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921587",
+    "popularity": 35.14
   },
   {
     "dob": "1936-04-20",
@@ -189,7 +212,8 @@
     "date": "2017-07-28",
     "playlistId": "6SG9W8DNhPTZ8DYQf3p7ze",
     "imageurl": "https://static-cdn.sr.se/images/2071/38d304c8-be41-48c6-8486-f874ea88f3d5.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/916616"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/916616",
+    "popularity": 37.55
   },
   {
     "dob": "1990-06-08",
@@ -197,7 +221,8 @@
     "date": "2017-07-27",
     "playlistId": "420arnJMwyKslbPkeNoWK2",
     "imageurl": "https://static-cdn.sr.se/images/2071/c5884416-da4e-4083-b1fa-390713687189.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921586"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921586",
+    "popularity": 53
   },
   {
     "dob": "1975-07-15",
@@ -205,7 +230,8 @@
     "date": "2017-07-26",
     "playlistId": "1KB6JVUPp7R1gARfpcrQn6",
     "imageurl": "https://static-cdn.sr.se/images/2071/6139becf-77c6-42c2-a889-9309e2a5ed27.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921585"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921585",
+    "popularity": 15.67
   },
   {
     "dob": "1947-07-07",
@@ -213,7 +239,8 @@
     "date": "2017-07-25",
     "playlistId": "2DgpaI5q3WbsFGJk2ZSeVb",
     "imageurl": "https://static-cdn.sr.se/images/2071/3415febd-db8c-415c-a4c8-b219bffef430.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921584"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921584",
+    "popularity": 41.92
   },
   {
     "dob": "1966-01-29",
@@ -221,7 +248,8 @@
     "date": "2017-07-24",
     "playlistId": "2RJAo9ujrYeA9MApE5zx8O",
     "imageurl": "https://static-cdn.sr.se/images/2071/c75ec0af-6243-4917-bec5-974331c35ea3.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921583"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921583",
+    "popularity": 32.13
   },
   {
     "dob": "1938-10-02",
@@ -229,7 +257,8 @@
     "date": "2017-07-23",
     "playlistId": "0kE5wlfnrhyqV4PKgZRLaq",
     "imageurl": "https://static-cdn.sr.se/images/2071/752720e5-32b6-4259-ae03-04a0843a6937.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921582"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921582",
+    "popularity": 28.33
   },
   {
     "dob": "1950-02-19",
@@ -237,7 +266,8 @@
     "date": "2017-07-22",
     "playlistId": "2bJKhzySOwceamfi74dKJj",
     "imageurl": "https://static-cdn.sr.se/images/2071/a18b8820-e97f-4b5c-ae83-f5b0b6995b8f.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921581"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921581",
+    "popularity": 52.08
   },
   {
     "dob": "1965-01-17",
@@ -245,7 +275,8 @@
     "date": "2017-07-21",
     "playlistId": "5F1Umef9xyfR7iKMyNv9gH",
     "imageurl": "https://static-cdn.sr.se/images/2071/7cfe43f0-4d3f-4421-b6f3-91cf83f7147f.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921580"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921580",
+    "popularity": 46.82
   },
   {
     "dob": "undefined-undefined-1969",
@@ -253,7 +284,8 @@
     "date": "2017-07-20",
     "playlistId": "6acxTNNAIdw0gbdU2AI9lI",
     "imageurl": "https://static-cdn.sr.se/images/2071/2de9753e-2458-48a7-b945-42733b60155e.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921579"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921579",
+    "popularity": 40.77
   },
   {
     "dob": null,
@@ -261,7 +293,8 @@
     "date": "2017-07-19",
     "playlistId": "1EnLikuLEMYFGdxE16ziSx",
     "imageurl": "https://static-cdn.sr.se/images/2071/939ccbf7-9a1f-4a61-aaae-2a34372a889e.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921565"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921565",
+    "popularity": 36.87
   },
   {
     "dob": null,
@@ -269,7 +302,8 @@
     "date": "2017-07-18",
     "playlistId": "4MrWGERwW0PcnMyuoTGliB",
     "imageurl": "https://static-cdn.sr.se/images/2071/981c878a-a2c9-45e5-bf34-c027d9f98d82.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921564"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921564",
+    "popularity": 23.46
   },
   {
     "dob": "1992-01-31",
@@ -277,7 +311,8 @@
     "date": "2017-07-17",
     "playlistId": "0C2r5kvrhBvOGBMu2HqCDx",
     "imageurl": "https://static-cdn.sr.se/images/2071/269fc80c-a07c-4088-b737-5dfec4d3331d.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/921561"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/921561",
+    "popularity": 50.07
   },
   {
     "dob": "1949-09-24",
@@ -285,7 +320,8 @@
     "date": "2017-07-16",
     "playlistId": "3qlSf58Q2B8KWCVNCjUsFr",
     "imageurl": "https://static-cdn.sr.se/images/2071/ac7b8ce3-b8e1-48ee-988e-ddca2b1b44ba.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/916969"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/916969",
+    "popularity": 29.23
   },
   {
     "dob": "1987-10-29",
@@ -293,7 +329,8 @@
     "date": "2017-07-15",
     "playlistId": "1dXaHdBZtd6xwh9yBaw8gJ",
     "imageurl": "https://static-cdn.sr.se/images/2071/3e652d15-ba19-4b88-9250-6d8fb19c5473.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/916940"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/916940",
+    "popularity": 47.57
   },
   {
     "dob": "1979-03-23",
@@ -301,7 +338,8 @@
     "date": "2017-07-14",
     "playlistId": "4vR3oCN0p06vPCWvzePzse",
     "imageurl": "https://static-cdn.sr.se/images/2071/c186e58a-2c4b-4e53-8f89-ee919c2187f3.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/917013"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/917013",
+    "popularity": 34.82
   },
   {
     "dob": "1956-05-18",
@@ -309,7 +347,8 @@
     "date": "2017-07-13",
     "playlistId": "1400TlGph2C6kgmnbbhKPG",
     "imageurl": "https://static-cdn.sr.se/images/2071/b4360e15-1924-4977-82f0-4a57b5bf886a.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/917105"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/917105",
+    "popularity": 53.67
   },
   {
     "dob": "1994-02-23",
@@ -317,7 +356,8 @@
     "date": "2017-07-12",
     "playlistId": "64ctWdCmIGRdtTnpNA4Vvw",
     "imageurl": "https://static-cdn.sr.se/images/2071/a60f7bd2-e9f6-4f4b-80fb-359320f35f54.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/917060"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/917060",
+    "popularity": 61
   },
   {
     "dob": "1996-04-04",
@@ -325,7 +365,8 @@
     "date": "2017-07-11",
     "playlistId": "6foiWGee6xPDiU1qPVwdu3",
     "imageurl": "https://static-cdn.sr.se/images/2071/7f00d754-be64-4eb3-8cdb-2f5aa8630a01.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/917198"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/917198",
+    "popularity": 48.07
   },
   {
     "dob": "1912-05-08",
@@ -333,7 +374,8 @@
     "date": "2017-07-10",
     "playlistId": "6JFEmhqOQumO3OxavFkdbB",
     "imageurl": "https://static-cdn.sr.se/images/2071/cb4ec504-0204-4868-b502-7e550422403b.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/917151"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/917151",
+    "popularity": 27.24
   },
   {
     "dob": "1952-06-27",
@@ -341,7 +383,8 @@
     "date": "2017-07-09",
     "playlistId": "4JIZhWmgTmxHhqFeDa6n8F",
     "imageurl": "https://static-cdn.sr.se/images/2071/bd81e537-3d73-428f-afcc-82e6cfcef07f.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/916906"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/916906",
+    "popularity": 50.27
   },
   {
     "dob": "1972-10-15",
@@ -349,7 +392,8 @@
     "date": "2017-07-08",
     "playlistId": "2pF8L3UhfxZUL0aZu5gdnp",
     "imageurl": "https://static-cdn.sr.se/images/2071/e7871381-7b71-426f-9291-f55d30b8ef0a.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/918363"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/918363",
+    "popularity": 23.27
   },
   {
     "dob": null,
@@ -357,7 +401,8 @@
     "date": "2017-07-07",
     "playlistId": "1E7foxiExnfjSUUDqc9XXn",
     "imageurl": "https://static-cdn.sr.se/images/2071/c124269e-cadd-4657-9624-14c7c73ce692.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/918335"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/918335",
+    "popularity": 53.78
   },
   {
     "dob": "1991-06-16",
@@ -365,7 +410,8 @@
     "date": "2017-07-06",
     "playlistId": "7DInjsYgSdf9zShdFXagz6",
     "imageurl": "https://static-cdn.sr.se/images/2071/ae40ef33-16c5-4b33-bb35-36fcbd1b83a5.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/917302"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/917302",
+    "popularity": 39.92
   },
   {
     "dob": "undefined-undefined-1969",
@@ -373,7 +419,8 @@
     "date": "2017-07-05",
     "playlistId": "4inLCoExE9Yj60JqPWOflr",
     "imageurl": "https://static-cdn.sr.se/images/2071/cd075891-3c16-45eb-bbf2-023a280b7dac.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/914978"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/914978",
+    "popularity": 47.15
   },
   {
     "dob": null,
@@ -381,7 +428,8 @@
     "date": "2017-07-04",
     "playlistId": "3guDW2h3ROXVkHaVkO5Taj",
     "imageurl": "https://static-cdn.sr.se/images/2071/046f0c84-b513-456c-94a4-200d2df92ae6.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/914931"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/914931",
+    "popularity": 32.8
   },
   {
     "dob": "1950-12-08",
@@ -389,7 +437,8 @@
     "date": "2017-07-03",
     "playlistId": "1sTxKwvTL22lcZUO86stbK",
     "imageurl": "https://static-cdn.sr.se/images/2071/b08edf48-836b-49ae-a130-0adec100b444.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/914882"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/914882",
+    "popularity": 29.17
   },
   {
     "dob": "1932-02-14",
@@ -397,7 +446,8 @@
     "date": "2017-07-02",
     "playlistId": "6fshAHu7e7OMPEbSkIaSr3",
     "imageurl": "https://static-cdn.sr.se/images/2071/2c06c290-b0b1-469e-b732-9d45112050a7.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/909821"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/909821",
+    "popularity": 26.63
   },
   {
     "dob": "1959-01-12",
@@ -405,7 +455,8 @@
     "date": "2017-07-01",
     "playlistId": "45gSBO3SAOFt3JFOrD5fWg",
     "imageurl": "https://static-cdn.sr.se/images/2071/ae2fbbaa-49bc-44ab-b1e1-0343e7e2f283.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/910832"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/910832",
+    "popularity": 37.21
   },
   {
     "dob": "1971-12-03",
@@ -413,7 +464,8 @@
     "date": "2017-06-30",
     "playlistId": "6mKXADqI6ymJ3FetqpV43t",
     "imageurl": "https://static-cdn.sr.se/images/2071/0a6f05d5-832f-4f61-980b-1bae958709c3.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/910806"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/910806",
+    "popularity": 31.83
   },
   {
     "dob": "1960-09-09",
@@ -421,7 +473,8 @@
     "date": "2017-06-29",
     "playlistId": "4QThBeB6aXMGFNQhTf5PI6",
     "imageurl": "https://static-cdn.sr.se/images/2071/9992d89b-1a1e-4cef-9128-03949b5def3f.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/910760"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/910760",
+    "popularity": 38.59
   },
   {
     "dob": "1967-12-28",
@@ -429,7 +482,8 @@
     "date": "2017-06-28",
     "playlistId": "6n8O0cbGNkp54SYA2u3UG9",
     "imageurl": "https://static-cdn.sr.se/images/2071/c5c50edf-f59e-47e3-93f8-8f51762da3ac.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/910713"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/910713",
+    "popularity": 39.36
   },
   {
     "dob": "1975-07-24",
@@ -437,7 +491,8 @@
     "date": "2017-06-27",
     "playlistId": "5YxaSCtriSqtMLvCVlQFr4",
     "imageurl": "https://static-cdn.sr.se/images/2071/a1bdc6c8-880d-4876-9d92-3eace44f3019.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/910666"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/910666",
+    "popularity": 42.8
   },
   {
     "dob": "1980-10-29",
@@ -445,7 +500,8 @@
     "date": "2017-06-26",
     "playlistId": "017zoxjT8xDcGjcbHE8Tz9",
     "imageurl": "https://static-cdn.sr.se/images/2071/8ff27568-2164-4c9b-88c2-6dbec0e3ba2b.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/910618"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/910618",
+    "popularity": 45.67
   },
   {
     "dob": "1993-08-17",
@@ -453,7 +509,8 @@
     "date": "2017-06-25",
     "playlistId": "6xXgHprJuEZDz7xHDwEZ7M",
     "imageurl": "https://static-cdn.sr.se/images/2071/7cb6ccb9-5370-4053-9391-9d47bbfd03d8.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/908584"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/908584",
+    "popularity": 50.67
   },
   {
     "dob": "1975-04-10",
@@ -461,7 +518,8 @@
     "date": "2017-06-24",
     "playlistId": "1LMjAskQm27GGlMFcwqrjc",
     "imageurl": "https://static-cdn.sr.se/images/2071/c913d31e-5304-4b61-8f19-f8e15f37afa4.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/908561"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/908561",
+    "popularity": 26.29
   },
   {
     "dob": null,
@@ -469,6 +527,7 @@
     "date": "2017-06-14",
     "playlistId": "7yBbgH5L0Agb9R5lu7w56H",
     "imageurl": "https://static-cdn.sr.se/images/2071/96c5f293-119d-4eda-b96e-40a3280a85c4.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/904120"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/904120",
+    "popularity": 31
   }
 ]

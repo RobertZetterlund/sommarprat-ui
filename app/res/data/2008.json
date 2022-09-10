@@ -5,7 +5,8 @@
     "date": "2008-08-17",
     "playlistId": "7AtQ6ZcivjVElaQT3k6Ccx",
     "imageurl": "https://static-cdn.sr.se/images/2071/96c5f293-119d-4eda-b96e-40a3280a85c4.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/88575"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/88575",
+    "popularity": 49.83
   },
   {
     "dob": "1944-11-05",
@@ -13,7 +14,8 @@
     "date": "2008-08-16",
     "playlistId": "2AEkDtc0KQG7WCrZ7BdYqO",
     "imageurl": "https://static-cdn.sr.se/images/2071/3255526_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/370324"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/370324",
+    "popularity": 24.68
   },
   {
     "dob": "1961-02-15",
@@ -21,7 +23,8 @@
     "date": "2008-08-15",
     "playlistId": "7IFAuf5snwNWNbY1ZJSi2k",
     "imageurl": "https://static-cdn.sr.se/images/2071/3255516_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/370322"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/370322",
+    "popularity": 42.62
   },
   {
     "dob": null,
@@ -29,7 +32,8 @@
     "date": "2008-08-14",
     "playlistId": "0E4Qe0EkJeYx2ZymAmOlgX",
     "imageurl": "https://static-cdn.sr.se/images/2071/3255480_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/353531"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/353531",
+    "popularity": 36.73
   },
   {
     "dob": "1961-04-12",
@@ -37,7 +41,8 @@
     "date": "2008-08-13",
     "playlistId": "1ENWTNJ8dQDlBox71vrXiC",
     "imageurl": "https://static-cdn.sr.se/images/2071/3255450_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/370230"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/370230",
+    "popularity": 37.53
   },
   {
     "dob": "1955-09-06",
@@ -45,7 +50,8 @@
     "date": "2008-08-12",
     "playlistId": "3VEUQDtP57VzirjlcnYe6N",
     "imageurl": "https://static-cdn.sr.se/images/2071/3255416_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/370190"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/370190",
+    "popularity": 38.45
   },
   {
     "dob": "1956-01-01",
@@ -53,7 +59,8 @@
     "date": "2008-08-11",
     "playlistId": "3rKXN8XBuhtEpgRBn99Hvo",
     "imageurl": "https://static-cdn.sr.se/images/2071/3255399_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/370189"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/370189",
+    "popularity": 40.14
   },
   {
     "dob": "1958-02-13",
@@ -61,7 +68,8 @@
     "date": "2008-08-10",
     "playlistId": "35neQcrXQ9cxH3dSrxLPVj",
     "imageurl": "https://static-cdn.sr.se/images/2071/3255384_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/370188"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/370188",
+    "popularity": 42.92
   },
   {
     "dob": "1972-11-29",
@@ -69,7 +77,8 @@
     "date": "2008-08-09",
     "playlistId": "68LgnbatXD9iDHHY6yHI9E",
     "imageurl": "https://static-cdn.sr.se/images/2071/3255347_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/370058"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/370058",
+    "popularity": 27.83
   },
   {
     "dob": "1886-07-23",
@@ -77,7 +86,8 @@
     "date": "2008-08-08",
     "playlistId": "6NmWyCLasFYJ2D7aGZfhTk",
     "imageurl": "https://static-cdn.sr.se/images/2071/3255329_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/370057"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/370057",
+    "popularity": 39.43
   },
   {
     "dob": "1958-12-30",
@@ -85,7 +95,8 @@
     "date": "2008-08-07",
     "playlistId": "4Tcnv8p90pdEkus3bEBMZS",
     "imageurl": "https://static-cdn.sr.se/images/2071/3253045_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369530"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369530",
+    "popularity": 42.17
   },
   {
     "dob": "1980-05-14",
@@ -93,7 +104,8 @@
     "date": "2008-08-06",
     "playlistId": "1ua5GrlRlNWA7zH7ll7QIg",
     "imageurl": "https://static-cdn.sr.se/images/2071/3253032_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369529"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369529",
+    "popularity": 53.23
   },
   {
     "dob": null,
@@ -101,7 +113,8 @@
     "date": "2008-08-05",
     "playlistId": "0zGpqtzZDGZGLcind10bQY",
     "imageurl": "https://static-cdn.sr.se/images/2071/3253021_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369527"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369527",
+    "popularity": 33.92
   },
   {
     "dob": "1953-12-20",
@@ -109,7 +122,8 @@
     "date": "2008-08-04",
     "playlistId": "1dvSnFr15XT9G1CGaBJgO1",
     "imageurl": "https://static-cdn.sr.se/images/2071/3253015_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369526"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369526",
+    "popularity": 47.08
   },
   {
     "dob": "1960-11-16",
@@ -117,7 +131,8 @@
     "date": "2008-08-03",
     "playlistId": "00dksqafbJpoLzisbsmJE6",
     "imageurl": "https://static-cdn.sr.se/images/2071/3253004_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369524"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369524",
+    "popularity": 27.12
   },
   {
     "dob": null,
@@ -125,7 +140,8 @@
     "date": "2008-08-02",
     "playlistId": "3JYEOvYIhZzWry4RrIU2IA",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252997_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369523"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369523",
+    "popularity": 36.38
   },
   {
     "dob": "1977-11-22",
@@ -133,7 +149,8 @@
     "date": "2008-08-01",
     "playlistId": "0lIqNFEetVhoxD2gdt0bKC",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252989_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369522"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369522",
+    "popularity": 44.15
   },
   {
     "dob": "1962-02-28",
@@ -141,7 +158,8 @@
     "date": "2008-07-31",
     "playlistId": "4FzJKKdeB4CVM9GBacVtl4",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252970_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369520"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369520",
+    "popularity": 36.78
   },
   {
     "dob": "1959-01-27",
@@ -149,7 +167,8 @@
     "date": "2008-07-30",
     "playlistId": "1HS8tw7QizvbBqZGvuv9OI",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252957_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369519"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369519",
+    "popularity": 46.67
   },
   {
     "dob": "1983-05-26",
@@ -157,7 +176,8 @@
     "date": "2008-07-29",
     "playlistId": "5Gsnjqgn4s6LfQhZVGWSUC",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252918_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369517"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369517",
+    "popularity": 19.44
   },
   {
     "dob": "1955-06-22",
@@ -165,7 +185,8 @@
     "date": "2008-07-28",
     "playlistId": "6NEothtdnvyEp7leqJRW9i",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252810_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369512"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369512",
+    "popularity": 29.07
   },
   {
     "dob": "1974-05-24",
@@ -173,7 +194,8 @@
     "date": "2008-07-27",
     "playlistId": "3tltQfYjEKNU2CuVWttD5q",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252794_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369510"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369510",
+    "popularity": 41.08
   },
   {
     "dob": "undefined-undefined-1964",
@@ -181,7 +203,8 @@
     "date": "2008-07-26",
     "playlistId": "5rf8beLTTm17GJVDp49je5",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252782_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369509"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369509",
+    "popularity": 48.5
   },
   {
     "dob": "1986-06-13",
@@ -189,7 +212,8 @@
     "date": "2008-07-25",
     "playlistId": "65Gq5sfjQzHMDnbUnr2QSR",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252766_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369508"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369508",
+    "popularity": 58.43
   },
   {
     "dob": "1920-01-12",
@@ -197,7 +221,8 @@
     "date": "2008-07-24",
     "playlistId": "1MXoxSZ4NdZnlIYsEoxp1M",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252706_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369506"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369506",
+    "popularity": 29.36
   },
   {
     "dob": "1967-05-06",
@@ -205,7 +230,8 @@
     "date": "2008-07-23",
     "playlistId": "4X9wFhsPRG6ki00KP2xR2I",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252624_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369505"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369505",
+    "popularity": 48.44
   },
   {
     "dob": "1956-04-15",
@@ -213,7 +239,8 @@
     "date": "2008-07-22",
     "playlistId": "0VRbFzWPcIQNgidB3LI8oN",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252592_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369503"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369503",
+    "popularity": 46.36
   },
   {
     "dob": "1942-07-13",
@@ -221,7 +248,8 @@
     "date": "2008-07-21",
     "playlistId": "4xU6WZTNPPyI75tJJkqUgl",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252581_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369502"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369502",
+    "popularity": 33.86
   },
   {
     "dob": "1979-06-12",
@@ -229,7 +257,8 @@
     "date": "2008-07-20",
     "playlistId": "6Lqmv4zgi7rZY7NsILBqxY",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252528_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369406"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369406",
+    "popularity": 52.92
   },
   {
     "dob": "1957-11-03",
@@ -237,7 +266,8 @@
     "date": "2008-07-19",
     "playlistId": "4FHsrpTkwF4nAeyUoAXQ79",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252441_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369402"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369402",
+    "popularity": 51.82
   },
   {
     "dob": "1936-05-01",
@@ -245,7 +275,8 @@
     "date": "2008-07-18",
     "playlistId": "3YXj6mkjazivCm3ql2muvO",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252421_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369400"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369400",
+    "popularity": 37.33
   },
   {
     "dob": "1968-02-10",
@@ -253,7 +284,8 @@
     "date": "2008-07-17",
     "playlistId": "5NeyTwwkUD46a0HK0KuW3X",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252408_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369399"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369399",
+    "popularity": 33.14
   },
   {
     "dob": null,
@@ -261,7 +293,8 @@
     "date": "2008-07-16",
     "playlistId": "3nih1ShKYMk79yPGygGEzq",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252181_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/322801"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/322801",
+    "popularity": 33.93
   },
   {
     "dob": "1943-09-06",
@@ -269,7 +302,8 @@
     "date": "2008-07-15",
     "playlistId": "4yajixsuMR3vSr1DGjSSWo",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252168_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369374"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369374",
+    "popularity": 42.58
   },
   {
     "dob": null,
@@ -277,7 +311,8 @@
     "date": "2008-07-14",
     "playlistId": "1M59f3pnCGQUg4S6UKyBXr",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252136_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369370"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369370",
+    "popularity": 22.3
   },
   {
     "dob": "1945-04-25",
@@ -285,7 +320,8 @@
     "date": "2008-07-13",
     "playlistId": "5zYCySBTSfRz0hN6O5Zt2T",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252112_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369369"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369369",
+    "popularity": 55.6
   },
   {
     "dob": "1973-08-06",
@@ -293,7 +329,8 @@
     "date": "2008-07-12",
     "playlistId": "5zrAqkytAqjV9fx02RZDFW",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252085_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369368"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369368",
+    "popularity": 41.82
   },
   {
     "dob": "1938-03-08",
@@ -301,7 +338,8 @@
     "date": "2008-07-11",
     "playlistId": "7o0BeySLo46XlJttb1Uolz",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252076_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369367"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369367",
+    "popularity": 32.69
   },
   {
     "dob": "1963-02-03",
@@ -309,7 +347,8 @@
     "date": "2008-07-10",
     "playlistId": "3j13E4H8jeElMWT69Bzat5",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252071_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369366"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369366",
+    "popularity": 32.5
   },
   {
     "dob": "1944-05-20",
@@ -317,7 +356,8 @@
     "date": "2008-07-09",
     "playlistId": "1h9XIXj5249XrDUGt343B5",
     "imageurl": "https://static-cdn.sr.se/images/2071/3252040_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369289"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369289",
+    "popularity": 30.93
   },
   {
     "dob": "1976-10-12",
@@ -325,7 +365,8 @@
     "date": "2008-07-08",
     "playlistId": "1AFiKiylj3Kz3Te8aC7H7m",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251996_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369285"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369285",
+    "popularity": 47.85
   },
   {
     "dob": "1955-05-06",
@@ -333,7 +374,8 @@
     "date": "2008-07-07",
     "playlistId": "1cj6qeTbdIc225nlrLKO5c",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251970_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369284"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369284",
+    "popularity": 41.67
   },
   {
     "dob": "1958-10-23",
@@ -341,7 +383,8 @@
     "date": "2008-07-06",
     "playlistId": "7mdQ8mNvU5JYVmyWo9z4vp",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251922_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369282"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369282",
+    "popularity": 13.91
   },
   {
     "dob": "1952-06-01",
@@ -349,7 +392,8 @@
     "date": "2008-07-05",
     "playlistId": "3fmgBZcEsbFG27DDoUrxzW",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251874_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369279"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369279",
+    "popularity": 0
   },
   {
     "dob": "1966-09-02",
@@ -357,7 +401,8 @@
     "date": "2008-07-04",
     "playlistId": "0v3boy07bmWjNsSTWR0UyR",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251341_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369191"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369191",
+    "popularity": 45.77
   },
   {
     "dob": null,
@@ -365,7 +410,8 @@
     "date": "2008-07-03",
     "playlistId": "4Hx3rJM9t2V1K7q72n5JvV",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251319_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369190"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369190",
+    "popularity": 44.59
   },
   {
     "dob": "1959-05-08",
@@ -373,7 +419,8 @@
     "date": "2008-07-02",
     "playlistId": "5EUEaZ1eKugVD8DD3UZRXO",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251304_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369188"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369188",
+    "popularity": 47.62
   },
   {
     "dob": "1947-02-24",
@@ -381,7 +428,8 @@
     "date": "2008-07-01",
     "playlistId": "4t0dTvo23cFyPkjio3ZaF0",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251290_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369187"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369187",
+    "popularity": 29.5
   },
   {
     "dob": "1954-09-28",
@@ -389,7 +437,8 @@
     "date": "2008-06-29",
     "playlistId": "3hjRmnjL3PpGdok0eKvLry",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251265_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369185"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369185",
+    "popularity": 45
   },
   {
     "dob": "1975-10-19",
@@ -397,7 +446,8 @@
     "date": "2008-06-28",
     "playlistId": "15tiMmFY3SqxtIGZa4DSkP",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251238_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369184"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369184",
+    "popularity": 34.27
   },
   {
     "dob": "1949-05-21",
@@ -405,7 +455,8 @@
     "date": "2008-06-27",
     "playlistId": "2ZhzFBkZkVgNLJa6JbdWnT",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251090_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369178"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369178",
+    "popularity": 40.38
   },
   {
     "dob": "1924-11-17",
@@ -413,7 +464,8 @@
     "date": "2008-06-26",
     "playlistId": "2DiwwZsXRWeKiIcmOq9jIp",
     "imageurl": "https://static-cdn.sr.se/images/2071/3251018_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369154"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369154",
+    "popularity": 33.21
   },
   {
     "dob": "undefined-undefined-1968",
@@ -421,7 +473,8 @@
     "date": "2008-06-25",
     "playlistId": "6hNuy2jXWMICIvlqhMf69x",
     "imageurl": "https://static-cdn.sr.se/images/2071/3250921_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369062"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369062",
+    "popularity": 33.25
   },
   {
     "dob": "1929-11-05",
@@ -429,7 +482,8 @@
     "date": "2008-06-24",
     "playlistId": "6gpA0tTZO3BWWtHutmkyP9",
     "imageurl": "https://static-cdn.sr.se/images/2071/3250782_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/369060"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/369060",
+    "popularity": 33.29
   },
   {
     "dob": "1967-05-05",
@@ -437,7 +491,8 @@
     "date": "2008-06-23",
     "playlistId": "10Hk85YkWo7MbjwQ2Ny3nf",
     "imageurl": "https://static-cdn.sr.se/images/2071/3250748_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/279990"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/279990",
+    "popularity": 35.86
   },
   {
     "dob": "1955-04-11",
@@ -445,7 +500,8 @@
     "date": "2008-06-22",
     "playlistId": "5eS3VOeTtULJpZYEjpJ69D",
     "imageurl": "https://static-cdn.sr.se/images/2071/3250714_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/368978"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/368978",
+    "popularity": 30.19
   },
   {
     "dob": "1963-06-27",
@@ -453,6 +509,7 @@
     "date": "2008-06-21",
     "playlistId": "2jRIUgkVwON6lBsHOy9CRU",
     "imageurl": "https://static-cdn.sr.se/images/2071/3242161_2048_1152.jpg?preset=api-default-square",
-    "episodeUrl": "https://sverigesradio.se/avsnitt/363730"
+    "episodeUrl": "https://sverigesradio.se/avsnitt/363730",
+    "popularity": 21.69
   }
 ]

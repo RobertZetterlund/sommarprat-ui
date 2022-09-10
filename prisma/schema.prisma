@@ -19,4 +19,31 @@ model Episode {
   imageurl   String
   episodeUrl String
   yearAired  Int
+  popularity Float
+}
+
+model Artist {
+  id    String @id
+  count Int
+  name  String
+}
+
+model Album {
+  id         String @id
+  count      Int
+  name       String
+  artistName String
+  artistId   String
+  albumImg   String
+}
+
+model Track {
+  id         String @id
+  name       String
+  count      Int
+  albumId    String
+  albumName  String
+  albumImg   String
+  artistId   String
+  artistName String
 }

@@ -81,6 +81,7 @@ export default function Index() {
                 in Sweden.
               </p>
             </div>
+            <div className="flex pt-10"></div>
           </div>
         </ParallaxLayer>
       </Parallax>

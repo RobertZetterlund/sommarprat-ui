@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 export const Placement = () => {
   const ref = useRef<HTMLDivElement | null>(null);

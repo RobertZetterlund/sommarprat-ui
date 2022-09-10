@@ -1,8 +1,8 @@
 import { useState, useCallback, useMemo, useRef } from "react";
 import type { ReactNode } from "react";
-import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import { useSpring, animated } from "@react-spring/web";
-import useElementSize from "../../../../hooks/useElementSize";
+import useElementSize from "../../hooks/useElementSize";
 
 interface BarItem {
   id: string;
@@ -18,7 +18,7 @@ const barColors = {
   yellow: "from-yellow-500 to-yellow-300",
 } as const;
 
-export const Bar = ({
+export const ExpandableBars = ({
   items,
   color,
   noAnimation = false,

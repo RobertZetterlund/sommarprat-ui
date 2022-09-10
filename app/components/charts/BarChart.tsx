@@ -22,7 +22,7 @@ type TooltipData<T> = {
   item: DataItem<T>;
 };
 
-export type BarStackProps<T> = {
+export type BarChartProps<T> = {
   width: number;
   height: number;
   data: DataItem<T>[];
@@ -48,7 +48,7 @@ const tooltipStyles = {
 
 let tooltipTimeout: number;
 
-export default function BarGraph<T>({
+export default function BarChart<T>({
   width,
   height,
   margin = defaultMargin,
@@ -59,7 +59,7 @@ export default function BarGraph<T>({
   color = "#B68CB8",
   linksTo,
   customYMax,
-}: BarStackProps<T>) {
+}: BarChartProps<T>) {
   const {
     tooltipOpen,
     tooltipLeft,

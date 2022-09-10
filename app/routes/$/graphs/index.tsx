@@ -2,7 +2,7 @@ import type { Episode } from "@prisma/client";
 import { useLoaderData } from "@remix-run/react";
 import type { LoaderFunction } from "@remix-run/server-runtime";
 import { json } from "@remix-run/server-runtime";
-import BarGraph from "../../../components/charts/bar";
+import BarChart from "../../../components/charts/BarChart";
 import { GraphEntry } from "../../../components/landing/GraphEntry";
 import useElementSize from "../../../hooks/useElementSize";
 import { db } from "../../../utils/db.server";
@@ -50,7 +50,7 @@ export default () => {
           <p>...</p>
         </div>
         <div className="flex justify-center">
-          <BarGraph
+          <BarChart
             width={Math.min(width, 1000)}
             height={500}
             data={_albums}
@@ -91,7 +91,7 @@ export default () => {
           <p>...</p>
         </div>
         <div className="flex justify-center">
-          <BarGraph
+          <BarChart
             width={Math.min(width, 1000)}
             height={500}
             data={_artists}
@@ -124,7 +124,7 @@ export default () => {
           <p>...</p>
         </div>
         <div className="flex justify-center">
-          <BarGraph
+          <BarChart
             width={Math.min(width - 40, 1000)}
             height={500}
             data={_tracks}
@@ -165,7 +165,7 @@ export default () => {
           <p>Många väljer att spela låtar som nyligen släppts</p>
         </div>
         <div className="flex justify-center">
-          <BarGraph
+          <BarChart
             data={_recency}
             width={Math.min(width - 40, 1000)}
             height={500}
@@ -189,7 +189,7 @@ export default () => {
           <p>Det finns teorier att man skapar sin musiksmak i ung ålder.</p>
         </div>
         <div className="flex justify-center">
-          <BarGraph
+          <BarChart
             width={Math.min(width, 1000)}
             height={500}
             data={_data}
@@ -213,7 +213,7 @@ export default () => {
           <p>...</p>
         </div>
         <div className="flex justify-center">
-          <BarGraph
+          <BarChart
             width={Math.min(width - 40, 1000)}
             height={500}
             data={popularity.slice(0, 51)}
@@ -258,7 +258,7 @@ export default () => {
           <p>...</p>
         </div>
         <div className="flex justify-center">
-          <BarGraph
+          <BarChart
             width={Math.min(width - 40, 1000)}
             height={500}
             customYMax={100}

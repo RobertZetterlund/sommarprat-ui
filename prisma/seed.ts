@@ -47,6 +47,7 @@ const AllYears = {
 const db = new PrismaClient();
 
 async function seed() {
+  console.info("seeding episodes...");
   await Promise.all(
     getYears().map(async (year) => {
       await Promise.all(
@@ -61,6 +62,51 @@ async function seed() {
       );
     })
   );
+  console.info("seeding top tracks");
+  await Promise.all(
+    Object.values(tracks).map((track) => {
+      return db.track.create({
+        data: {
+          albumId: track.album.id,
+          albumImg: track.album.img,
+          albumName: track.album.name,
+          artistId: track.artists[0].id,
+          artistName: track.artists[0].name,
+          count: track.count,
+          id: track.track.id,
+          name: track.track.name,
+        },
+      });
+    })
+  );
+  console.info("seeding top albums");
+  await Promise.all(
+    Object.values(albums).map((album) => {
+      return db.album.create({
+        data: {
+          artistId: album.artist.id,
+          artistName: album.artist.name,
+          count: album.count,
+          id: album.album.id,
+          name: album.album.name,
+          img: album.album.img,
+        },
+      });
+    })
+  );
+  console.info("seeding top artists");
+  await Promise.all(
+    Object.values(artists).map((artist) => {
+      return db.artist.create({
+        data: {
+          count: artist.count,
+          id: artist.id,
+          name: artist.name,
+        },
+      });
+    })
+  );
+
   console.log(`Database has been seeded. 🌱`);
 }
 

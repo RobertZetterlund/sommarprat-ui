@@ -34,7 +34,7 @@ model Album {
   name       String
   artistName String
   artistId   String
-  albumImg   String
+  img        String
 }
 
 model Track {

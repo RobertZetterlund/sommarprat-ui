@@ -6,7 +6,7 @@ import BarChart from "../../../components/charts/BarChart";
 import { GraphEntry } from "../../../components/landing/GraphEntry";
 import useElementSize from "../../../hooks/useElementSize";
 import { db } from "../../../utils/db.server";
-import { shortenPlayListId } from "../../../utils/links";
+import { episodeLink } from "../../../utils/links";
 
 type LoaderData = {
   popularityEpisodeById: {
@@ -222,9 +222,7 @@ export default () => {
             linksTo={(item) => {
               if (item.meta?.id && popularityEpisodeById[item.meta?.id]) {
                 const ep = popularityEpisodeById[item.meta?.id];
-                return `/playlists/${ep.yearAired}/${shortenPlayListId(
-                  ep.playlistId
-                )}`;
+                return episodeLink(ep);
               }
               return "";
             }}
@@ -269,9 +267,7 @@ export default () => {
             linksTo={(item) => {
               if (item.meta?.id && popularityEpisodeById[item.meta?.id]) {
                 const ep = popularityEpisodeById[item.meta?.id];
-                return `/playlists/${ep.yearAired}/${shortenPlayListId(
-                  ep.playlistId
-                )}`;
+                return episodeLink(ep);
               }
               return "";
             }}

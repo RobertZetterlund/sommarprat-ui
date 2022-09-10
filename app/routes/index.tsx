@@ -1,8 +1,9 @@
-import type { Album, Artist, Track } from "@prisma/client";
+import type { Album, Artist, Episode, Track } from "@prisma/client";
 import { Link, useLoaderData } from "@remix-run/react";
 import type { LoaderFunction } from "@remix-run/server-runtime";
 import { json } from "@remix-run/server-runtime";
 import { useEffect, useState } from "react";
+import { EpisodeSquare } from "../components/EpisodeSquares";
 import { TopAlbums } from "../components/TopAlbums";
 import { TopArtists } from "../components/TopArtists";
 import { TopTracks } from "../components/TopTracks";
@@ -12,8 +13,19 @@ type LoaderData = {
   topTracks: Track[];
   topAlbums: Album[];
   topArtists: Artist[];
+  highlightedEpisodes: Episode[];
   epCount: number;
+  avgHostAge: number;
 };
+
+const notableHosts = [
+  "0Derk8qpnDa3W0ZfkCnYvQ", // Zara Larsson
+  "25SOoCQFzJUhzJLrekKQTI", // Greta Thunberg
+  //"7gWPYSs8DAbWrYnaywHiRq", // Hans Rosling
+  //"1Nv0tZDjZQnCYvgGHbXcwp", // Nils Van der poel
+  "5bvD6DnpKkWPgdvhUFx4wF", // Daniel Ek
+  "4uHPiMfv4rWmPOvzcQnLH5", // Felix "Pewdiepie" Kjellberg
+];
 
 // yeah... it is this easy :D
 export const loader: LoaderFunction = async () => {
@@ -32,11 +44,24 @@ export const loader: LoaderFunction = async () => {
 
   const epCount = await db.episode.count();
 
-  return json({ topTracks, topAlbums, topArtists, epCount });
+  // Lets highlight Zara Larsson and other notable hosts.
+
+  const highlightedEpisodes = await db.episode.findMany({
+    where: { playlistId: { in: notableHosts } },
+    take: 4,
+  });
+
+  return json({
+    topTracks,
+    topAlbums,
+    topArtists,
+    epCount,
+    highlightedEpisodes,
+  });
 };
 
 export default function Index() {
-  const { topTracks, topAlbums, topArtists, epCount } =
+  const { topTracks, topAlbums, topArtists, epCount, highlightedEpisodes } =
     useLoaderData<LoaderData>();
 
   const [sunUp, setSunUp] = useState<boolean>(false);
@@ -62,11 +87,15 @@ export default function Index() {
         height={982}
       />
 
-      <div className="relative h-screen w-screen">
+      <div className="relative h-screen min-h-screen w-screen lg:mt-16">
         <img
           src={`/landing/bg-3.svg`}
           alt={""}
           className="absolute left-0 bottom-0 -z-10 h-screen w-screen object-cover"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(31,76,10,1) 50%, rgba(31,76,10,1) 100%);",
+          }}
           width={1512}
           height={982}
         />
@@ -74,10 +103,14 @@ export default function Index() {
           src={`/landing/bg-4.svg`}
           alt={""}
           className="absolute left-0 bottom-0 h-screen w-screen object-cover"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(71,112,53,1) 60%, rgba(71,112,53,1) 100%);",
+          }}
           width={1512}
           height={982}
         />
-        <div className="absolute bottom-16 flex flex-col gap-2 px-4 lg:px-16">
+        <div className="absolute bottom-16 flex flex-col gap-2 px-4 lg:bottom-32 lg:px-16">
           <h1 className="text-5xl text-slate-100 ">Sommarprat-ui.</h1>
           <h2 className="text-xl text-slate-200">
             A collection of the musical selection of the hosts of Sommar i P1.
@@ -113,21 +146,27 @@ export default function Index() {
 
         <div className="flex w-full flex-col">
           <h2 className="mb-3 text-3xl">Most played songs.</h2>
-          <TopTracks tracks={topTracks} expanded />
+          <div className="p-4 md:px-16">
+            <TopTracks tracks={topTracks} expanded />
+          </div>
           <Link className="self-center underline" to={"/statistics#tracks"}>
             See all
           </Link>
         </div>
         <div className="flex w-full flex-col">
           <h2 className="mb-3 text-3xl">Most played artists.</h2>
-          <TopArtists artists={topArtists} expanded />
+          <div className="p-4 md:px-16">
+            <TopArtists artists={topArtists} expanded />
+          </div>
           <Link className="self-center underline" to={"/statistics#artists"}>
             See all
           </Link>
         </div>
         <div className="flex w-full flex-col">
           <h2 className="mb-3 text-3xl">Most played albums.</h2>
-          <TopAlbums albums={topAlbums} expanded />
+          <div className="p-4 md:px-16">
+            <TopAlbums albums={topAlbums} expanded />
+          </div>
           <Link className="self-center underline" to={"/statistics#albums"}>
             See all
           </Link>
@@ -155,8 +194,19 @@ export default function Index() {
             <Link className="underline" to="playlists">
               {epCount} playlists
             </Link>{" "}
-            available on this website.
-            {/* TODO: talk about average host, popularity, spotify, how song selection might reflect talk and/or person*/}
+            available on this website and on Spotify. A few notable hosts
+            include the singer Zara Larsson, environmental activist Greta
+            Thunberg and the president of Spotify Daniel Ek.
+          </p>
+          {/* TODO: talk about average host, popularity, spotify, how song selection might reflect talk and/or person*/}
+          <ul className="grid grid-cols-1 gap-4 px-16 py-8 sm:grid-cols-2 lg:grid-cols-4">
+            {highlightedEpisodes.map((episode) => (
+              <EpisodeSquare key={episode.playlistId} episode={episode} />
+            ))}
+          </ul>
+          <p>
+            The average host of Sommar is 50 years old and prefers playing songs
+            that have been recently released.
           </p>
         </div>
       </div>

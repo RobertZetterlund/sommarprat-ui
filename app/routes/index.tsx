@@ -70,7 +70,7 @@ export default function Index() {
           width={1512}
           height={982}
         />
-        <div className="absolute bottom-12 flex flex-col gap-2 px-4">
+        <div className="absolute bottom-16 flex flex-col gap-2 px-4">
           <h1 className="text-5xl text-slate-100 ">Sommarprat-ui.</h1>
           <h2 className="text-xl text-slate-200">
             A collection of the musical selection of the hosts of Sommar i P1.

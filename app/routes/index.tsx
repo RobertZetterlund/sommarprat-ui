@@ -1,17 +1,15 @@
 import type { IParallax } from "@react-spring/parallax";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { useRef } from "react";
-import { Header } from "../components/layout/header";
+
+const pages = 4;
 
 export default function Index() {
   const ref = useRef<IParallax>(null);
 
   return (
     <div className="bg-[#236C02]">
-      <Parallax pages={7} ref={ref}>
-        <ParallaxLayer sticky={{ start: 0, end: 2 }} style={{ height: 40 }}>
-          <Header />
-        </ParallaxLayer>
+      <Parallax pages={pages} ref={ref}>
         <ParallaxLayer offset={0.02} speed={-0.5} factor={1}>
           <img
             src={`/landing/bg-1.svg`}
@@ -48,7 +46,7 @@ export default function Index() {
             height={982}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={0.8} speed={0} factor={2}>
+        <ParallaxLayer offset={0.83} speed={0} factor={pages}>
           <div className="flex h-full flex-col bg-[#236C02] px-4">
             <div className="flex flex-col gap-2 pb-10">
               <h1 className="text-5xl text-slate-100 ">Sommarprat-ui.</h1>
@@ -57,7 +55,7 @@ export default function Index() {
               </h2>
             </div>
 
-            <div className="flex gap-2 rounded bg-slate-900 bg-opacity-40 p-4 text-slate-100">
+            <div className="mt-4 flex gap-2 rounded bg-slate-900 bg-opacity-40 p-4 text-slate-100">
               <svg
                 className="shrink-0 self-center"
                 stroke="white"

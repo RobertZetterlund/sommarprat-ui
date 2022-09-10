@@ -1,27 +1,16 @@
-import { Episode } from "@prisma/client";
+import type { Episode } from "@prisma/client";
 import { useLoaderData } from "@remix-run/react";
-import { json, LoaderFunction } from "@remix-run/server-runtime";
+import type { LoaderFunction } from "@remix-run/server-runtime";
+import { json } from "@remix-run/server-runtime";
 import BarGraph from "../../../components/charts/bar";
 import { GraphEntry } from "../../../components/landing/GraphEntry";
 import useElementSize from "../../../hooks/useElementSize";
 import { db } from "../../../utils/db.server";
 import { shortenPlayListId } from "../../../utils/links";
 
-const EpisodeLoaderDataSelections: (keyof Episode)[] = [
-  "title",
-  "playlistId",
-  "imageurl",
-  "date",
-];
-
-const select = EpisodeLoaderDataSelections.reduce(
-  (acc, curr) => ({ [curr]: true, ...acc }),
-  {} as { [key in keyof Episode]: boolean }
-);
-
 type LoaderData = {
   popularityEpisodeById: {
-    [key: string]: Pick<Episode, typeof EpisodeLoaderDataSelections[number]>;
+    [key: string]: Episode;
   };
 };
 
@@ -55,6 +44,124 @@ export default () => {
         smal graf. Hoppas du har förtåelse.
       </p>
 
+      <GraphEntry>
+        <div>
+          <h2>De mest spelade albumen</h2>
+          <p>...</p>
+        </div>
+        <div className="flex justify-center">
+          <BarGraph
+            width={Math.min(width, 1000)}
+            height={500}
+            data={_albums}
+            color={"#f5ce0c"}
+            yLabel={"Antalet spelade låtar på albumet"}
+            linksTo={(item) =>
+              item.meta
+                ? `https://open.spotify.com/album/${item.meta?.album.id}`
+                : ""
+            }
+            renderLabel={(item) => {
+              return (
+                <div className="flex gap-2">
+                  <span className="self-center text-lg">{item.x}</span>
+                  <img
+                    width={60}
+                    height={60}
+                    src={item.meta?.album.img}
+                    alt={item.meta?.album.name}
+                  />
+                  <div className="flex flex-col gap-1">
+                    <span className="text-s text-slate-50">
+                      {item.meta?.album.name}
+                    </span>
+                    <span className="text-xs text-slate-300">
+                      {item.meta?.artist.name}
+                    </span>
+                    <span className="text-slate-400">{`${item.y} spelningar`}</span>
+                  </div>
+                </div>
+              );
+            }}
+          />
+        </div>
+      </GraphEntry>
+      <GraphEntry>
+        <div>
+          <h2>De mest spelade artisterna</h2>
+          <p>...</p>
+        </div>
+        <div className="flex justify-center">
+          <BarGraph
+            width={Math.min(width, 1000)}
+            height={500}
+            data={_artists}
+            color="#fa6f6f"
+            yLabel={"Mest spelade artisterna"}
+            linksTo={(item) =>
+              item.meta?.id
+                ? `https://open.spotify.com/artist/${item.meta.id}`
+                : ""
+            }
+            renderLabel={(item) => {
+              return (
+                <div className="flex gap-2">
+                  <span className="self-center text-lg">{item.x}</span>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-s text-slate-50">
+                      {item.meta?.name}
+                    </span>
+
+                    <span className="text-slate-400">{`${item.y} spelningar`}</span>
+                  </div>
+                </div>
+              );
+            }}
+          />
+        </div>
+      </GraphEntry>
+      <GraphEntry>
+        <div>
+          <h2>De mest spelade låtarna</h2>
+          <p>...</p>
+        </div>
+        <div className="flex justify-center">
+          <BarGraph
+            width={Math.min(width - 40, 1000)}
+            height={500}
+            data={_tracks}
+            color={"#fca344"}
+            yLabel={"Antalet spelningar för låten"}
+            linksTo={(item) =>
+              item.meta?.track
+                ? `https://open.spotify.com/track/${item.meta.track.id}`
+                : ""
+            }
+            renderLabel={(item) => {
+              return (
+                <div className="flex gap-2">
+                  <span className="self-center text-lg">{item.x}</span>
+                  <img
+                    width={60}
+                    height={60}
+                    src={item.meta?.album.img}
+                    alt={item.meta?.album.name}
+                  />
+                  <div className="flex flex-col gap-1">
+                    <span className="text-s text-slate-50">
+                      {item.meta?.album.name}
+                    </span>
+                    <span className="text-xs text-slate-300">
+                      {item.meta?.artists[0].name}
+                    </span>
+                    <span className="text-slate-400">{`${item.y} spelningar`}</span>
+                  </div>
+                </div>
+              );
+            }}
+          />
+        </div>
+      </GraphEntry>
       <GraphEntry>
         <div>
           <h2>Hur viktigt är hur nyligen låten släpptes?</h2>
@@ -105,109 +212,6 @@ export default () => {
       </GraphEntry>
       <GraphEntry>
         <div>
-          <h2>De mest spelade albumen</h2>
-          <p>...</p>
-        </div>
-        <div className="flex justify-center">
-          <BarGraph
-            width={Math.min(width, 1000)}
-            height={500}
-            data={_albums}
-            color={"#f5ce0c"}
-            yLabel={"Antalet spelade låtar på albumet"}
-            renderLabel={(item) => {
-              return (
-                <div className="flex gap-2">
-                  <span className="self-center text-lg">{item.x}</span>
-                  <img
-                    width={60}
-                    height={60}
-                    src={item.meta?.album.img}
-                    alt={item.meta?.album.name}
-                  />
-                  <div className="flex flex-col gap-1">
-                    <span className="text-xs text-slate-50">
-                      {item.meta?.album.name}
-                    </span>
-                    <span className="text-xs text-slate-300">
-                      {item.meta?.artist.name}
-                    </span>
-                    <span className="text-slate-400">{`${item.y} spelningar`}</span>
-                  </div>
-                </div>
-              );
-            }}
-          />
-        </div>
-      </GraphEntry>
-      <GraphEntry>
-        <div>
-          <h2>De mest spelade artisterna</h2>
-          <p>...</p>
-        </div>
-        <div className="flex justify-center">
-          <BarGraph
-            width={Math.min(width, 1000)}
-            height={500}
-            data={_artists}
-            color="#fa6f6f"
-            yLabel={"Mest spelade artisterna"}
-            renderLabel={(item) => {
-              return (
-                <div className="flex gap-2">
-                  <span className="self-center text-lg">{item.x}</span>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-xs text-slate-50">
-                      {item.meta?.name}
-                    </span>
-
-                    <span className="text-slate-400">{`${item.y} spelningar`}</span>
-                  </div>
-                </div>
-              );
-            }}
-          />
-        </div>
-      </GraphEntry>
-      <GraphEntry>
-        <div>
-          <h2>De mest spelade låtarna</h2>
-          <p>...</p>
-        </div>
-        <div className="flex justify-center">
-          <BarGraph
-            width={Math.min(width - 40, 1000)}
-            height={500}
-            data={_tracks}
-            color={"#fca344"}
-            yLabel={"Antalet spelningar för låten"}
-            renderLabel={(item) => {
-              return (
-                <div className="flex gap-2">
-                  <span className="self-center text-lg">{item.x}</span>
-                  <img
-                    width={60}
-                    height={60}
-                    src={item.meta?.album.img}
-                    alt={item.meta?.album.name}
-                  />
-                  <div className="flex flex-col gap-1">
-                    <span className="text-xs text-slate-50">
-                      {item.meta?.album.name}
-                    </span>
-                    <span className="text-xs text-slate-300">
-                      {item.meta?.artists[0].name}
-                    </span>
-                    <span className="text-slate-400">{`${item.y} spelningar`}</span>
-                  </div>
-                </div>
-              );
-            }}
-          />
-        </div>
-      </GraphEntry>
-      <GraphEntry>
-        <div>
           <h2>Sommarvärdar med populärast musik 2022</h2>
           <p>...</p>
         </div>
@@ -216,6 +220,7 @@ export default () => {
             width={Math.min(width - 40, 1000)}
             height={500}
             data={popularity.slice(0, 51)}
+            customYMax={100}
             yLabel={"Genomsnittlig popularitet för värdens spellista"}
             linksTo={(item) => {
               if (item.meta?.id && popularityEpisodeById[item.meta?.id]) {
@@ -259,6 +264,7 @@ export default () => {
           <BarGraph
             width={Math.min(width - 40, 1000)}
             height={500}
+            customYMax={100}
             data={popularity
               .slice(popularity.length - 50)
               .map((item, i) => ({ ...item, x: i + 1 }))}

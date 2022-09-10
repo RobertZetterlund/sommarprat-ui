@@ -33,6 +33,7 @@ export type BarStackProps<T> = {
   yLabel?: string;
   color?: string;
   linksTo?: (dataItem: DataItem<T>) => string;
+  customYMax?: number;
 };
 
 export const background = "#eaedff";
@@ -57,6 +58,7 @@ export default function BarGraph<T>({
   renderLabel,
   color = "#483d61",
   linksTo,
+  customYMax,
 }: BarStackProps<T>) {
   const {
     tooltipOpen,
@@ -82,7 +84,10 @@ export default function BarGraph<T>({
   const xMax = useMemo(() => Math.max(...xs), [xs]);
   const xMin = useMemo(() => Math.min(...xs, 0), [xs]);
   const ys = useMemo(() => data.map((p) => p.y), [data]);
-  const yMax = useMemo(() => Math.max(...ys), [ys]);
+  const yMax = useMemo(
+    () => (customYMax ? customYMax : Math.max(...ys)),
+    [ys, customYMax]
+  );
   const yMin = useMemo(() => Math.min(...ys, 0), [ys]);
 
   const xScale = useMemo(() => {
@@ -131,43 +136,53 @@ export default function BarGraph<T>({
           >
             {data.map((item, index) => {
               const { x, y, meta } = item;
-              const link = linksTo ? linksTo(item) : "";
-              const Container = link === "" ? Fragment : Link;
-              return (
-                <Container key={`bar-stack-${y}`} to={link}>
-                  <Bar
-                    x={tickWidth * x + xOffset}
-                    y={-(y / yMax) * yMaxDimension}
-                    height={(y / yMax) * yMaxDimension}
-                    width={tickWidth * barWidthMultiplier}
-                    fill={color}
-                    onMouseLeave={() => {
-                      tooltipTimeout = window.setTimeout(() => {
-                        hideTooltip();
-                      }, 300);
-                    }}
-                    onMouseMove={(event) => {
-                      if (tooltipTimeout) clearTimeout(tooltipTimeout);
-                      // TooltipInPortal expects coordinates to be relative to containerRef
-                      // localPoint returns coordinates relative to the nearest SVG, which
-                      // is what containerRef is set to in this example.
-                      const eventSvgCoords = localPoint(event);
-                      showTooltip({
-                        tooltipData: {
-                          index,
-                          key: y,
-                          item: {
-                            x,
-                            y,
-                            meta,
-                          },
+
+              const child = (
+                <Bar
+                  x={tickWidth * x + xOffset}
+                  y={-(y / yMax) * yMaxDimension}
+                  height={(y / yMax) * yMaxDimension}
+                  width={tickWidth * barWidthMultiplier}
+                  rx={2}
+                  fill={color}
+                  onMouseLeave={() => {
+                    tooltipTimeout = window.setTimeout(() => {
+                      hideTooltip();
+                    }, 300);
+                  }}
+                  onMouseMove={(event) => {
+                    if (tooltipTimeout) clearTimeout(tooltipTimeout);
+                    // TooltipInPortal expects coordinates to be relative to containerRef
+                    // localPoint returns coordinates relative to the nearest SVG, which
+                    // is what containerRef is set to in this example.
+                    const eventSvgCoords = localPoint(event);
+                    showTooltip({
+                      tooltipData: {
+                        index,
+                        key: y,
+                        item: {
+                          x,
+                          y,
+                          meta,
                         },
-                        tooltipTop: eventSvgCoords?.y,
-                        tooltipLeft: tickWidth * x + margin.left + xOffset,
-                      });
-                    }}
-                  />
-                </Container>
+                      },
+                      tooltipTop: eventSvgCoords?.y,
+                      tooltipLeft: tickWidth * x + margin.left + xOffset,
+                    });
+                  }}
+                />
+              );
+
+              const link = linksTo ? linksTo(item) : null;
+
+              return !link || width < 500 ? (
+                <Fragment>{child}</Fragment>
+              ) : link.includes("http") ? (
+                <a target="_blank" rel="noreferrer" href={link}>
+                  {child}
+                </a>
+              ) : (
+                <Link to={link}>{child}</Link>
               );
             })}
           </Group>

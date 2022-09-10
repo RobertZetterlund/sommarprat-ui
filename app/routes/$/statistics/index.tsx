@@ -17,7 +17,7 @@ export default () => {
           Önskar du att se sammaställningen i vertikala barer kan du navigera
           till{" "}
           <Link to="/graphs" className="underline">
-            /graphs
+            grafer
           </Link>{" "}
           där du kan få en vertikal överblick.
         </span>

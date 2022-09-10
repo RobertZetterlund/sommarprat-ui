@@ -10,6 +10,7 @@ import {
 
 import tailwind from "./tailwind.css";
 import globalstyles from "./styles/global.css";
+import { Header } from "./components/layout/header";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
@@ -31,7 +32,8 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="flex h-full w-full flex-col justify-between overscroll-x-none text-stone-800">
+      <body className="flex h-full w-full flex-col justify-between overscroll-x-none text-stone-800 ">
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

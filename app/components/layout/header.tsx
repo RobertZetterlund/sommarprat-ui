@@ -4,7 +4,7 @@ import logo from "../../res/images/logo.png";
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 z-10 w-full backdrop-blur">
+    <header className="fixed top-0 z-10 w-full bg-[#1b3e6a] shadow-xl">
       <nav className="align-center flex justify-between px-4 py-2">
         <Link
           to={"."}
@@ -20,12 +20,17 @@ export const Header = () => {
           >
             Spellistor
           </Link>
-
           <Link
             to={"/statistics"}
             className="w-fit whitespace-nowrap text-sm text-slate-100 underline"
           >
             Statistik
+          </Link>
+          <Link
+            to="/graphs"
+            className="hidden w-fit whitespace-nowrap text-sm text-slate-100 underline sm:block"
+          >
+            Grafer
           </Link>
         </div>
       </nav>

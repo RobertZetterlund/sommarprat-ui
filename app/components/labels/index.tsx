@@ -1,24 +1,19 @@
-export const AlbumLabel = ({
-  album,
-}: {
-  album: {
-    album: { id: string; name: string };
-    artist: { id: string; name: string };
-  };
-}) => {
+import type { Album, Track } from "@prisma/client";
+
+export const AlbumLabel = ({ album }: { album: Album }) => {
   return (
     <div className="flex flex-col md:ml-auto">
       <a
         className="w-fit text-slate-100 hover:underline md:ml-auto"
-        href={`https://open.spotify.com/album/${album.album.id}`}
+        href={`https://open.spotify.com/album/${album.id}`}
       >
-        {album.album.name}
+        {album.name}
       </a>
       <a
         className="w-fit text-slate-300 hover:underline md:ml-auto"
-        href={`https://open.spotify.com/artist/${album.artist.id}`}
+        href={`https://open.spotify.com/artist/${album.artistId}`}
       >
-        {album.artist.name}
+        {album.artistName}
       </a>
     </div>
   );
@@ -70,27 +65,20 @@ export const EmbedSpotify = ({
   />
 );
 
-export const TrackLabel = ({
-  track,
-}: {
-  track: {
-    track: { id: string; name: string };
-    artists: { id: string; name: string }[];
-  };
-}) => {
+export const TrackLabel = ({ track }: { track: Track }) => {
   return (
     <div className="flex flex-col md:ml-auto">
       <a
         className="w-fit text-slate-100 hover:underline md:ml-auto"
-        href={`https://open.spotify.com/track/${track.track.id}`}
+        href={`https://open.spotify.com/track/${track.id}`}
       >
-        {track.track.name}
+        {track.name}
       </a>
       <a
         className="w-fit text-slate-300 hover:underline md:ml-auto"
-        href={`https://open.spotify.com/artist/${track.artists[0].id}`}
+        href={`https://open.spotify.com/artist/${track.artistId}`}
       >
-        {track.artists[0].name}
+        {track.artistName}
       </a>
     </div>
   );

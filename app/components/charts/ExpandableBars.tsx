@@ -22,10 +22,12 @@ export const ExpandableBars = ({
   items,
   color,
   noAnimation = false,
+  expanded = false,
 }: {
   items: BarItem[];
   color: "orange" | "red" | "yellow";
   noAnimation?: boolean;
+  expanded?: boolean;
 }) => {
   const maxValue = useMemo(
     () => Math.max(...items.map((i) => i.value)),
@@ -49,10 +51,10 @@ export const ExpandableBars = ({
     [maxValue, isInView]
   );
 
-  const [showMore, setShowMore] = useState<boolean>(false);
+  const [showMore, setShowMore] = useState<boolean>(expanded);
 
   const tableStyles = useSpring({
-    height: showMore ? height : 500,
+    height: expanded ? "100%" : showMore ? height : 500,
     config: {
       duration: 1000,
     },
@@ -79,7 +81,7 @@ export const ExpandableBars = ({
               className="flex flex-col justify-center gap-1 pb-2 md:flex-row md:items-center"
             >
               <td className="md:w-[40%] md:text-right">{item.label}</td>
-              <td className="flex w-full items-center gap-1 self-end pb-2">
+              <td className="flex w-full items-center gap-1 self-end">
                 <span
                   className={`inline-block h-4 w-4 rounded bg-gradient-to-tr ${barColors[color]} transition-[width] delay-100 duration-500`}
                   style={style(item)}

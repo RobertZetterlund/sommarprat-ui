@@ -4,7 +4,7 @@ import logo from "../../res/images/logo.png";
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 z-10 w-full bg-[#1b3e6a] shadow-xl">
+    <header className="sticky top-0 z-50 w-full bg-[#1b3e6a] shadow-xl">
       <nav className="align-center flex justify-between px-4 py-2">
         <Link
           to={"."}

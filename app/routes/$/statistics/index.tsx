@@ -3,7 +3,6 @@ import { Bar } from "../../../components/charts/homemade/bar";
 import {
   AlbumLabel,
   ArtistLabel,
-  EmbedSpotify,
   ImageLabel,
   TrackLabel,
 } from "../../../components/labels";
@@ -52,11 +51,10 @@ export default () => {
           color="red"
           items={Object.values(artists)
             .sort((itemA, itemB) => itemB.count - itemA.count)
-            .map((item, idx) => ({
+            .map((item) => ({
               label: (
-                <div className="flex flex-row items-end gap-2">
+                <div className="flex flex-row items-end">
                   <ArtistLabel artist={item} />
-                  <EmbedSpotify type="artist" id={item.id} title={item.name} />
                 </div>
               ),
               value: item.count,

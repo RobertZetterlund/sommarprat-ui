@@ -54,7 +54,6 @@ export default () => {
             width={Math.min(width, 1000)}
             height={500}
             data={_albums}
-            color={"#f5ce0c"}
             yLabel={"Antalet spelade låtar på albumet"}
             linksTo={(item) =>
               item.meta
@@ -96,7 +95,6 @@ export default () => {
             width={Math.min(width, 1000)}
             height={500}
             data={_artists}
-            color="#fa6f6f"
             yLabel={"Mest spelade artisterna"}
             linksTo={(item) =>
               item.meta?.id
@@ -130,7 +128,6 @@ export default () => {
             width={Math.min(width - 40, 1000)}
             height={500}
             data={_tracks}
-            color={"#fca344"}
             yLabel={"Antalet spelningar för låten"}
             linksTo={(item) =>
               item.meta?.track

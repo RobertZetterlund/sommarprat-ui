@@ -76,9 +76,9 @@ export const Bar = ({
           {items.map((item) => (
             <tr
               key={item.id}
-              className="flex flex-col justify-center gap-1 md:flex-row md:items-center"
+              className="flex flex-col justify-center gap-1 pb-2 md:flex-row md:items-center"
             >
-              <td className="pb-2 md:w-[40%] md:text-right">{item.label}</td>
+              <td className="md:w-[40%] md:text-right">{item.label}</td>
               <td className="flex w-full items-center gap-1 self-end pb-2">
                 <span
                   className={`inline-block h-4 w-4 rounded bg-gradient-to-tr ${barColors[color]} transition-[width] delay-100 duration-500`}

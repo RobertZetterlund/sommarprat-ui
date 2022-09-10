@@ -64,13 +64,14 @@ export default function Playlists() {
         alt={episode.title}
       />
 
-      <div>
+      <div className="flex flex-col text-center">
         <a
           href={episode.episodeUrl}
           className="text-3xl text-slate-100 hover:underline"
         >
           {episode.title}
         </a>
+        <span className="text-slate-300">{episode.date}</span>
       </div>
       <iframe
         title={episode.title}

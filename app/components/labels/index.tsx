@@ -45,6 +45,9 @@ export const ArtistLabel = ({
   );
 };
 
+/**
+ * @deprecated Unfortunately it takes a while to load this one.
+ */
 export const EmbedSpotify = ({
   id,
   title,

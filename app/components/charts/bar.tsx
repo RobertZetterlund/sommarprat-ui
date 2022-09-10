@@ -56,7 +56,7 @@ export default function BarGraph<T>({
   xLabel,
   yLabel,
   renderLabel,
-  color = "#483d61",
+  color = "#B68CB8",
   linksTo,
   customYMax,
 }: BarStackProps<T>) {
@@ -109,7 +109,7 @@ export default function BarGraph<T>({
   xScale.range([0, xMaxDimension]);
 
   return (
-    <div className="relative overflow-auto rounded bg-white">
+    <div className="relative overflow-auto rounded bg-[#F7F4F3]">
       <svg ref={containerRef} width={width} height={height}>
         <Group left={margin.left} top={margin.top}>
           <Grid
@@ -117,7 +117,7 @@ export default function BarGraph<T>({
             yScale={yScale}
             width={xMaxDimension + tickWidth}
             height={yMaxDimension}
-            stroke="black"
+            stroke="#000"
             strokeOpacity={0.1}
           />
           {xLabel && (

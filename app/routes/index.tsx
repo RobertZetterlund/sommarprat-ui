@@ -118,7 +118,7 @@ export default function Index() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-2 bg-[#477035] px-4 pb-12 lg:px-16">
-        <div className="z-10 -mt-8 flex gap-2 rounded bg-slate-900 bg-opacity-40 p-4 text-slate-100">
+        <div className="z-10 -mt-8 flex gap-2 rounded bg-slate-900 bg-opacity-40 p-4 text-slate-100 lg:-mt-24">
           <svg
             className="shrink-0 self-center"
             stroke="white"

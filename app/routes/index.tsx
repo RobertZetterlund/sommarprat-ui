@@ -2,6 +2,7 @@ import type { Album, Artist, Track } from "@prisma/client";
 import { Link, useLoaderData } from "@remix-run/react";
 import type { LoaderFunction } from "@remix-run/server-runtime";
 import { json } from "@remix-run/server-runtime";
+import { useEffect, useState } from "react";
 import { TopAlbums } from "../components/TopAlbums";
 import { TopArtists } from "../components/TopArtists";
 import { TopTracks } from "../components/TopTracks";
@@ -38,6 +39,11 @@ export default function Index() {
   const { topTracks, topAlbums, topArtists, epCount } =
     useLoaderData<LoaderData>();
 
+  const [sunUp, setSunUp] = useState<boolean>(false);
+  useEffect(() => {
+    setSunUp(true);
+  }, []);
+
   return (
     <div className="text-slate-50">
       <img
@@ -50,7 +56,8 @@ export default function Index() {
       <img
         src={`/landing/bg-1.svg`}
         alt={"Blue sky background with a yellow sun."}
-        className="fixed -z-10 min-h-screen w-full object-cover"
+        style={sunUp ? { transform: "translateY(20px)" } : undefined}
+        className="fixed -z-10 min-h-screen w-full translate-y-80 object-cover transition-transform delay-100 duration-1000"
         width={1512}
         height={982}
       />
@@ -70,14 +77,14 @@ export default function Index() {
           width={1512}
           height={982}
         />
-        <div className="absolute bottom-16 flex flex-col gap-2 px-4">
+        <div className="absolute bottom-16 flex flex-col gap-2 px-4 lg:px-16">
           <h1 className="text-5xl text-slate-100 ">Sommarprat-ui.</h1>
           <h2 className="text-xl text-slate-200">
             A collection of the musical selection of the hosts of Sommar i P1.
           </h2>
         </div>
       </div>
-      <div className="flex w-full flex-col gap-2 bg-[#477035] px-4 pb-12">
+      <div className="flex w-full flex-col gap-2 bg-[#477035] px-4 pb-12 lg:px-16">
         <div className="z-10 -mt-8 flex gap-2 rounded bg-slate-900 bg-opacity-40 p-4 text-slate-100">
           <svg
             className="shrink-0 self-center"
@@ -135,13 +142,20 @@ export default function Index() {
               href="https://sverigesradio.se/artikel/api-villkor"
             >
               {" "}
-              public api.
+              public api
             </a>
-            By querying the{" "}
-            <a href="https://developer.spotify.com/console/get-search-item/">
+            . By querying the{" "}
+            <a
+              className="underline"
+              href="https://developer.spotify.com/console/get-search-item/"
+            >
               spotify search api
             </a>{" "}
-            I have created {epCount} playlists available on this website.
+            I have created{" "}
+            <Link className="underline" to="playlists">
+              {epCount} playlists
+            </Link>{" "}
+            available on this website.
             {/* TODO: talk about average host, popularity, spotify, how song selection might reflect talk and/or person*/}
           </p>
         </div>

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Fragment } from "react";
 import React, { useMemo } from "react";
 import { Group } from "@visx/group";
 import { useTooltip, useTooltipInPortal, defaultStyles } from "@visx/tooltip";
@@ -7,6 +8,7 @@ import { Bar } from "@visx/shape";
 import { AxisBottom, AxisLeft } from "@visx/axis";
 import { scaleLinear } from "@visx/scale";
 import { Grid } from "@visx/grid";
+import { Link } from "@remix-run/react";
 
 type DataItem<T> = {
   x: number;
@@ -29,6 +31,8 @@ export type BarStackProps<T> = {
   events?: boolean;
   xLabel?: string;
   yLabel?: string;
+  color?: string;
+  linksTo?: (dataItem: DataItem<T>) => string;
 };
 
 export const background = "#eaedff";
@@ -38,6 +42,7 @@ const tooltipStyles = {
   minWidth: 60,
   backgroundColor: "rgba(0,0,0,0.9)",
   color: "white",
+  padding: 8,
 };
 
 let tooltipTimeout: number;
@@ -50,6 +55,8 @@ export default function BarGraph<T>({
   xLabel,
   yLabel,
   renderLabel,
+  color = "#483d61",
+  linksTo,
 }: BarStackProps<T>) {
   const {
     tooltipOpen,
@@ -122,41 +129,47 @@ export default function BarGraph<T>({
             top={yMaxDimension}
             left={(-xMaxDimension / (data.length - 1)) * 0.5 + 10}
           >
-            {data.map(({ x, y, meta }, index) => (
-              <Bar
-                key={`bar-stack-${y}`}
-                x={tickWidth * x + xOffset}
-                y={-(y / yMax) * yMaxDimension}
-                height={(y / yMax) * yMaxDimension}
-                width={tickWidth * barWidthMultiplier}
-                fill={"#483d61"}
-                onMouseLeave={() => {
-                  tooltipTimeout = window.setTimeout(() => {
-                    hideTooltip();
-                  }, 300);
-                }}
-                onMouseMove={(event) => {
-                  if (tooltipTimeout) clearTimeout(tooltipTimeout);
-                  // TooltipInPortal expects coordinates to be relative to containerRef
-                  // localPoint returns coordinates relative to the nearest SVG, which
-                  // is what containerRef is set to in this example.
-                  const eventSvgCoords = localPoint(event);
-                  showTooltip({
-                    tooltipData: {
-                      index,
-                      key: y,
-                      item: {
-                        x,
-                        y,
-                        meta,
-                      },
-                    },
-                    tooltipTop: eventSvgCoords?.y,
-                    tooltipLeft: tickWidth * x + margin.left + xOffset,
-                  });
-                }}
-              />
-            ))}
+            {data.map((item, index) => {
+              const { x, y, meta } = item;
+              const link = linksTo ? linksTo(item) : "";
+              const Container = link === "" ? Fragment : Link;
+              return (
+                <Container key={`bar-stack-${y}`} to={link}>
+                  <Bar
+                    x={tickWidth * x + xOffset}
+                    y={-(y / yMax) * yMaxDimension}
+                    height={(y / yMax) * yMaxDimension}
+                    width={tickWidth * barWidthMultiplier}
+                    fill={color}
+                    onMouseLeave={() => {
+                      tooltipTimeout = window.setTimeout(() => {
+                        hideTooltip();
+                      }, 300);
+                    }}
+                    onMouseMove={(event) => {
+                      if (tooltipTimeout) clearTimeout(tooltipTimeout);
+                      // TooltipInPortal expects coordinates to be relative to containerRef
+                      // localPoint returns coordinates relative to the nearest SVG, which
+                      // is what containerRef is set to in this example.
+                      const eventSvgCoords = localPoint(event);
+                      showTooltip({
+                        tooltipData: {
+                          index,
+                          key: y,
+                          item: {
+                            x,
+                            y,
+                            meta,
+                          },
+                        },
+                        tooltipTop: eventSvgCoords?.y,
+                        tooltipLeft: tickWidth * x + margin.left + xOffset,
+                      });
+                    }}
+                  />
+                </Container>
+              );
+            })}
           </Group>
         </Group>
       </svg>

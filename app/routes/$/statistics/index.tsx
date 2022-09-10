@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Bar } from "../../../components/charts/homemade/bar";
 import {
   AlbumLabel,
@@ -9,9 +10,62 @@ import {
 
 export default () => {
   return (
-    <>
-      <div className="flex w-full flex-col text-slate-100">
-        <h1 className="mb-3 text-4xl">Mest spelade albumen.</h1>
+    <div className="flex w-full flex-col gap-4 text-slate-100">
+      <div>
+        <h1 className="text-4xl">Statistik</h1>
+        <span className="mb-3 hidden sm:block">
+          Önskar du att se sammaställningen i vertikala barer kan du navigera
+          till{" "}
+          <Link to="/graphs" className="underline">
+            /graphs
+          </Link>{" "}
+          där du kan få en vertikal överblick.
+        </span>
+      </div>
+
+      <>
+        <h2 className="mb-3 text-3xl">Mest spelade låtarna.</h2>
+        <Bar
+          noAnimation
+          color="orange"
+          items={Object.values(tracks)
+            .sort((itemA, itemB) => itemB.count - itemA.count)
+            .map((item) => ({
+              label: (
+                <div className="flex flex-row items-center gap-2">
+                  <TrackLabel track={item} />
+                  <ImageLabel
+                    href={`https://open.spotify.com/album/${item.album.id}`}
+                    img={item.album.img}
+                    alt={item.album.name}
+                  />
+                </div>
+              ),
+              value: item.count,
+              id: item.album.id,
+            }))}
+        />
+      </>
+      <>
+        <h2 className="mb-3 text-3xl">Mest spelade artisterna.</h2>
+        <Bar
+          color="red"
+          items={Object.values(artists)
+            .sort((itemA, itemB) => itemB.count - itemA.count)
+            .map((item, idx) => ({
+              label: (
+                <div className="flex flex-row items-end gap-2">
+                  <ArtistLabel artist={item} />
+                  <EmbedSpotify type="artist" id={item.id} title={item.name} />
+                </div>
+              ),
+              value: item.count,
+              id: item.id,
+            }))}
+        />
+      </>
+      <>
+        <h2 className="mb-3 text-3xl">Mest spelade albumen.</h2>
         <Bar
           color="yellow"
           items={Object.values(albums)
@@ -31,48 +85,8 @@ export default () => {
               id: item.album.id,
             }))}
         />
-      </div>
-      <div className="flex w-full flex-col text-slate-100">
-        <h1 className="mb-3 text-4xl">Mest spelade låtarna.</h1>
-        <Bar
-          color="orange"
-          items={Object.values(tracks)
-            .sort((itemA, itemB) => itemB.count - itemA.count)
-            .map((item) => ({
-              label: (
-                <div className="flex flex-row items-center gap-2">
-                  <TrackLabel track={item} />
-                  <ImageLabel
-                    href={`https://open.spotify.com/album/${item.album.id}`}
-                    img={item.album.img}
-                    alt={item.album.name}
-                  />
-                </div>
-              ),
-              value: item.count,
-              id: item.album.id,
-            }))}
-        />
-      </div>
-      <div className="flex w-full flex-col text-slate-100">
-        <h1 className="mb-3 text-4xl">Mest spelade artisterna.</h1>
-        <Bar
-          color="red"
-          items={Object.values(artists)
-            .sort((itemA, itemB) => itemB.count - itemA.count)
-            .map((item) => ({
-              label: (
-                <div className="flex flex-row items-end gap-2">
-                  <ArtistLabel artist={item} />
-                  <EmbedSpotify type="artist" id={item.id} title={item.name} />
-                </div>
-              ),
-              value: item.count,
-              id: item.id,
-            }))}
-        />
-      </div>
-    </>
+      </>
+    </div>
   );
 };
 

@@ -21,9 +21,11 @@ const barColors = {
 export const Bar = ({
   items,
   color,
+  noAnimation = false,
 }: {
   items: BarItem[];
   color: "orange" | "red" | "yellow";
+  noAnimation?: boolean;
 }) => {
   const maxValue = useMemo(
     () => Math.max(...items.map((i) => i.value)),
@@ -37,7 +39,7 @@ export const Bar = ({
     threshold: 0.05,
   });
 
-  const isInView = observer?.isIntersecting;
+  const isInView = observer?.isIntersecting || noAnimation;
 
   const style = useCallback(
     (item: BarItem) =>

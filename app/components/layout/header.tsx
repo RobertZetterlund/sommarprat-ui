@@ -18,19 +18,13 @@ export const Header = () => {
             to={"/playlists"}
             className="w-fit whitespace-nowrap text-sm text-slate-100 underline"
           >
-            Spellistor
+            Playlists
           </Link>
           <Link
             to={"/statistics"}
             className="w-fit whitespace-nowrap text-sm text-slate-100 underline"
           >
-            Statistik
-          </Link>
-          <Link
-            to="/graphs"
-            className="hidden w-fit whitespace-nowrap text-sm text-slate-100 underline sm:block"
-          >
-            Grafer
+            Statistics
           </Link>
         </div>
       </nav>

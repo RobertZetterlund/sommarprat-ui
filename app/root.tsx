@@ -20,10 +20,13 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Sommarprat-UI",
-  description: "A collection of spotify playlists from Sommar I P1",
+  title: "Sommarprat-ui",
+  description:
+    "A collection of the musical selection of the hosts of Sommar i P1",
   theme: "#1b3e6a",
   viewport: "width=device-width,initial-scale=1",
+  "og:image": "/meta-image-png",
+  "twitter:image": "/meta-image-png",
 });
 
 export default function App() {
@@ -33,7 +36,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="flex h-full w-full flex-col justify-between overscroll-x-none text-stone-800">
+      <body className="flex h-full min-h-screen w-full flex-col justify-between overscroll-x-none text-stone-800">
         <Header />
         <Outlet />
         <ScrollRestoration />

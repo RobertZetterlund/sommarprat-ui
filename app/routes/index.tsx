@@ -86,14 +86,14 @@ export default function Index() {
         height={982}
       />
 
-      <div className="relative h-screen min-h-screen w-screen lg:mt-16">
+      <div className="relative mt-16 h-screen min-h-screen w-screen">
         <img
           src={`/landing/bg-3.svg`}
           alt={"Green forest"}
           className="absolute left-0 bottom-0 -z-10 h-screen w-screen object-cover"
           style={{
             background:
-              "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(31,76,10,1) 50%, rgba(31,76,10,1) 100%);",
+              "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(31,76,10,1) 50%, rgba(31,76,10,1) 100%)",
           }}
           width={1512}
           height={982}
@@ -104,20 +104,20 @@ export default function Index() {
           className="absolute left-0 bottom-0 h-screen w-screen object-cover"
           style={{
             background:
-              "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(71,112,53,1) 60%, rgba(71,112,53,1) 100%);",
+              "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(71,112,53,1) 60%, rgba(71,112,53,1) 100%)",
           }}
           width={1512}
           height={982}
         />
-        <div className="absolute bottom-16 flex flex-col gap-2 px-4 lg:bottom-32 lg:px-16">
-          <h1 className="text-5xl text-slate-100 ">Sommarprat-ui.</h1>
+        <div className="absolute bottom-32 flex flex-col gap-2 px-4 lg:px-16">
+          <h1 className="text-5xl text-slate-100 ">Sommarprat-ui</h1>
           <h2 className="text-xl text-slate-200">
-            A collection of the musical selection of the hosts of Sommar i P1.
+            A collection of the musical selection of the hosts of Sommar i P1
           </h2>
         </div>
       </div>
       <div className="flex w-full flex-col gap-2 bg-[#477035] px-4 pb-12 lg:px-16">
-        <div className="z-10 -mt-8 mb-8 flex gap-2 rounded bg-slate-900 bg-opacity-40 p-4 text-slate-100 lg:-mt-24">
+        <div className="z-10 -mt-24 mb-8 flex gap-2 rounded bg-slate-900 bg-opacity-40 p-4 text-slate-100">
           <svg
             className="shrink-0 self-center"
             stroke="white"
@@ -143,33 +143,6 @@ export default function Index() {
           </p>
         </div>
 
-        <div className="flex w-full flex-col">
-          <h2 className="mb-3 text-3xl">Most played songs.</h2>
-          <div className="p-4 md:px-16">
-            <TopTracks tracks={topTracks} expanded />
-          </div>
-          <Link className="self-center underline" to={"/statistics#tracks"}>
-            See all
-          </Link>
-        </div>
-        <div className="flex w-full flex-col">
-          <h2 className="mb-3 text-3xl">Most played artists.</h2>
-          <div className="p-4 md:px-16">
-            <TopArtists artists={topArtists} expanded />
-          </div>
-          <Link className="self-center underline" to={"/statistics#artists"}>
-            See all
-          </Link>
-        </div>
-        <div className="flex w-full flex-col">
-          <h2 className="mb-3 text-3xl">Most played albums.</h2>
-          <div className="p-4 md:px-16">
-            <TopAlbums albums={topAlbums} expanded />
-          </div>
-          <Link className="self-center underline" to={"/statistics#albums"}>
-            See all
-          </Link>
-        </div>
         <div>
           <h2 className="text-3xl">Radio Sweden (SR)... </h2>
           <p>
@@ -193,9 +166,9 @@ export default function Index() {
             <Link className="underline" to="playlists">
               {epCount} playlists
             </Link>{" "}
-            available on this website and on Spotify. A few notable hosts
-            include the singer Zara Larsson, environmental activist Greta
-            Thunberg and the president of Spotify Daniel Ek.
+            on spotify available on this website. A few notable hosts include
+            the singer Zara Larsson, environmental activist Greta Thunberg and
+            the president of Spotify Daniel Ek.
           </p>
           {/* TODO: talk about average host, popularity, spotify, how song selection might reflect talk and/or person*/}
           <ul className="grid grid-cols-1 gap-4 px-16 py-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -203,11 +176,40 @@ export default function Index() {
               <EpisodeSquare key={episode.playlistId} episode={episode} />
             ))}
           </ul>
-          <p>
-            The average host of Sommar is 50 years old and prefers playing songs
-            that have been recently released.
-          </p>
         </div>
+
+        <div className="flex w-full flex-col">
+          <h2 className="mb-3 text-3xl">Most played songs</h2>
+          <div className="p-4 md:px-16">
+            <TopTracks tracks={topTracks} expanded />
+          </div>
+          <Link className="self-center underline" to={"/statistics#tracks"}>
+            See all
+          </Link>
+        </div>
+        <div className="flex w-full flex-col">
+          <h2 className="mb-3 text-3xl">Most played artists</h2>
+          <div className="p-4 md:px-16">
+            <TopArtists artists={topArtists} expanded />
+          </div>
+          <Link className="self-center underline" to={"/statistics#artists"}>
+            See all
+          </Link>
+        </div>
+        <div className="flex w-full flex-col">
+          <h2 className="mb-3 text-3xl">Most played albums</h2>
+          <div className="p-4 md:px-16">
+            <TopAlbums albums={topAlbums} expanded />
+          </div>
+          <Link className="self-center underline" to={"/statistics#albums"}>
+            See all
+          </Link>
+        </div>
+
+        {/*<div>
+          <h2 className="mb-3 text-3xl">Recency of song release</h2>
+          <div className="p-4 md:px-16"></div>
+            </div>*/}
       </div>
     </div>
   );

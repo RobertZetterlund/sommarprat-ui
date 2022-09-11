@@ -1,5 +1,5 @@
 import type { Episode } from "@prisma/client";
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import type { BreadcrumbHandle } from "../../../../components/Breadcrumbs";
 import { json } from "@remix-run/node";
 import { useCatch, useLoaderData, useParams } from "@remix-run/react";
@@ -23,9 +23,14 @@ type LoaderData = {
   episode: Pick<Episode, typeof EpisodeLoaderDataSelections[number]>;
 };
 
+export const meta: MetaFunction = (d) => ({
+  charset: "utf-8",
+  title: d?.data?.episode?.title ?? "Sommarprat-ui",
+});
+
 export const handle: BreadcrumbHandle<LoaderData> = {
-  breadcrumb: (data) => {
-    return data.episode.title;
+  breadcrumb: (handle, data) => {
+    return data?.episode?.title ?? handle?.params?.playlistId ?? "not found";
   },
 };
 
@@ -65,6 +70,7 @@ export default function Playlists() {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-4">
       <img
+        className="rounded-lg border"
         src={episode.imageurl}
         height={400}
         width={400}

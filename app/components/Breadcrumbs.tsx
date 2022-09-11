@@ -5,7 +5,10 @@ import type { ReactNode } from "react";
 import { Fragment } from "react";
 import { useMemo } from "react";
 
-export type BreadcrumbRenderer<TData> = (data: TData) => string;
+export type BreadcrumbRenderer<TData> = (
+  routematch: RouteMatch,
+  data: TData
+) => string;
 export type BreadcrumbHandle<TData> = { breadcrumb: BreadcrumbRenderer<TData> };
 
 type RouteMatchWithBreadCrumbsHandler<TData = {}> = RouteMatch & {
@@ -43,7 +46,8 @@ export const Breadcrumbs = () => {
   const location = useLocation();
   const subPaths = useMemo(() => {
     const pathname = location.pathname;
-    const parts = pathname.split("/").slice(1);
+    let parts = pathname.split("/").slice(1);
+    parts = parts.at(-1) === "" ? parts.slice(0, -1) : parts;
     return parts.map((_p, index) => parts.slice(0, index + 1).join("/"));
   }, [location.pathname]);
 
@@ -61,7 +65,10 @@ export const Breadcrumbs = () => {
             ? [
                 {
                   link: location.pathname,
-                  text: customHandler.handle.breadcrumb(customHandler.data),
+                  text: customHandler.handle.breadcrumb(
+                    customHandler,
+                    customHandler.data
+                  ),
                 },
               ]
             : []
@@ -70,7 +77,7 @@ export const Breadcrumbs = () => {
   );
 
   return (
-    <nav>
+    <nav className="mb-auto">
       <ol className="flex items-center gap-2">
         {paths.map((path, idx) => {
           const isLast = paths.length - 1 === idx;

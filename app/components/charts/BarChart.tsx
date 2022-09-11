@@ -137,12 +137,13 @@ export default function BarChart<T>({
             {data.map((item, index) => {
               const { x, y, meta } = item;
 
+              const key = x + "-" + y;
               const child = (
                 <Bar
                   x={tickWidth * x + xOffset}
                   y={-(y / yMax) * yMaxDimension}
                   height={(y / yMax) * yMaxDimension}
-                  width={tickWidth * barWidthMultiplier}
+                  width={Math.abs(tickWidth * barWidthMultiplier)}
                   rx={2}
                   fill={color}
                   onMouseLeave={() => {
@@ -176,13 +177,15 @@ export default function BarChart<T>({
               const link = linksTo ? linksTo(item) : null;
 
               return !link || width < 500 ? (
-                <Fragment>{child}</Fragment>
+                <Fragment key={key}>{child}</Fragment>
               ) : link.includes("http") ? (
-                <a target="_blank" rel="noreferrer" href={link}>
+                <a key={key} target="_blank" rel="noreferrer" href={link}>
                   {child}
                 </a>
               ) : (
-                <Link to={link}>{child}</Link>
+                <Link key={key} to={link}>
+                  {child}
+                </Link>
               );
             })}
           </Group>

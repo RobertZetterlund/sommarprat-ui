@@ -1,6 +1,6 @@
 import type { Episode } from "@prisma/client";
 import { useLoaderData } from "@remix-run/react";
-import type { LoaderFunction } from "@remix-run/server-runtime";
+import type { LoaderFunction, MetaFunction } from "@remix-run/server-runtime";
 import { json } from "@remix-run/server-runtime";
 import BarChart from "../../../components/charts/BarChart";
 import { GraphEntry } from "../../../components/landing/GraphEntry";
@@ -13,6 +13,11 @@ type LoaderData = {
     [key: string]: Episode;
   };
 };
+
+export const meta: MetaFunction = () => ({
+  charset: "utf-8",
+  title: "Graphs",
+});
 
 export const loader: LoaderFunction = async ({ params }) => {
   const popularityEpisodes = await db.episode.findMany({
@@ -35,26 +40,27 @@ export default () => {
 
   const [sizeRef, { width }] = useElementSize();
 
+  const barWidth = Math.min(width, 1000);
+
   return (
     <div className="text-slate-100" ref={sizeRef}>
-      <h1 className="text-4xl">Grafer över statistik</h1>
+      <h1 className="text-4xl">Graphs</h1>
       <p className="mt-2 block sm:hidden">
-        Tyvärr är denna sida inte optimerad för mobilen. Det funkar det
-        fortfarande, men visualiseringen kräver att du klickar på en väldigt
-        smal graf. Hoppas du har förtåelse.
+        Unfortunately, this page is not optimized for mobile. It still works,
+        but the visualization requires you to click on a very thin graph. Hope
+        you understand.
       </p>
 
       <GraphEntry>
         <div>
-          <h2>De mest spelade albumen</h2>
-          <p>...</p>
+          <h2 className="text-2xl">Most played albums</h2>
         </div>
         <div className="flex justify-center">
           <BarChart
-            width={Math.min(width, 1000)}
+            width={barWidth}
             height={500}
             data={_albums}
-            yLabel={"Antalet spelade låtar på albumet"}
+            yLabel={"Amount of songs played from album"}
             linksTo={(item) =>
               item.meta
                 ? `https://open.spotify.com/album/${item.meta?.album.id}`
@@ -77,7 +83,7 @@ export default () => {
                     <span className="text-xs text-slate-300">
                       {item.meta?.artist.name}
                     </span>
-                    <span className="text-slate-400">{`${item.y} spelningar`}</span>
+                    <span className="text-slate-400">{`${item.y} plays`}</span>
                   </div>
                 </div>
               );
@@ -87,15 +93,14 @@ export default () => {
       </GraphEntry>
       <GraphEntry>
         <div>
-          <h2>De mest spelade artisterna</h2>
-          <p>...</p>
+          <h2 className="text-2xl">Most played artists</h2>
         </div>
         <div className="flex justify-center">
           <BarChart
-            width={Math.min(width, 1000)}
+            width={barWidth}
             height={500}
             data={_artists}
-            yLabel={"Mest spelade artisterna"}
+            yLabel={"Amount of songs played from artist"}
             linksTo={(item) =>
               item.meta?.id
                 ? `https://open.spotify.com/artist/${item.meta.id}`
@@ -110,7 +115,7 @@ export default () => {
                       {item.meta?.name}
                     </span>
 
-                    <span className="text-slate-400">{`${item.y} spelningar`}</span>
+                    <span className="text-slate-400">{`${item.y} plays`}</span>
                   </div>
                 </div>
               );
@@ -120,15 +125,14 @@ export default () => {
       </GraphEntry>
       <GraphEntry>
         <div>
-          <h2>De mest spelade låtarna</h2>
-          <p>...</p>
+          <h2 className="text-2xl">Most played tracks</h2>
         </div>
         <div className="flex justify-center">
           <BarChart
-            width={Math.min(width - 40, 1000)}
+            width={barWidth}
             height={500}
             data={_tracks}
-            yLabel={"Antalet spelningar för låten"}
+            yLabel={"Times played"}
             linksTo={(item) =>
               item.meta?.track
                 ? `https://open.spotify.com/track/${item.meta.track.id}`
@@ -151,7 +155,7 @@ export default () => {
                     <span className="text-xs text-slate-300">
                       {item.meta?.artists[0].name}
                     </span>
-                    <span className="text-slate-400">{`${item.y} spelningar`}</span>
+                    <span className="text-slate-400">{`${item.y} plays`}</span>
                   </div>
                 </div>
               );
@@ -161,22 +165,21 @@ export default () => {
       </GraphEntry>
       <GraphEntry>
         <div>
-          <h2>Hur viktigt är hur nyligen låten släpptes?</h2>
-          <p>Många väljer att spela låtar som nyligen släppts</p>
+          <h2 className="text-2xl">Recency of the release date of the track</h2>
         </div>
         <div className="flex justify-center">
           <BarChart
             data={_recency}
-            width={Math.min(width - 40, 1000)}
+            width={barWidth}
             height={500}
-            xLabel={"År innan låten släpptes"}
-            yLabel={"Antalet spelningar"}
+            xLabel={"Recency of release (year)"}
+            yLabel={"Times played"}
             renderLabel={(item) => {
               return (
                 <div>
-                  {`Låtar som släpptes ${item.x} år innan`}
+                  {`Tracks released ${item.x} years before`}
                   <br />
-                  {`spelades ${item.y} gånger.`}
+                  {`were played ${item.y} times.`}
                 </div>
               );
             }}
@@ -185,22 +188,23 @@ export default () => {
       </GraphEntry>
       <GraphEntry>
         <div>
-          <h2>Hur gammal var värden när låtarna de valt släpptes?</h2>
-          <p>Det finns teorier att man skapar sin musiksmak i ung ålder.</p>
+          <h2 className="text-2xl">
+            What age was the host when the tracks they picked was released?
+          </h2>
         </div>
         <div className="flex justify-center">
           <BarChart
-            width={Math.min(width, 1000)}
+            width={barWidth}
             height={500}
             data={_data}
-            xLabel={"Ålder på värden då låten släpptes"}
-            yLabel={"Antalet låtar spelade"}
+            xLabel={"Age of host when track was released"}
+            yLabel={"Times played"}
             renderLabel={(item) => {
               return (
                 <div>
-                  {`Det spelades ${item.y} låtar där värden var`}
+                  {`${item.y} tracks were played where the host was`}
                   <br />
-                  {`${item.x} år när låten släpptes.`}
+                  {`${item.x} years old when it was released`}
                 </div>
               );
             }}
@@ -209,16 +213,15 @@ export default () => {
       </GraphEntry>
       <GraphEntry>
         <div>
-          <h2>Sommarvärdar med populärast musik 2022</h2>
-          <p>...</p>
+          <h2 className="text-2xl">Hosts with the most popular music</h2>
         </div>
         <div className="flex justify-center">
           <BarChart
-            width={Math.min(width - 40, 1000)}
+            width={barWidth}
             height={500}
             data={popularity.slice(0, 51)}
             customYMax={100}
-            yLabel={"Genomsnittlig popularitet för värdens spellista"}
+            yLabel={"Average popularity of the host's playlist"}
             linksTo={(item) => {
               if (item.meta?.id && popularityEpisodeById[item.meta?.id]) {
                 const ep = popularityEpisodeById[item.meta?.id];
@@ -252,18 +255,17 @@ export default () => {
       </GraphEntry>
       <GraphEntry>
         <div>
-          <h2>Sommarvärdar med minst populärast musik 2022</h2>
-          <p>...</p>
+          <h2 className="text-2xl">Hosts with the least popular music</h2>
         </div>
         <div className="flex justify-center">
           <BarChart
-            width={Math.min(width - 40, 1000)}
+            width={barWidth}
             height={500}
             customYMax={100}
             data={popularity
               .slice(popularity.length - 50)
               .map((item, i) => ({ ...item, x: i + 1 }))}
-            yLabel={"Genomsnittlig popularitet för värdens spellista"}
+            yLabel={"Average popularity of the host's playlist"}
             linksTo={(item) => {
               if (item.meta?.id && popularityEpisodeById[item.meta?.id]) {
                 const ep = popularityEpisodeById[item.meta?.id];

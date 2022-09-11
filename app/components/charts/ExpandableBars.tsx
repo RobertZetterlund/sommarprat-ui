@@ -107,9 +107,7 @@ export const ExpandableBars = ({
           className="flex h-full w-full items-end justify-center"
           onClick={() => setShowMore(true)}
         >
-          <span className="rounded border px-4 hover:opacity-95">
-            Expandera
-          </span>
+          <span className="rounded border px-4 hover:opacity-95">Expand</span>
         </button>
       </animated.div>
     </animated.div>

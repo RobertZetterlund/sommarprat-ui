@@ -1,5 +1,5 @@
 import type { Episode } from "@prisma/client";
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import { db } from "../../../utils/db.server";
@@ -20,12 +20,17 @@ export const loader: LoaderFunction = async () => {
   return json({ yearsAired });
 };
 
+export const meta: MetaFunction = () => ({
+  charset: "utf-8",
+  title: "Playlists",
+});
+
 export default function Playlists() {
   const { yearsAired } = useLoaderData<LoaderData>();
 
   return (
     <>
-      <h1 className="text-4xl text-slate-100">Alla Spellistor</h1>
+      <h1 className="text-4xl text-slate-100">All Playlists</h1>
       <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {yearsAired.map((year) => (
           <li key={year} className="w-full overflow-hidden rounded shadow-lg">
@@ -36,7 +41,7 @@ export default function Playlists() {
                 alt={`Collection of hosts year ${year}`}
                 loading="lazy"
               />
-              <span className="px-2 py-1 text-xl font-bold text-slate-100 hover:underline">{`Sommarprat ${year}`}</span>
+              <span className="px-2 py-1 text-xl font-bold text-slate-100 hover:underline">{`Hosts ${year}`}</span>
             </Link>
           </li>
         ))}

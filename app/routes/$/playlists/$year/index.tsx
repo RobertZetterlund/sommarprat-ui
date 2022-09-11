@@ -1,10 +1,15 @@
 import type { Episode } from "@prisma/client";
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useCatch, useLoaderData, useParams } from "@remix-run/react";
 import { db } from "../../../../utils/db.server";
 import { ErrorBox } from "../../../../components/error";
 import { EpisodeSquares } from "../../../../components/EpisodeSquares";
+
+export const meta: MetaFunction = (d) => ({
+  charset: "utf-8",
+  title: d.data.year ? `Hosts ${d.data.year}` : "Sommarprat-ui",
+});
 
 const EpisodeLoaderDataSelections: (keyof Episode)[] = [
   "title",
@@ -54,7 +59,7 @@ export default function Playlists() {
 
   return (
     <>
-      <h1 className="text-4xl text-slate-100">Sommarpratare {year}</h1>
+      <h1 className="text-4xl text-slate-100">Hosts {year}</h1>
       <EpisodeSquares episodes={episodes} />
     </>
   );

@@ -25,8 +25,8 @@ export const meta: MetaFunction = () => ({
     "A collection of the musical selection of the hosts of Sommar i P1",
   theme: "#1b3e6a",
   viewport: "width=device-width,initial-scale=1",
-  "og:image": "/meta-image-png",
-  "twitter:image": "/meta-image-png",
+  "og:image": "/meta-image.png",
+  "twitter:image": "/meta-image.png",
 });
 
 export default function App() {

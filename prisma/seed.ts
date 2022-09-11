@@ -1,31 +1,29 @@
 import type { Episode } from "@prisma/client";
 import { PrismaClient } from "@prisma/client";
-import twokfive from "~/res/data/2005.json";
-import twoksix from "~/res/data/2006.json";
-import twokseven from "~/res/data/2007.json";
-import twokeight from "~/res/data/2008.json";
-import twoknine from "~/res/data/2009.json";
-import twokten from "~/res/data/2010.json";
-import twokeleven from "~/res/data/2011.json";
-import twoktwelve from "~/res/data/2012.json";
-import twokthirteen from "~/res/data/2013.json";
-import twokfourthteen from "~/res/data/2014.json";
-import twokfiftheen from "~/res/data/2015.json";
-import twoksixteen from "~/res/data/2016.json";
-import twokseventeen from "~/res/data/2017.json";
-import twokeighteen from "~/res/data/2018.json";
-import twoknineteen from "~/res/data/2019.json";
-import twoktwenty from "~/res/data/2020.json";
-import twoktwentyone from "~/res/data/2021.json";
-import twoktwentytwo from "~/res/data/2022.json";
-
-import tracks from "~/res/data/stats/tracks.json";
-import albums from "~/res/data/stats/albums.json";
-import artists from "~/res/data/stats/artists.json";
-
-import recency from "~/res/data/stats/recency.json";
-import ages from "~/res/data/stats/ages.json";
-import popularity from "~/res/data/stats/popularity.json";
+const twokfive = require("../public/data/2005.json");
+const twoksix = require("../public/data/2006.json");
+const twokseven = require("../public/data/2007.json");
+const twokeight = require("../public/data/2008.json");
+const twoknine = require("../public/data/2009.json");
+const twokten = require("../public/data/2010.json");
+const twokeleven = require("../public/data/2011.json");
+const twoktwelve = require("../public/data/2012.json");
+const twokthirteen = require("../public/data/2013.json");
+const twokfourthteen = require("../public/data/2014.json");
+const twokfiftheen = require("../public/data/2015.json");
+const twoksixteen = require("../public/data/2016.json");
+const twokseventeen = require("../public/data/2017.json");
+const twokeighteen = require("../public/data/2018.json");
+const twoknineteen = require("../public/data/2019.json");
+const twoktwenty = require("../public/data/2020.json");
+const twoktwentyone = require("../public/data/2021.json");
+const twoktwentytwo = require("../public/data/2022.json");
+const tracks = require("../public/data/stats/tracks.json");
+const albums = require("../public/data/stats/albums.json");
+const artists = require("../public/data/stats/artists.json");
+const recency = require("../public/data/stats/recency.json");
+const ages = require("../public/data/stats/ages.json");
+const popularity = require("../public/data/stats/popularity.json");
 
 const AllYears = {
   "2005": twokfive,
@@ -68,7 +66,7 @@ async function seed() {
   );
   console.info("seeding top tracks");
   await Promise.all(
-    Object.values(tracks).map((track) => {
+    Object.values(tracks).map((track: any) => {
       return db.track.create({
         data: {
           albumId: track.album.id,
@@ -85,7 +83,7 @@ async function seed() {
   );
   console.info("seeding top albums");
   await Promise.all(
-    Object.values(albums).map((album) => {
+    Object.values(albums).map((album: any) => {
       return db.album.create({
         data: {
           artistId: album.artist.id,
@@ -100,7 +98,7 @@ async function seed() {
   );
   console.info("seeding top artists");
   await Promise.all(
-    Object.values(artists).map((artist) => {
+    Object.values(artists).map((artist: any) => {
       return db.artist.create({
         data: {
           count: artist.count,
@@ -113,21 +111,21 @@ async function seed() {
 
   console.info("Seeding recency");
   await Promise.all(
-    Object.entries(recency).map(([age, count]) =>
+    Object.entries(recency).map(([age, count]: any) =>
       db.recency.create({ data: { count, year: parseInt(age) } })
     )
   );
   console.info("Seeding ages");
   await Promise.all(
     Object.entries(ages).map(
-      ([age, count]) =>
+      ([age, count]: any) =>
         !isNaN(parseInt(age)) &&
         db.age.create({ data: { count, age: parseInt(age) } })
     )
   );
   console.info("Seeding popularity");
   await Promise.all(
-    Object.entries(popularity).map(([id, count]) =>
+    Object.entries(popularity).map(([id, count]: any) =>
       db.popularity.create({ data: { id, count } })
     )
   );
@@ -135,7 +133,14 @@ async function seed() {
   console.log(`Database has been seeded. 🌱`);
 }
 
-seed();
+seed()
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await db.$disconnect();
+  });
 
 function getYears() {
   const years = Object.keys(AllYears);

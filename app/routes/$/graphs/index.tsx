@@ -85,9 +85,6 @@ export default () => {
     topPopular,
   } = useLoaderData<LoaderData>();
 
-  console.info("topPopular", topPopular);
-  console.info("popularityEpisodeById", popularityEpisodeById);
-
   const [sizeRef, { width }] = useElementSize();
 
   const barWidth = Math.min(width, 1000);

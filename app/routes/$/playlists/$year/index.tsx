@@ -7,7 +7,6 @@ import { ErrorBox } from "../../../../components/error";
 import { EpisodeSquares } from "../../../../components/EpisodeSquares";
 
 export const meta: MetaFunction = (d) => ({
-  charset: "utf-8",
   title: d.data.year ? `Hosts ${d.data.year}` : "Sommarprat-ui",
 });
 

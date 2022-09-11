@@ -24,7 +24,6 @@ type LoaderData = {
 };
 
 export const meta: MetaFunction = (d) => ({
-  charset: "utf-8",
   title: d?.data?.episode?.title ?? "Sommarprat-ui",
 });
 

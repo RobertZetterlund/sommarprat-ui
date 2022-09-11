@@ -15,7 +15,6 @@ type LoaderData = {
 };
 
 export const meta: MetaFunction = () => ({
-  charset: "utf-8",
   title: "Graphs",
 });
 

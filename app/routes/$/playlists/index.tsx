@@ -21,7 +21,6 @@ export const loader: LoaderFunction = async () => {
 };
 
 export const meta: MetaFunction = () => ({
-  charset: "utf-8",
   title: "Playlists",
 });
 

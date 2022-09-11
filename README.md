@@ -9,6 +9,9 @@
 
 ---
 
+![Sommarprat-ui](/public/meta-image.png)
+
+
 Using [Sveriges Radio API](https://api.sr.se/api/documentation/v2/index.html) and [Spotify Web API](https://developer.spotify.com/documentation/web-api/reference/#/) this repo visualises spotify playlists from the hosts of Sommar i P1.
 
 # What is sommarprat / Sommar i P1?

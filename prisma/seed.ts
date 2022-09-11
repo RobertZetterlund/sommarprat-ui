@@ -23,7 +23,9 @@ import tracks from "~/res/data/stats/tracks.json";
 import albums from "~/res/data/stats/albums.json";
 import artists from "~/res/data/stats/artists.json";
 
-//import recency from "~/res/data/stats/recency.json";
+import recency from "~/res/data/stats/recency.json";
+import ages from "~/res/data/stats/ages.json";
+import popularity from "~/res/data/stats/popularity.json";
 
 const AllYears = {
   "2005": twokfive,
@@ -107,6 +109,27 @@ async function seed() {
         },
       });
     })
+  );
+
+  console.info("Seeding recency");
+  await Promise.all(
+    Object.entries(recency).map(([age, count]) =>
+      db.recency.create({ data: { count, year: parseInt(age) } })
+    )
+  );
+  console.info("Seeding ages");
+  await Promise.all(
+    Object.entries(ages).map(
+      ([age, count]) =>
+        !isNaN(parseInt(age)) &&
+        db.age.create({ data: { count, age: parseInt(age) } })
+    )
+  );
+  console.info("Seeding popularity");
+  await Promise.all(
+    Object.entries(popularity).map(([id, count]) =>
+      db.popularity.create({ data: { id, count } })
+    )
   );
 
   console.log(`Database has been seeded. 🌱`);

@@ -47,3 +47,18 @@ model Track {
   artistId   String
   artistName String
 }
+
+model Recency {
+  year  Int @id
+  count Int
+}
+
+model Age {
+  age   Int @id
+  count Int
+}
+
+model Popularity {
+  id    String @id
+  count Float
+}

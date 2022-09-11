@@ -1,5 +1,6 @@
 import type { Episode } from "@prisma/client";
 import type { LoaderFunction } from "@remix-run/node";
+import type { BreadcrumbHandle } from "../../../../components/Breadcrumbs";
 import { json } from "@remix-run/node";
 import { useCatch, useLoaderData, useParams } from "@remix-run/react";
 import { ErrorBox } from "../../../../components/error";
@@ -20,6 +21,12 @@ const select = EpisodeLoaderDataSelections.reduce(
 
 type LoaderData = {
   episode: Pick<Episode, typeof EpisodeLoaderDataSelections[number]>;
+};
+
+export const handle: BreadcrumbHandle<LoaderData> = {
+  breadcrumb: (data) => {
+    return data.episode.title;
+  },
 };
 
 export const loader: LoaderFunction = async ({ params }) => {

@@ -45,7 +45,6 @@ export const loader: LoaderFunction = async () => {
   const epCount = await db.episode.count();
 
   // Lets highlight Zara Larsson and other notable hosts.
-
   const highlightedEpisodes = await db.episode.findMany({
     where: { playlistId: { in: notableHosts } },
     take: 4,
@@ -74,7 +73,7 @@ export default function Index() {
       <img
         src={`/landing/bg-2.svg`}
         alt={"White clouds"}
-        className="fixed -z-10 min-h-screen w-full bg-gradient-to-b from-[#1b3e6a] to-[#02a7cb] object-cover"
+        className="fixed -z-10 min-h-screen w-full bg-gradient-to-b object-cover"
         width={1512}
         height={982}
       />
@@ -90,7 +89,7 @@ export default function Index() {
       <div className="relative h-screen min-h-screen w-screen lg:mt-16">
         <img
           src={`/landing/bg-3.svg`}
-          alt={""}
+          alt={"Green forest"}
           className="absolute left-0 bottom-0 -z-10 h-screen w-screen object-cover"
           style={{
             background:
@@ -101,7 +100,7 @@ export default function Index() {
         />
         <img
           src={`/landing/bg-4.svg`}
-          alt={""}
+          alt={"Light green forest"}
           className="absolute left-0 bottom-0 h-screen w-screen object-cover"
           style={{
             background:
@@ -118,7 +117,7 @@ export default function Index() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-2 bg-[#477035] px-4 pb-12 lg:px-16">
-        <div className="z-10 -mt-8 flex gap-2 rounded bg-slate-900 bg-opacity-40 p-4 text-slate-100 lg:-mt-24">
+        <div className="z-10 -mt-8 mb-8 flex gap-2 rounded bg-slate-900 bg-opacity-40 p-4 text-slate-100 lg:-mt-24">
           <svg
             className="shrink-0 self-center"
             stroke="white"

@@ -24,7 +24,7 @@ export const EpisodeSquare = ({ episode }: { episode: Episode }) => {
               className="rounded bg-slate-800 p-1"
               stroke="white"
               fill="white"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 1024 1024"
               height="2em"
               width="2em"

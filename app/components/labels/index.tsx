@@ -31,7 +31,7 @@ export const ArtistLabel = ({
   return (
     <div className="flex flex-col md:ml-auto">
       <a
-        className="w-fit text-slate-300 hover:underline md:ml-auto"
+        className="w-fit text-slate-50 hover:underline md:ml-auto"
         href={`https://open.spotify.com/artist/${artist.id}`}
       >
         {artist.name}

@@ -69,28 +69,30 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="text-slate-50">
-      <img
-        src={`/landing/bg-2.svg`}
-        alt={"White clouds"}
-        className="fixed -z-10 min-h-screen w-full bg-gradient-to-b object-cover"
-        width={1512}
-        height={982}
-      />
-      <img
-        src={`/landing/bg-1.svg`}
-        alt={"Blue sky background with a yellow sun."}
-        style={sunUp ? { transform: "translateY(20px)" } : undefined}
-        className="fixed -z-10 min-h-screen w-full translate-y-80 object-cover transition-transform delay-100 duration-1000"
-        width={1512}
-        height={982}
-      />
+    <div className="w-full text-slate-50">
+      <div className="overflow-hidden">
+        <img
+          src={`/landing/bg-2.svg`}
+          alt={"White clouds"}
+          className="fixed -z-10 min-h-screen w-full bg-gradient-to-b object-cover"
+          width={1512}
+          height={982}
+        />
+        <img
+          src={`/landing/bg-1.svg`}
+          alt={"Blue sky background with a yellow sun."}
+          style={sunUp ? { transform: "translateY(20px)" } : undefined}
+          className="fixed -z-10 min-h-screen w-full translate-y-80 object-cover transition-transform delay-100 duration-1000"
+          width={1512}
+          height={982}
+        />
+      </div>
 
-      <div className="relative mt-16 h-screen min-h-screen w-screen">
+      <div className="relative mt-16 h-screen min-h-screen w-full overflow-hidden">
         <img
           src={`/landing/bg-3.svg`}
           alt={"Green forest"}
-          className="absolute left-0 bottom-0 -z-10 h-screen w-screen object-cover"
+          className="absolute left-0 bottom-0 -z-10 h-screen w-full object-cover"
           style={{
             background:
               "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(31,76,10,1) 50%, rgba(31,76,10,1) 100%)",
@@ -101,7 +103,7 @@ export default function Index() {
         <img
           src={`/landing/bg-4.svg`}
           alt={"Light green forest"}
-          className="absolute left-0 bottom-0 h-screen w-screen object-cover"
+          className="absolute left-0 bottom-0 h-screen w-full object-cover"
           style={{
             background:
               "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(71,112,53,1) 60%, rgba(71,112,53,1) 100%)",

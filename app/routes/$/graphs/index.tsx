@@ -208,10 +208,10 @@ export default () => {
                     <span className="text-s text-slate-50">
                       {item.meta?.albumName}
                     </span>
-                    <span className="text-xs text-slate-300">
+                    <span className="text-xs text-slate-200">
                       {item.meta?.artistName}
                     </span>
-                    <span className="text-slate-400">{`${item.y} plays`}</span>
+                    <span className="text-slate-300">{`${item.y} plays`}</span>
                   </div>
                 </div>
               );

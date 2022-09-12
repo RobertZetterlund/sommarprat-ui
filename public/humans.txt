@@ -1,0 +1,6 @@
+This site is built by Robert Zetterlund (https://robertzetterlund.github.io/).
+Images used on this site belong to SR (https://sverigesradio.se/) and Spotify (https://spotify.com/).
+The scaffolding of the remix.run app is based on the jokes tutorial on their website (https://remix.run/docs/en/v1/tutorials/jokes).
+The idea of parallax for the sun is from Firewatch the game (https://www.firewatchgame.com/)
+The bar charts are inspired from the stack overflow 2022 survey (https://survey.stackoverflow.co/2022/).
+The data about the ages for hosts are scraped from WikiData (https://www.wikidata.org/wiki/Wikidata:Main_Page)

@@ -29,7 +29,7 @@ export default function handleRequest(
             "Strict-Transport-Security",
             "max-age=31536000; includeSubDomains"
           );
-          // TODO(robertz): get default-src none;
+
           responseHeaders.set(
             "Content-Security-Policy",
             "img-src 'self' https://static-cdn.sr.se/ https://i.scdn.co/image/; font-src 'self'; object-src 'none';"

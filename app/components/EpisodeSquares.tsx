@@ -3,8 +3,15 @@ import { Link } from "@remix-run/react";
 import { episodeLink } from "../utils/links";
 import SpotifyLogo from "../res/images/spotify.svg";
 import SRLogo from "../res/images/SR.svg";
+import type { ImgHTMLAttributes } from "react";
 
-export const EpisodeSquare = ({ episode }: { episode: Episode }) => {
+export const EpisodeSquare = ({
+  episode,
+  loading = undefined,
+}: {
+  episode: Episode;
+  loading?: ImgHTMLAttributes<HTMLImageElement>["loading"];
+}) => {
   const { date, episodeUrl, imageurl, playlistId, title } = episode;
   return (
     <li className="w-full overflow-hidden rounded shadow-lg" key={playlistId}>
@@ -13,12 +20,13 @@ export const EpisodeSquare = ({ episode }: { episode: Episode }) => {
           src={imageurl}
           className="aspect-square w-full object-cover"
           alt={`${title} wearing a midsommarkrans most likely`}
-          loading="lazy"
+          loading={loading}
         />
         <div className="absolute top-0 left-0 flex h-0 w-full flex-col items-end justify-between bg-gray-700 bg-opacity-0 p-2	duration-500 group-hover:h-full group-hover:bg-opacity-50">
           <Link
             className="flex items-end duration-100 hover:-translate-y-1 hover:pb-1"
             to={episodeLink(episode)}
+            aria-label={`Visit the page of ${title}`}
           >
             <svg
               className="rounded bg-slate-800 p-1"
@@ -79,8 +87,12 @@ export const EpisodeSquare = ({ episode }: { episode: Episode }) => {
 export const EpisodeSquares = ({ episodes }: { episodes: Episode[] }) => {
   return (
     <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-      {episodes.map((episode) => (
-        <EpisodeSquare episode={episode} key={episode.playlistId} />
+      {episodes.map((episode, idx) => (
+        <EpisodeSquare
+          episode={episode}
+          key={episode.playlistId}
+          loading={idx < 2 ? "eager" : undefined}
+        />
       ))}
     </ul>
   );

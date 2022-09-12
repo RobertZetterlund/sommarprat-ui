@@ -2,7 +2,6 @@ import type { RouteMatch } from "@remix-run/react";
 import { Link } from "@remix-run/react";
 import { useMatches, useLocation } from "@remix-run/react";
 import type { ReactNode } from "react";
-import { Fragment } from "react";
 import { useMemo } from "react";
 
 export type BreadcrumbRenderer<TData> = (
@@ -82,7 +81,7 @@ export const Breadcrumbs = () => {
         {paths.map((path, idx) => {
           const isLast = paths.length - 1 === idx;
           return (
-            <Fragment key={path.text + idx}>
+            <li key={path.text + idx} className="flex items-center gap-2">
               <Breadcrumb to={path.link} active={isLast}>
                 {path.text}
               </Breadcrumb>
@@ -100,7 +99,7 @@ export const Breadcrumbs = () => {
                   />
                 </svg>
               )}
-            </Fragment>
+            </li>
           );
         })}
       </ol>

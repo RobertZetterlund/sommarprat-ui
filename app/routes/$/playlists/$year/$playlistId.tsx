@@ -83,7 +83,7 @@ export default function Playlists() {
         >
           {episode.title}
         </a>
-        <span className="text-slate-300">{episode.date}</span>
+        <span className="text-slate-200">{episode.date}</span>
       </div>
       <iframe
         title={episode.title}

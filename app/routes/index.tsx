@@ -1,6 +1,6 @@
 import type { Album, Artist, Episode, Track } from "@prisma/client";
 import { Link, useLoaderData } from "@remix-run/react";
-import type { LoaderFunction } from "@remix-run/server-runtime";
+import type { LinksFunction, LoaderFunction } from "@remix-run/server-runtime";
 import { json } from "@remix-run/server-runtime";
 import { useEffect, useState } from "react";
 import { EpisodeSquare } from "../components/EpisodeSquares";
@@ -59,6 +59,10 @@ export const loader: LoaderFunction = async () => {
   });
 };
 
+const TREES = "/landing/tree-clouds.svg";
+
+export const links: LinksFunction = () => [{ rel: "prefetch", href: TREES }];
+
 export default function Index() {
   const { topTracks, topAlbums, topArtists, epCount, highlightedEpisodes } =
     useLoaderData<LoaderData>();
@@ -70,48 +74,29 @@ export default function Index() {
 
   return (
     <div className="w-full text-slate-50">
-      <div className="overflow-hidden">
+      <div className="relative h-screen min-h-screen w-full overflow-hidden">
+        <div className="fixed -z-10 flex w-full overflow-hidden">
+          <img
+            src={`/landing/sun.svg`}
+            alt={"A yellow sun."}
+            style={sunUp ? { transform: "translatey(0)" } : undefined}
+            className="-z-10 min-h-screen w-full translate-y-1/2 object-cover transition-transform delay-100 duration-1000"
+            width={1512}
+            height={982}
+          />
+        </div>
         <img
-          src={`/landing/bg-2.svg`}
-          alt={"White clouds"}
-          className="fixed -z-10 min-h-screen w-full bg-gradient-to-b object-cover"
-          width={1512}
-          height={982}
-        />
-        <img
-          src={`/landing/bg-1.svg`}
-          alt={"Blue sky background with a yellow sun."}
-          style={sunUp ? { transform: "translateY(20px)" } : undefined}
-          className="fixed -z-10 min-h-screen w-full translate-y-80 object-cover transition-transform delay-100 duration-1000"
-          width={1512}
-          height={982}
-        />
-      </div>
-
-      <div className="relative mt-16 h-screen min-h-screen w-full overflow-hidden">
-        <img
-          src={`/landing/bg-3.svg`}
-          alt={"Green forest"}
+          src={TREES}
+          alt={"Green forest."}
           className="absolute left-0 bottom-0 -z-10 h-screen w-full object-cover"
           style={{
             background:
-              "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(31,76,10,1) 50%, rgba(31,76,10,1) 100%)",
+              "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 70%, #477035 70%, #477035 100%)",
           }}
           width={1512}
           height={982}
         />
-        <img
-          src={`/landing/bg-4.svg`}
-          alt={"Light green forest"}
-          className="absolute left-0 bottom-0 h-screen w-full object-cover"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(71,112,53,1) 60%, rgba(71,112,53,1) 100%)",
-          }}
-          width={1512}
-          height={982}
-        />
-        <div className="absolute bottom-32 flex flex-col gap-2 px-4 lg:px-16">
+        <div className="absolute bottom-16 flex flex-col gap-2 px-4 lg:px-16">
           <h1 className="text-5xl text-slate-100 ">Sommarprat-ui</h1>
           <h2 className="text-xl text-slate-200">
             A collection of the musical selection of the hosts of Sommar i P1
@@ -119,7 +104,7 @@ export default function Index() {
         </div>
       </div>
       <div className="flex w-full flex-col gap-2 bg-[#477035] px-4 pb-12 lg:px-16">
-        <div className="z-10 -mt-24 mb-8 flex gap-2 rounded bg-slate-900 bg-opacity-40 p-4 text-slate-100">
+        <div className="z-10 -mt-8 mb-8 flex gap-2 rounded bg-slate-900 bg-opacity-40 p-4 text-slate-100">
           <svg
             className="shrink-0 self-center"
             stroke="white"
@@ -146,10 +131,10 @@ export default function Index() {
         </div>
 
         <div>
-          <h2 className="text-3xl">Radio Sweden (SR)... </h2>
+          <h2 className="text-3xl">Radio Sweden (SR)</h2>
           <p>
-            have been tracking the songs that have played in their channels
-            since 2005, available via their{" "}
+            have tracked the songs that have played in their channels since
+            2005, available via their{" "}
             <a
               className="underline"
               href="https://sverigesradio.se/artikel/api-villkor"
@@ -163,8 +148,8 @@ export default function Index() {
               href="https://developer.spotify.com/console/get-search-item/"
             >
               spotify search api
-            </a>{" "}
-            I have created{" "}
+            </a>
+            , I have created{" "}
             <Link className="underline" to="playlists">
               {epCount} playlists
             </Link>{" "}
@@ -172,9 +157,8 @@ export default function Index() {
             the singer Zara Larsson, environmental activist Greta Thunberg and
             the president of Spotify Daniel Ek.
           </p>
-          {/* TODO: talk about average host, popularity, spotify, how song selection might reflect talk and/or person*/}
           <ul className="grid grid-cols-1 gap-4 px-16 py-8 sm:grid-cols-2 lg:grid-cols-4">
-            {highlightedEpisodes.map((episode) => (
+            {highlightedEpisodes.map((episode, index) => (
               <EpisodeSquare key={episode.playlistId} episode={episode} />
             ))}
           </ul>
@@ -207,11 +191,6 @@ export default function Index() {
             See all
           </Link>
         </div>
-
-        {/*<div>
-          <h2 className="mb-3 text-3xl">Recency of song release</h2>
-          <div className="p-4 md:px-16"></div>
-            </div>*/}
       </div>
     </div>
   );

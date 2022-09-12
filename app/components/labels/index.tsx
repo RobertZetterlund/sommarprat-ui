@@ -10,7 +10,7 @@ export const AlbumLabel = ({ album }: { album: Album }) => {
         {album.name}
       </a>
       <a
-        className="w-fit text-slate-300 hover:underline md:ml-auto"
+        className="w-fit text-slate-200 hover:underline md:ml-auto"
         href={`https://open.spotify.com/artist/${album.artistId}`}
       >
         {album.artistName}
@@ -75,7 +75,7 @@ export const TrackLabel = ({ track }: { track: Track }) => {
         {track.name}
       </a>
       <a
-        className="w-fit text-slate-300 hover:underline md:ml-auto"
+        className="w-fit text-slate-200 hover:underline md:ml-auto"
         href={`https://open.spotify.com/artist/${track.artistId}`}
       >
         {track.artistName}

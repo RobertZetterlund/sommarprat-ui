@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 
-import logo from "../../res/images/logo.png";
+import logo from "../../res/images/logo.svg";
 
 export const Header = () => {
   return (
@@ -10,7 +10,13 @@ export const Header = () => {
           to={"."}
           className="text-m flex w-fit items-center gap-1 whitespace-nowrap font-semibold text-slate-100"
         >
-          <img width={24} height={24} src={logo} alt="Midsommarkrans" />
+          <img
+            width={24}
+            height={24}
+            src={logo}
+            alt="A vinyl record with the color of a sun and with a cloud covering parts of it."
+            className="rounded"
+          />
           Sommarprat-UI
         </Link>
         <div className="flex gap-2">

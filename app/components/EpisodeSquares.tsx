@@ -22,49 +22,47 @@ export const EpisodeSquare = ({
           alt={`${title} wearing a midsommarkrans most likely`}
           loading={loading}
         />
-        <div className="absolute top-0 left-0 flex h-0 w-full flex-col items-end justify-between bg-gray-700 bg-opacity-0 p-2	duration-500 group-hover:h-full group-hover:bg-opacity-50">
-          <Link
-            className="flex items-end duration-100 hover:-translate-y-1 hover:pb-1"
-            to={episodeLink(episode)}
-            aria-label={`Visit the page of ${title}`}
+        <Link
+          className="absolute top-2 right-2 z-10 flex items-end"
+          to={episodeLink(episode)}
+          aria-label={`Visit the page of ${title}`}
+        >
+          <svg
+            className="rounded bg-slate-800 p-1"
+            stroke="white"
+            fill="white"
+            strokeWidth="0"
+            viewBox="0 0 1024 1024"
+            height="2em"
+            width="2em"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              className="rounded bg-slate-800 p-1"
-              stroke="white"
-              fill="white"
-              strokeWidth="0"
-              viewBox="0 0 1024 1024"
-              height="2em"
-              width="2em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>
-              <path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"></path>
-            </svg>
-          </Link>
+            <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>
+            <path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"></path>
+          </svg>
+        </Link>
+        <div className="absolute bottom-0 flex w-full flex-col items-end justify-between bg-gray-700 bg-opacity-50 p-2 duration-500">
           <div className="mt-auto flex w-full justify-between">
             <a
               href={`https://open.spotify.com/playlist/${playlistId}`}
               target="_blank"
               rel="noreferrer"
-              className="duration-100 hover:-translate-y-1"
             >
               <img
                 src={SpotifyLogo}
                 alt="Spotify Logo"
-                className="h-8 w-8 opacity-0 duration-300 group-hover:opacity-100"
+                className="h-6 w-6"
+                width={24}
+                height={24}
               />
             </a>
-            <a
-              href={episodeUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="duration-100 hover:-translate-y-1"
-            >
+            <a href={episodeUrl} target="_blank" rel="noreferrer">
               <img
                 src={SRLogo}
                 alt="Sveriges Radio Logo"
-                className="h-8 w-8 opacity-0 duration-300 group-hover:opacity-100"
+                width={24}
+                height={24}
+                className="h-6 w-6 "
               />
             </a>
           </div>

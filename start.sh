@@ -7,4 +7,5 @@
 
 set -ex
 npx prisma migrate deploy
+npx --yes ts-node prisma/seed.ts
 npm run start
